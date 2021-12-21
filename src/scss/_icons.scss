@@ -1,0 +1,17 @@
+.icon {
+    &-plus {
+        background-color: $default;
+        border-radius: 50%;
+        width: 28px;
+        height: 28px;
+        font-size: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;       
+        color: #04476B; 
+    }
+
+    &-pointer {
+        cursor: pointer;
+    }
+}
