@@ -72,7 +72,7 @@ form {
             height: 0;
             border-style: solid;
             border-width: 10px;
-            border-color: #fff transparent transparent transparent;
+            border-color: $white transparent transparent transparent;
             position: absolute;
           }
         }
@@ -124,7 +124,7 @@ form {
         background-color: $darck;
       }
       &:before {
-        background-color: #fff;
+        background-color: $white;
         width: 71.68px;
         border-radius: 10px 0 0 10px;
       }
@@ -177,7 +177,7 @@ form {
     line-height: 21px;
 
     a {
-      color: white;
+      color: $white;
       text-decoration: none;
     }
 

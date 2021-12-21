@@ -27,13 +27,13 @@
   }
 
   &-dark {
-    color: #ffffff;
+    color: $white;
     background-color: #202833;
     border: 1px solid #26303d;
   }
 
   &-green {
-    color: #ffffff;
+    color: $white;
     background-color: $green;
 
     &:hover {
@@ -92,7 +92,7 @@
 
   &-default {
     background: $default;
-    color: white;
+    color: $white;
     &-center {
       padding: 14.5px;
       text-align: center;
@@ -132,7 +132,7 @@
 
     &:hover {
       background-color: $default;
-      color: white;
+      color: $white;
     }
   }
 }
