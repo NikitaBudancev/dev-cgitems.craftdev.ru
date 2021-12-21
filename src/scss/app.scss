@@ -1,12 +1,12 @@
-@import '../node_modules/normalize.css/normalize.css';
+@import './base/normalize.css';
 
-@import '_variables'; 
-@import '_mixins'; 
-@import '_helpers'; 
-@import '_flex_greed'; 
-@import '_buttons';
-@import '_forms'; 
-@import '_icons'; 
+@import './abstracts/variables'; 
+@import './abstracts/_mixins'; 
+@import './abstracts/helpers'; 
+@import './base/_flex_greed'; 
+@import './components/_buttons';
+@import './base/_forms'; 
+@import './base/_icons'; 
 
 
 body {
@@ -22,7 +22,7 @@ form {
         &-standart {
             font-weight: bold;
             font-size: 18px;
-            line-height: 21px;            
+            line-height: 21px;
         }
     }
 }
