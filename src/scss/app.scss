@@ -1,7 +1,7 @@
 @import '../node_modules/normalize.css/normalize.css';
 
-@import '_variables'; 
-@import '_mixins'; 
+@import './abstracts/_variables'; 
+@import './abstracts/_mixins'; 
 @import '_helpers'; 
 @import '_flex_greed'; 
 @import '_buttons';
