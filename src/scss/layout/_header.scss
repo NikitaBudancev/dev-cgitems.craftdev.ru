@@ -1,7 +1,11 @@
 .header {
-  background-color: ;
-}
+  background-color: #202833;
 
+  &__inner {
+    @include flex;
+  }
+
+}
 
 // .menu {
 //   background: #202833;
