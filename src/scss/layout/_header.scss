@@ -1,11 +1,6 @@
 .header {
   background-color: $dark;
-  padding: 11px 24px 11px 24px;
-
-  &__container {
-    padding-left: 24px;
-    padding-right: 26px;
-  }
+  padding: 11px 26px 11px 24px;
 
   &__inner {
     @include flex;
@@ -21,23 +16,20 @@
 
   &__search-form {
     max-width: 540px;
-    width: 100%
+    width: 100%;
   }
 
   &__form-control {
-    width: 100%
+    width: 100%;
   }
-
 }
 
 .menu {
   &__list {
     @include flex;
-    @include __normilize_pm;
   }
 
   &__item {
-    list-style: none;
     margin-right: 40px;
     &:last-child {
       margin: 0;

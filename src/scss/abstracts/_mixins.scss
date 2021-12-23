@@ -35,6 +35,7 @@
 }
 
 @mixin font($size: false, $color: false, $weight: false, $lh: false) {
+  font-family: Roboto, sans-serif;
   @if $size {
     font-size: $size;
   }
@@ -49,7 +50,7 @@
   }
 }
 
-@mixin flex($justify: space-between, $align: center,) {
+@mixin flex($justify: space-between, $align: center) {
   display: flex;
   justify-content: $justify;
   align-items: $align;

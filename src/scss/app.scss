@@ -3,13 +3,17 @@
 @import "./abstracts/variables";
 @import "./abstracts/mixins";
 @import "./abstracts/helpers";
+
 @import "./base/flex_greed";
-@import "./components/buttons";
 @import "./base/style";
 @import "./base/forms";
 @import "./base/icons";
+
+@import "./components/buttons";
+
 @import "./layout/header";
 
+@import "./pages/index";
 
 form {
   margin: 0;
