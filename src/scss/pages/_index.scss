@@ -3,14 +3,28 @@
 }
 
 .course {
+  position: relative;
   background-color: $bg-main;
+  padding-bottom: 55px;
+  background-image: url("/images/home/course-bg.png");
+  background-repeat: no-repeat;
+  background-position-x: right;
+
+  &::before {
+    @include pseudo-element;
+    top: 0;
+    right: 0;
+    width: 58%;
+    height: 100%;
+    background-image: url("/images/home/course-dots-bg.png");
+  }
 
   &__inner {
     padding: 230px 0 68px;
   }
 
   &__left {
-    padding-left: 126px;
+    padding-left: 128px;
     max-width: 908px;
   }
 
@@ -26,6 +40,33 @@
   &__text {
     max-width: 620px;
     margin-bottom: 40px;
+  }
+
+  &__detail {
+    padding-top: 152px;
+    max-width: 1640px;
+
+    &-list {
+      @include flex;
+      padding: 30px 200px 30px 128px;
+      background-color: $dark;
+      border-radius: 0 10px 10px 0;
+      border: 1px solid $border-dark;
+    }
+
+    &-item {
+      position: relative;
+      font-size: 24px;
+      padding-left: 44px;
+      &::before {
+        @include pseudo-element;
+        left: 0;
+        top: 5px;
+        width: 28px;
+        height: 28px;
+        background-image: url("/images/icons/check.svg");
+      }
+    }
   }
 
 }
