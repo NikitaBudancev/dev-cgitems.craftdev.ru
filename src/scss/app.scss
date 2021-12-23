@@ -5,13 +5,11 @@
 @import "./abstracts/helpers";
 @import "./base/flex_greed";
 @import "./components/buttons";
+@import "./base/style";
 @import "./base/forms";
 @import "./base/icons";
 @import "./layout/header";
 
-body {
-  font-family: Roboto;
-}
 
 form {
   margin: 0;
@@ -29,7 +27,7 @@ form {
 
 .panel {
   &-bar {
-    background: $darck;
+    background: $dark;
     box-sizing: border-box;
     color: white;
 
@@ -122,7 +120,7 @@ form {
       &:after {
         width: 7px;
         border-radius: 10px 0 0 10px;
-        background-color: $darck;
+        background-color: $dark;
       }
       &:before {
         background-color: $white;

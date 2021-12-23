@@ -1,4 +1,11 @@
 .icon {
+
+  @include  сentering-xy;
+
+  &-initials {
+    @include font(14px, $white, 700);
+  }
+
   &-plus {
     background-color: $default;
     border-radius: 50%;
@@ -13,5 +20,18 @@
 
   &-pointer {
     cursor: pointer;
+  }
+}
+
+
+.user {
+  position: relative;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+
+  &__default {
+    background: #010203;
   }
 }

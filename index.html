@@ -17,46 +17,79 @@
 
 <body>
     <header class="header">
-        <div class="container">
-            <div class="header__inner">
-                <div class="logo header__item">
-                    <a href="logo__link">
-                        <img class="logo__img" src="images/logo-cg-items.svg" alt="">
-                    </a>
-                </div>
-                <nav class="menu header__item">
-                    <ul class="menu__list">
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">Home</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">Test</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">About</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">Page</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="search-form header__item">
-                    <form action="#">
-                        <input type="text" class="form-control form-control-darck form-control-search"
-                            placeholder="Test default">
-                    </form>
-                </div>
-                <div class="header__item">
-                    <a href="#" class="button-small button-default">Записаться на курс</a>
-                </div>
-                <div class="header__item">
-                    <div class="user user-default ">
-
-                    </div>
-                </div>
+        <div class="header__inner">
+            <div class="logo header-logo">
+                <a href="logo__link">
+                    <img class="logo__img" src="images/logo-cg-items.svg" alt="">
+                </a>
+            </div>
+            <nav class="header__item menu">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">О курсе</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Работы студентов</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Стоимость</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Отзывы</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Статьи о 3D</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__item search-form header__search-form">
+                <form action="#">
+                    <input class="form-control form-control-darck form-control-search header__form-control" type="text"
+                        placeholder="Test default">
+                </form>
+            </div>
+            <div class="header__item">
+                <a href="#" class="button-small button-default">Записаться на курс</a>
+            </div>
+            <div class="header__item">
+                <a href="#" class="user user__default ">
+                    <img class="user__img icon" src="/images/icons/icon-profile-union.svg" alt="">
+                </a>
+                <!-- <a href="#" class="user user__default" style="background-color:#af848e">
+                    <span class="icon icon-initials">НБ</span>
+                </a> -->
             </div>
         </div>
     </header>
+    <section class="course">
+        <div class="container">
+            <div class="course__inner">
+                <h1 class="title course__title">ОНЛАЙН КУРС 3D-моделирование для игр</h1>
+                <ul class="course__icons">
+                    <li class="course__icon"><img src="" alt=""></li>
+                    <li class="course__icon"><img src="" alt=""></li>
+                    <li class="course__icon"><img src="" alt=""></li>
+                    <li class="course__icon"><img src="" alt=""></li>
+                    <li class="course__icon"><img src="" alt=""></li>
+                    <li class="course__icon"><img src="" alt=""></li>
+                </ul>
+                <div class="course__text">CG Items – авторский курс по полному циклу разработки игровых 3D-моделей с
+                    индивидуальным менторством.
+                </div>
+                <p class="text">Под руководством опытного преподавателя ты создашь качественную 3D-модель по всем
+                    требованиям современной игровой индустрии.
+                </p>
+                <p class="text">Курс дает знания, позволяющие в дальнейшем самостоятельно сформировать портфолио и
+                    устроиться в игровую студию на позицию Junior или Middle.
+                </p>
+
+                <button class="button">Записаться на курс</button>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
