@@ -1,0 +1,32 @@
+.container {
+  padding: 0 128px;
+}
+
+.course {
+  background-color: $bg-main;
+
+  &__inner {
+    padding: 230px 0 68px;
+  }
+
+  &__left {
+    padding-left: 126px;
+    max-width: 908px;
+  }
+
+  &__icons {
+    @include flex(flex-start);
+    margin-bottom: 24px;
+  }
+
+  &__icon {
+    margin-right: 48px;
+  }
+
+  &__text {
+    max-width: 620px;
+    margin-bottom: 40px;
+  }
+
+}
+

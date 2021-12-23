@@ -1,0 +1,44 @@
+.header {
+  background-color: $dark;
+  padding: 11px 26px 11px 24px;
+
+  &__inner {
+    @include flex;
+  }
+
+  &__item {
+    margin-left: 40px;
+  }
+
+  &-logo {
+    flex: 1;
+  }
+
+  &__search-form {
+    max-width: 540px;
+    width: 100%;
+  }
+
+  &__form-control {
+    width: 100%;
+  }
+}
+
+.menu {
+  &__list {
+    @include flex;
+  }
+
+  &__item {
+    margin-right: 40px;
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__link {
+    color: $white;
+    text-decoration: none;
+    font-weight: 500;
+  }
+}

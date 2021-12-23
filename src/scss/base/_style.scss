@@ -1,0 +1,60 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  @include font(18px, $white, 400, 1.5);
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  @include __normilize_pm;
+}
+
+li {
+  list-style: none;
+}
+
+.title {
+  @include font(48px, false, 700, 1.2);
+  text-transform: uppercase;
+}
+
+.subtitle {
+  display: block;
+}
+
+.text {
+  margin: 0 0 13px;
+
+  &-light {
+    @extend .text;
+    font-weight: 300;
+  }
+
+  &-big {
+    @extend .text;
+    font-size: 24px;
+  }
+
+  &-dash {
+    position: relative;
+    padding-bottom: 54px;
+    margin: 0;
+
+    &::after {
+      @include pseudo-element;
+      bottom: 24px;
+      height: 5px;
+      width: 183px;
+      background-color: $default;
+    }
+  }
+}

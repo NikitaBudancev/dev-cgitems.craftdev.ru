@@ -1,142 +1,166 @@
 /* // BUTTONS // */
 .button {
-    width: 400px;
-    max-width: 100%;
+  width: 400px;
+  max-width: 100%;
+  text-decoration: none;
+  display: block;
+  box-sizing: border-box;
+  font-style: normal;
+  font-weight: bold;
+  font-size: $base_button_size;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-feature-settings: "liga" off;
+  background-repeat: no-repeat;
+  background-position: 28px center;
+  padding: 14.5px 75px 14.5px 58px;
+  position: relative;
+
+  @mixin __control_after() {
+    content: "";
+    position: absolute;
+    width: 61px;
+    height: 100%;
+  }
+
+  &-dark {
+    color: $white;
+    background-color: #202833;
+    border: 1px solid #26303d;
+  }
+
+  &-green {
+    color: $white;
+    background-color: $green;
+
+    &:hover {
+      background-color: $green_hover;
+    }
+  }
+
+  &-articles {
+    background-image: url(#{$path}buttons/b-list.svg);
+  }
+
+  &-g-all {
+    padding: 14.5px;
+    text-align: center;
+    justify-content: center;
+
+    @mixin __gradient_left_right() {
+      @include __control_after();
+      background-image: url(#{$path}buttons/gradient-left-green.svg);
+    }
+
+    &:after {
+      @include __gradient_left_right();
+      left: 0;
+    }
+    &:before {
+      @include __gradient_left_right();
+      right: 0;
+      transform: rotate(180deg);
+    }
+  }
+
+  &.button-project {
+    background-image: url(#{$path}buttons/b-project.svg);
+
+    &:hover {
+      background-color: #202833;
+    }
+  }
+  &-alphabet {
+    background-image: url(#{$path}buttons/b-alphabet.svg);
+  }
+
+  &.gradient-right {
+    &:after {
+      @include __control_after();
+
+      right: 0;
+      background-image: url(#{$path}buttons/gradient-right.svg);
+
+      &:hover {
+        visibility: hidden;
+      }
+    }
+  }
+
+  &-default {
+    background: $default;
+    color: $white;
+    &-center {
+      padding: 14.5px;
+      text-align: center;
+      justify-content: center;
+    }
+    &:hover {
+      background: #0377b4;
+    }
+  }
+
+  &-small {
     text-decoration: none;
-    display: block;
-    box-sizing: border-box;
-    font-style: normal;
-    font-weight: bold;
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: center;
+    // align-items: center;
+    padding: 6.5px 18px;
     font-size: $base_button_size;
-    line-height: 19px;
-    display: flex;
-    align-items: center;
+    box-sizing: border-box;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    font-feature-settings: 'liga' off;
-    background-repeat: no-repeat;
-    background-position: 28px center;
-    padding: 14.5px 75px 14.5px 58px;
-    position: relative;
+    font-weight: 700;
+    border-radius: 5px;
+    // width: 400px;
+    // max-width: 100%;
+    line-height: 18.75px;
+  }
 
-    @mixin __control_after() {
-        content: '';
-        position: absolute;
-        width: 61px;
-        height: 100%;   
+  &-fill {
+    border: 1px solid $default;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #7d92b0;
+    &.white-text {
+      color: #fff;
     }
 
-    &-dark {
-        color: #FFFFFF; 
-        background-color: #202833;    
-        border: 1px solid #26303D;
+    &:hover {
+      background-color: $default;
+      color: $white;
     }
-
-    &-green {
-        color: #FFFFFF; 
-        background-color: $green;
-
-        &:hover {
-            background-color:$green_hover;
-        }
-    }
-
-    &-articles {
-        background-image: url(#{$path}buttons/b-list.svg);
-    }
-
-    &-g-all {
-        padding: 14.5px;
-        text-align: center;
-        justify-content: center;
-
-        @mixin __gradient_left_right() {
-            @include __control_after();
-            background-image: url(#{$path}buttons/gradient-left-green.svg);                
-        }
-
-        &:after {
-            @include __gradient_left_right();
-            left: 0;
-            
-        }
-        &:before {
-            @include __gradient_left_right();
-            right: 0;
-            transform: rotate(180deg);            
-        }
-    }
-
-    &.button-project {
-        background-image: url(#{$path}buttons/b-project.svg);
-
-        &:hover {
-            background-color: #202833;
-        }
-    }
-    &-alphabet {
-        background-image: url(#{$path}buttons/b-alphabet.svg);
-    }
-
-    &.gradient-right {
-        &:after {
-            @include __control_after();
-
-            right: 0;            
-            background-image: url(#{$path}buttons/gradient-right.svg);
-
-            &:hover {
-                visibility: hidden;
-            }
-
-        }
-    }
-
-    &-default {
-        background: $default;
-        color: white;
-        &-center {
-            padding: 14.5px;
-            text-align: center;
-            justify-content: center;            
-        }
-        &:hover {
-            background: #0377B4;            
-        }
-    }
-
-    &-small {
-        text-decoration: none;
-        // display: flex;
-        // flex-direction: row;
-        // justify-content: center;
-        // align-items: center;
-        padding: 6.5px 18px;        
-        font-size: $base_button_size;
-        box-sizing: border-box;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-        font-weight: 700;        
-        border-radius: 5px;
-        // width: 400px;
-        // max-width: 100%;    
-        line-height: 18.75px;
-    }
-
-    &-fill {
-        border: 1px solid $default;
-        box-sizing: border-box;
-        border-radius: 5px;   
-        color: #7D92B0;     
-        &.white-text {
-            color: #fff;
-        }
-
-        &:hover {
-            background-color: $default;
-            color: white;            
-        }
-    }
-
+  }
 }
 /* // BUTTONS // */
+
+.btn {
+  background-color: $default;
+  border: none;
+  color: $white;
+  font-weight: 700;
+  cursor: pointer;
+
+  &-course {
+    position: relative;
+    z-index: 1;
+    width: 288px;
+    height: 48px;
+    border-radius: 5px;
+    background: radial-gradient($default, #2a75d7);
+    text-transform: uppercase;
+
+    &::before {
+      @include pseudo-element;
+      @include сentering-xy;
+      z-index: -1;
+      width: 1px;
+      height: 1px;
+      box-shadow: 0 0 119px 121px #0192e142;
+    }
+  }
+}
