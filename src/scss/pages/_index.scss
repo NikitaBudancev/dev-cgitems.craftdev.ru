@@ -1,8 +1,12 @@
+.container {
+  padding: 0 128px;
+}
+
 .course {
   background-color: $bg-main;
 
   &__inner {
-    padding: 230px 0 55px;
+    padding: 230px 0 68px;
   }
 
   &__left {
@@ -21,6 +25,7 @@
 
   &__text {
     max-width: 620px;
+    margin-bottom: 40px;
   }
 
 }
