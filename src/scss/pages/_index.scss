@@ -5,10 +5,11 @@
 .course {
   position: relative;
   background-color: $bg-main;
-  padding-bottom: 55px;
+  padding-bottom: 63px;
   background-image: url("/images/home/course-bg.png");
   background-repeat: no-repeat;
-  background-position-x: right;
+  background-position-x: 85%;
+  background-position-y: 10%;
 
   &::before {
     @include pseudo-element;
@@ -20,7 +21,7 @@
   }
 
   &__inner {
-    padding: 230px 0 68px;
+    padding: 180px 0 68px;
   }
 
   &__left {
@@ -28,9 +29,13 @@
     max-width: 908px;
   }
 
+  &__title {
+    margin-bottom: 23px;
+  }
+
   &__icons {
     @include flex(flex-start);
-    margin-bottom: 24px;
+    margin-bottom: 17px;
   }
 
   &__icon {
@@ -38,8 +43,9 @@
   }
 
   &__text {
-    max-width: 620px;
-    margin-bottom: 40px;
+    max-width: 770px;
+    margin-bottom: 65px;
+    letter-spacing: 1px;
   }
 
   &__detail {
@@ -47,11 +53,13 @@
     max-width: 1640px;
 
     &-list {
+      position: relative;
       @include flex;
-      padding: 30px 200px 30px 128px;
+      padding: 30px 193px 30px 128px;
       background-color: $dark;
       border-radius: 0 10px 10px 0;
       border: 1px solid $border-dark;
+      letter-spacing: 1px;
     }
 
     &-item {
@@ -68,6 +76,42 @@
       }
     }
   }
-
 }
 
+.mission {
+  background-color: $bg-main;
+  padding-top: 200px;
+
+  &__inner {
+    display: flex;
+  }
+
+  &__title {
+    margin-bottom: 156px;
+    letter-spacing: 2px;
+  }
+
+  &__left {
+    margin-right: 56px;
+
+    &-item {
+      background: $color_gradient;
+      padding: 40px;
+      border-radius: 16px;
+    }
+  }
+
+  &__bottom {
+    @include flex(space-between, flex-start);
+  }
+
+  &__bottom-item {
+    max-width: 493px;
+    letter-spacing: 1px;
+  }
+
+  &-text-big {
+    font-size: 26px;
+    margin-bottom: 40px;
+  }
+}
