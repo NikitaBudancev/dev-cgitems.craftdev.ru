@@ -1,6 +1,5 @@
 .icon {
-
-  @include  сentering-xy;
+  @include сentering-xy;
 
   &-initials {
     @include font(14px, $white, 700);
@@ -22,7 +21,6 @@
     cursor: pointer;
   }
 }
-
 
 .user {
   position: relative;

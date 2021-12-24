@@ -25,9 +25,17 @@ li {
 .title {
   @include font(48px, false, 700, 1.2);
   text-transform: uppercase;
+
+  &-blue {
+    background: $color_gradient;
+    -webkit-text-fill-color: transparent;
+    font-size: 48px;
+    font-weight: 700;
+  }
+
 }
 
-.subtitle {
+.subtext {
   display: block;
 }
 

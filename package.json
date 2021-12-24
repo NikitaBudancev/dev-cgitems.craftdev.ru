@@ -12,7 +12,11 @@
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-sass": "^5.0.0",
-    "sass": "^1.43.4"
+    "gulp-stylelint": "^13.0.0",
+    "sass": "^1.43.4",
+    "stylelint": "^14.2.0",
+    "stylelint-config-recess-order": "^3.0.0",
+    "stylelint-config-standard": "^24.0.0"
   },
   "dependencies": {
     "gulp-cli": "^2.3.0",
