@@ -1,22 +1,21 @@
 .form {
   &-control {
     display: block;
-    background: #13171a;
-    border: 1px solid #26303d;
-    box-sizing: border-box;
-    border-radius: 60px;
-    color: $white;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 140%;
     padding: 8px 39px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 140%;
+    color: $white;
+    background: #13171a;
     background-image: url(#{$path}forms/form-darck.svg);
     background-repeat: no-repeat;
     background-position: left center;
+    border: 1px solid #26303d;
+    border-radius: 60px;
 
     &-search {
       background: url(#{$path}forms/form-darck.svg) no-repeat left center,
-        url(#{$path}icons/search.svg) no-repeat 95% center, #13171a;
+        url(#{$path}icons/search.svg) no-repeat 95% center #13171a;
     }
 
     &:focus,

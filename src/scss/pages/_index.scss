@@ -4,8 +4,8 @@
 
 .course {
   position: relative;
-  background-color: $bg-main;
   padding-bottom: 63px;
+  background-color: $bg-main;
   background-image: url("/images/home/course-bg.png");
   background-repeat: no-repeat;
   background-position-x: 85%;
@@ -13,6 +13,7 @@
 
   &::before {
     @include pseudo-element;
+
     top: 0;
     right: 0;
     width: 58%;
@@ -25,8 +26,8 @@
   }
 
   &__left {
-    padding-left: 128px;
     max-width: 908px;
+    padding-left: 128px;
   }
 
   &__title {
@@ -35,6 +36,7 @@
 
   &__icons {
     @include flex(flex-start);
+
     margin-bottom: 17px;
   }
 
@@ -49,27 +51,30 @@
   }
 
   &__detail {
-    padding-top: 152px;
     max-width: 1640px;
+    padding-top: 152px;
 
     &-list {
       position: relative;
       @include flex;
+
       padding: 30px 193px 30px 128px;
-      background-color: $dark;
-      border-radius: 0 10px 10px 0;
-      border: 1px solid $border-dark;
       letter-spacing: 1px;
+      background-color: $dark;
+      border: 1px solid $border-dark;
+      border-radius: 0 10px 10px 0;
     }
 
     &-item {
       position: relative;
-      font-size: 24px;
       padding-left: 44px;
+      font-size: 24px;
+
       &::before {
         @include pseudo-element;
-        left: 0;
+
         top: 5px;
+        left: 0;
         width: 28px;
         height: 28px;
         background-image: url("/images/icons/check.svg");
@@ -79,8 +84,8 @@
 }
 
 .mission {
-  background-color: $bg-main;
   padding-top: 200px;
+  background-color: $bg-main;
 
   &__inner {
     display: flex;
@@ -95,8 +100,8 @@
     margin-right: 56px;
 
     &-item {
-      background: $color_gradient;
       padding: 40px;
+      background: $color-gradient;
       border-radius: 16px;
     }
   }
@@ -111,7 +116,7 @@
   }
 
   &-text-big {
-    font-size: 26px;
     margin-bottom: 40px;
+    font-size: 26px;
   }
 }

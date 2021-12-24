@@ -10,12 +10,13 @@ html {
 
 body {
   @include font(18px, $white, 400, 1.5);
+
   padding: 0;
   margin: 0;
 }
 
 ul {
-  @include __normilize_pm;
+  @include normilize-pm;
 }
 
 li {
@@ -24,31 +25,33 @@ li {
 
 .title {
   @include font(48px, false, 700, 1.2);
+
   text-transform: uppercase;
 
   &-blue {
-    background: $color_gradient;
-    -webkit-text-fill-color: transparent;
     font-size: 48px;
     font-weight: 700;
+    background: $color-gradient;
+    -webkit-text-fill-color: transparent;
   }
-
 }
 
 .subtext {
   display: block;
 }
 
-.text {
+%text {
   margin: 0 0 13px;
 
   &-light {
-    @extend .text;
+    @extend %text;
+
     font-weight: 300;
   }
 
   &-big {
-    @extend .text;
+    @extend %text;
+
     font-size: 24px;
   }
 
@@ -59,9 +62,10 @@ li {
 
     &::after {
       @include pseudo-element;
+
       bottom: 24px;
-      height: 5px;
       width: 183px;
+      height: 5px;
       background-color: $default;
     }
   }
