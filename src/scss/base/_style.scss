@@ -32,6 +32,7 @@ li {
     font-size: 48px;
     font-weight: 700;
     background: $color-gradient;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 }
@@ -42,7 +43,9 @@ li {
 
 %text {
   margin: 0 0 13px;
+}
 
+.text {
   &-light {
     @extend %text;
 

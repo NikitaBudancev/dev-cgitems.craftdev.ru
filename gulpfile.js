@@ -1,17 +1,21 @@
 const gulp = require('gulp');
+
+const { src, dest, watch, parallel } = require('gulp');
+
 const sass = require('gulp-sass')(require('sass'));
 const autoprefixer = require('gulp-autoprefixer');
 
-gulp.task('sass', () => {
-    return gulp.src('src/scss/*.scss')
-        .pipe(sass({
-            outputStyle: 'compressed'
-        }))
-        .pipe(autoprefixer('last 2 versions'))
+function scss() {
+    return src('src/scss/*.scss')
+        .pipe(sass({ outputStyle: 'compressed' }))
+        .pipe(autoprefixer('last 2 version'))
         .on('error', sass.logError)
-        .pipe(gulp.dest('dist/css'))
-});
+        .pipe(dest('dist/css'))
+}
 
-gulp.task('sass:watch', function () {
-    gulp.watch('src/**/*.scss', gulp.parallel('sass'));
-});
+function scssWatch() {
+    watch(['src/**/*.scss'], parallel(scss));
+}
+
+exports.scss = scss;
+exports.scssWatch = scssWatch;
