@@ -120,3 +120,63 @@
     font-size: 26px;
   }
 }
+
+.who-course {
+  padding: 235px 0 305px;
+  background-color: $bg-main;
+
+  &__list {
+    @include flex(space-between, false);
+
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    position: relative;
+    max-width: 730px;
+    padding-left: 145px;
+
+    &::before {
+      @include pseudo-element;
+
+      top: 0;
+      left: 0;
+      width: 105px;
+      height: 122px;
+      filter: drop-shadow(0 0 60px #005DE9);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &-newbie::before {
+      background-image: url("/images/home/who-course/who-course-1.svg");
+    }
+
+    &-2d-painters::before {
+      background-image: url("/images/home/who-course/who-course-2.svg");
+    }
+
+    &-experienced-3d::before {
+      background-image: url("/images/home/who-course/who-course-3.svg");
+    }
+
+    &-title {
+      @include font(26px, false, 700);
+
+    }
+  }
+
+  &-title {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin-bottom: 145px;
+    letter-spacing: 1.5px;
+
+  }
+}
+
+.advantages {
+  background: radial-gradient(58.95% 96.31% at 50% 50%, #0A1623 0%, #121618 100%);
+  background-color: #2f3c4a;
+}

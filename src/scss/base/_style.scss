@@ -31,6 +31,7 @@ li {
   &-blue {
     font-size: 48px;
     font-weight: 700;
+    text-shadow: 0 0 60px #005DE9;
     background: $color-gradient;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -46,6 +47,8 @@ li {
 }
 
 .text {
+  letter-spacing: 1px;
+ 
   &-light {
     @extend %text;
 

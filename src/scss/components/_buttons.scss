@@ -153,6 +153,7 @@
     text-transform: uppercase;
     background: #1c79d2;
     border-radius: 5px;
+    box-shadow: 0 0 160px #005DE9;
 
     &::before {
       @include pseudo-element;
