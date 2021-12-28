@@ -35,7 +35,6 @@
 }
 
 @mixin font($size: false, $color: false, $weight: false, $lh: false) {
-  font-family: Roboto, sans-serif;
 
   @if $size {
     font-size: $size;

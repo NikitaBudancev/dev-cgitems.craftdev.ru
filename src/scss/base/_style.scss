@@ -13,6 +13,7 @@ body {
 
   padding: 0;
   margin: 0;
+  font-family: Roboto, sans-serif;
 }
 
 ul {
@@ -31,11 +32,15 @@ li {
   &-blue {
     font-size: 48px;
     font-weight: 700;
-    text-shadow: 0 0 60px #005DE9;
+    text-shadow: 0 0 60px #005de9;
     letter-spacing: 1.5px;
     background: $color-gradient;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  &-text {
+    @include font(26px, false, 700);
   }
 }
 
@@ -49,7 +54,7 @@ li {
 
 .text {
   letter-spacing: 1px;
- 
+
   &-light {
     @extend %text;
 
