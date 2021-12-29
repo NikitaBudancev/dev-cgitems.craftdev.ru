@@ -212,6 +212,7 @@
       left: 0;
       width: 73px;
       height: 63px;
+      filter: drop-shadow(0 0 60px #005de9);
       background-position: center;
     }
 
@@ -325,3 +326,131 @@
   }
 }
 
+.feedback {
+  padding: 170px 0 300px;
+  background: radial-gradient(
+    58.95% 96.31% at 50% 50%,
+    #0a1623 0%,
+    #121618 100%
+  );
+  background-color: #2f3c4a;
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+    padding: 40px 40px 60px;
+    background: $color-gradient;
+    border-radius: 16px;
+
+    &::before {
+      @include pseudo-element;
+
+      top: 0;
+      right: 0;
+      width: 540px;
+      height: 415px;
+      background-image: url("/images/home/form-bg-cube.svg");
+      background-repeat: no-repeat;
+    }
+
+    &::after {
+      @include pseudo-element;
+
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 500px;
+      height: 100%;
+      background-image: url("/images/home/form-bg-pixel.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__title {
+    @include font(48px, false, 900);
+
+    margin-bottom: 75px;
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px 80px;
+  }
+
+  &__label {
+    &-text {
+      @include font(14px, #f3f4f4, 700);
+
+      margin-bottom: 7px;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    height: 48px;
+    padding: 0 10px;
+    font-size: 18px;
+    border: 1px solid #798faa;
+    border-radius: 5px;
+  }
+
+  &__button {
+    @include font(24px, #f3f4f4, 700);
+
+    align-self: end;
+    height: 48px;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: #deae06;
+    border: 0;
+    border-radius: 5px;
+  }
+
+  &__check {
+    align-self: end;
+
+    &-text {
+      font-size: 16px;
+    }
+
+    &-link {
+      font-weight: 700;
+      color: #f3f4f4;
+      text-decoration: none;
+    }
+  }
+}
+
+.program {
+  padding: 300px 0 232px;
+  background-color: $bg-main;
+
+  &__title {
+    margin-bottom: 146px;
+  }
+
+  &__inner {
+    @include flex(space-between, flex-start);
+  }
+
+  &-top-text {
+    margin-bottom: 150px;
+    font-weight: 400;
+  }
+
+  &__left {
+    max-width: 1124px;
+    margin-right: 56px;
+  }
+
+  &__text-title {
+    @include font(26px, #0099e9, 700)
+  }
+
+  &__right {
+    max-width: 982px;
+    width: 100%;
+  }
+
+}

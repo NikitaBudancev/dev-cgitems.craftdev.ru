@@ -24,3 +24,45 @@
     }
   }
 }
+
+.check__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 30px;
+  margin-top: 30px;
+}
+
+.check__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.check__box {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  margin-left: -30px;
+  cursor: pointer;
+  background-color: #f3f4f4;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.check__input:checked + .check__box {
+  background-image: url('/images/icons/form-ckeck.svg');
+}
+
+.check__input:focus + .check__box {
+  box-shadow: 0 0 4px 0 #deae06;
+}
+
+// .check__input:disabled + .check__box {
+//   background-image: url(/images/tick-disabled.svg);
+//   cursor: unset;
+// }
