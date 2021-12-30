@@ -327,7 +327,7 @@
 }
 
 .feedback {
-  padding: 170px 0 300px;
+  padding: 170px 0 293px;
   background: radial-gradient(
     58.95% 96.31% at 50% 50%,
     #0a1623 0%,
@@ -423,11 +423,11 @@
 }
 
 .program {
-  padding: 300px 0 232px;
+  padding: 290px 0 232px;
   background-color: $bg-main;
 
   &__title {
-    margin-bottom: 146px;
+    margin-bottom: 136px;
   }
 
   &__inner {
@@ -435,7 +435,7 @@
   }
 
   &-top-text {
-    margin-bottom: 150px;
+    margin-bottom: 90px;
     font-weight: 400;
   }
 
@@ -445,12 +445,64 @@
   }
 
   &__text-title {
-    @include font(26px, #0099e9, 700)
+    @include font(26px, #0099e9, 700);
+  }
+
+  &__text {
+    margin-bottom: 60px;
+
+    .text {
+      margin: 20px 0;
+    }
   }
 
   &__right {
-    max-width: 982px;
     width: 100%;
+    max-width: 982px;
+  }
+}
+
+.reviews {
+  padding: 290px 0 232px;
+  background: radial-gradient(
+    58.95% 96.31% at 50% 50%,
+    #0a1623 0%,
+    #121618 100%
+  );
+  background-color: #2f3c4a;
+
+  &__title {
+    margin-bottom: 100px;
+  }
+
+  &__item {
+    // width: 450px;
+    background-image: url('/images/home/reviews/reviews.png');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &-inner {
+      padding: 40px 24px;
+    }
+
+  }
+
+
+
+  &__user {
+    @include flex(flex-start);
+
+    margin-bottom: 20px;
+  }
+
+  &__user-right {
+    margin-left: 10px;
+    font-size: 16px;
+  }
+
+  &__date {
+    @include font(14px, #7b8ea9, 700);
   }
 
 }
+

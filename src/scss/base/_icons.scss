@@ -20,6 +20,11 @@
   &-pointer {
     cursor: pointer;
   }
+
+  &-reviews {
+    font-size: 20px;
+  }
+
 }
 
 .user {
@@ -32,4 +37,10 @@
   &__default {
     background: #010203;
   }
+
+  &-reviews {
+    width: 40px;
+    height: 40px;
+  }
+
 }

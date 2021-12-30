@@ -15,4 +15,11 @@ $(function () {
     $this.next().slideToggle();
     $('.accordion__arrow', this).toggleClass('accordion__rotate');
   });
+
+  $('.reviews__list').owlCarousel({
+  loop: true,
+    margin: 10,
+    nav: true,
+})
+
 })

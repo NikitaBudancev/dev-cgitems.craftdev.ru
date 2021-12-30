@@ -82,3 +82,9 @@ li {
     }
   }
 }
+
+.user-name {
+  @include font(16px, $white, 700);
+
+  text-decoration: none;
+}
