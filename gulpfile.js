@@ -1,10 +1,27 @@
-const { src, dest, watch, parallel } = require('gulp');
+const { src, dest, watch, parallel, series } = require('gulp');
 
 const sass = require('gulp-sass')(require('sass'));
 const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify-es').default;
 const concat = require('gulp-concat');
-// const imagemin = require('gulp-imagemin');
+const imagemin = require('gulp-imagemin');
+const fileInclude = require('gulp-file-include');
+const browserSync = require('browser-sync').create();
+
+function server() {
+    browserSync.init({
+        server: {
+            baseDir: './dist'
+        }
+    })
+}
+
+function html() {
+    return src('src/html/**/*.html')
+        .pipe(fileInclude())
+        .pipe(dest('dist/'))
+        .pipe(browserSync.stream())
+}
 
 function scss() {
     return src('src/scss/*.scss')
@@ -15,6 +32,7 @@ function scss() {
         }))
         .on('error', sass.logError)
         .pipe(dest('dist/css'))
+        .pipe(browserSync.stream())
 }
 
 function scripts() {
@@ -26,25 +44,28 @@ function scripts() {
         .pipe(concat('app.js'))
         .pipe(uglify())
         .pipe(dest('dist/js'))
+        .pipe(browserSync.stream())
 }
 
-// function images() {
-//     return src('images/**/*')
-//         .pipe(imagemin([
-//             imagemin.gifsicle({ interlaced: true }),
-//             imagemin.mozjpeg({ quality: 75, progressive: true }),
-//             imagemin.optipng({ optimizationLevel: 5 }),
-//             imagemin.svgo({
-//                 plugins: [
-//                     { removeViewBox: true },
-//                     { cleanupIDs: false }
-//                 ]
-//             })
-//         ]))
-//         .pipe(dest('dist/images'))
-// }
+function images() {
+    return src('src/images/**/*')
+        .pipe(imagemin([
+            imagemin.gifsicle({ interlaced: true }),
+            imagemin.mozjpeg({ quality: 75, progressive: true }),
+            imagemin.optipng({ optimizationLevel: 5 }),
+            imagemin.svgo({
+                plugins: [
+                    { removeViewBox: true },
+                    { cleanupIDs: false }
+                ]
+            })
+        ]))
+        .pipe(dest('dist/images'))
+        .pipe(browserSync.stream())
+}
 
 function watching() {
+    watch(['src/html/**/*.html'], html);
     watch(['src/**/*.scss'], scss);
     watch(['src/js/**/*.js'], scripts);
 }
@@ -52,6 +73,7 @@ function watching() {
 exports.scss = scss;
 exports.scripts = scripts;
 exports.watching = watching;
-// exports.images = images;
+exports.images = images;
+exports.html = html;
 
-exports.default = parallel(scripts, watching);
+exports.default = series(scss, scripts, html, parallel(watching, server));

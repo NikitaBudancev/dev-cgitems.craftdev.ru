@@ -65,4 +65,13 @@
       grid-template-columns: 388px 394px 517px;
     }
   }
+
+  .accordion {
+
+    &__content-inner {
+      max-width: 613px;
+    }
+
+  }
+
 }

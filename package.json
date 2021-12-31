@@ -5,16 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "gulp": "gulp",
-    "start": "gulp watching"
+    "gulp": "gulp"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^2.27.7",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-concat": "^2.6.1",
-    "gulp-imagemin": "^8.0.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^5.0.0",
     "gulp-uglify-es": "^3.0.0",
     "jquery": "^3.6.0",
@@ -27,7 +28,6 @@
     "stylelint-scss": "^4.1.0"
   },
   "dependencies": {
-    "gulp-cli": "^2.3.0",
     "normalize.css": "^8.0.1",
     "owl.carousel": "^2.3.4"
   }
