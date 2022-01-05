@@ -5,6 +5,9 @@ const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify-es').default;
 const concat = require('gulp-concat');
 const imagemin = require('gulp-imagemin');
+const webp = require('gulp-webp');
+const webpHtml = require('gulp-webp-html');
+const webpCss = require('gulp-webp-css');
 const fileInclude = require('gulp-file-include');
 const browserSync = require('browser-sync').create();
 
@@ -17,8 +20,9 @@ function server() {
 }
 
 function html() {
-    return src('src/html/**/*.html')
+    return src('src/html/*.html')
         .pipe(fileInclude())
+        .pipe(webpHtml())
         .pipe(dest('dist/'))
         .pipe(browserSync.stream())
 }
@@ -26,6 +30,7 @@ function html() {
 function scss() {
     return src('src/scss/*.scss')
         .pipe(sass({ outputStyle: 'compressed' }))
+        .pipe(webpCss())
         .pipe(autoprefixer({
             overrideBrowserslist: ['last 10 version'],
             grid: true
@@ -49,6 +54,9 @@ function scripts() {
 
 function images() {
     return src('src/images/**/*')
+        .pipe(webp())
+        .pipe(dest('dist/images'))
+        .pipe(src('src/images/**/*'))
         .pipe(imagemin([
             imagemin.gifsicle({ interlaced: true }),
             imagemin.mozjpeg({ quality: 75, progressive: true }),
