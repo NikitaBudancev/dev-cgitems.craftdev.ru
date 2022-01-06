@@ -9,6 +9,7 @@ const webp = require('gulp-webp');
 const webpHtml = require('gulp-webp-html');
 const webpCss = require('gulp-webp-css');
 const fileInclude = require('gulp-file-include');
+const tildeImporter = require('node-sass-tilde-importer');
 const browserSync = require('browser-sync').create();
 
 function server() {
@@ -29,7 +30,7 @@ function html() {
 
 function scss() {
     return src('src/scss/*.scss')
-        .pipe(sass({ outputStyle: 'compressed' }))
+        .pipe(sass({ outputStyle: 'compressed', importer: tildeImporter }))
         .pipe(webpCss())
         .pipe(autoprefixer({
             overrideBrowserslist: ['last 10 version'],
@@ -43,7 +44,7 @@ function scss() {
 function scripts() {
     return src([
         'node_modules/jquery/dist/jquery.js',
-        'node_modules/owl.carousel/dist/owl.carousel.js',
+        'node_modules/slick-carousel/slick/slick.js',
         'src/js/app.js'
     ])
         .pipe(concat('app.js'))

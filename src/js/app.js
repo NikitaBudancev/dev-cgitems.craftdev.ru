@@ -3,7 +3,7 @@ $(function () {
   $(".accordion__title").on("click", function (e) {
 
     e.preventDefault();
-    var $this = $(this);
+    let $this = $(this);
 
     if (!$this.hasClass("accordion-active")) {
       $(".accordion__content").slideUp(300);
@@ -16,10 +16,32 @@ $(function () {
     $('.accordion__arrow', this).toggleClass('accordion__rotate');
   });
 
-//   $('.reviews__list').owlCarousel({
-//   loop: true,
-//     margin: 10,
-//     nav: true,
-// })
+  let $slider = $('.reviews__list');
+
+  if ($slider.length) {
+    let currentSlide;
+    let slidesCount;
+    let sliderCounter = document.createElement('div');
+    sliderCounter.classList.add('slider__counter');
+
+    let updateSliderCounter = function (slick, currentIndex) {
+      currentSlide = slick.slickCurrentSlide() + 1;
+      slidesCount = slick.slideCount;
+      $(sliderCounter).text(currentSlide + '/' + slidesCount)
+    };
+
+    $slider.on('init', function (event, slick) {
+      $slider.append(sliderCounter);
+      updateSliderCounter(slick);
+    });
+
+    $slider.on('afterChange', function (event, slick, currentSlide) {
+      updateSliderCounter(slick, currentSlide);
+    });
+
+    $slider.slick({
+      slidesToShow: 4
+    });
+  }
 
 })

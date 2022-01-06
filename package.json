@@ -22,6 +22,7 @@
     "gulp-webp-css": "^1.1.0",
     "gulp-webp-html": "^1.0.2",
     "jquery": "^3.6.0",
+    "node-sass-tilde-importer": "^1.0.2",
     "sass": "^1.43.4",
     "stylelint": "^14.2.0",
     "stylelint-config-prettier": "^9.0.3",
@@ -32,6 +33,6 @@
   },
   "dependencies": {
     "normalize.css": "^8.0.1",
-    "owl.carousel": "^2.3.4"
+    "slick-carousel": "^1.8.1"
   }
 }
