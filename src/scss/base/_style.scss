@@ -16,6 +16,10 @@ body {
   font-family: Roboto, sans-serif;
 }
 
+button {
+  cursor: pointer;
+}
+
 ul {
   @include normilize-pm;
 }
