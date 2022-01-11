@@ -10,12 +10,22 @@ html {
 
 body {
   @include font(18px, $white, 400, 1.5);
+
   padding: 0;
   margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  outline: none;
 }
 
 ul {
-  @include __normilize_pm;
+  @include normilize-pm;
 }
 
 li {
@@ -24,31 +34,44 @@ li {
 
 .title {
   @include font(48px, false, 700, 1.2);
+
   text-transform: uppercase;
 
   &-blue {
-    background: $color_gradient;
-    -webkit-text-fill-color: transparent;
     font-size: 48px;
     font-weight: 700;
+    text-shadow: 0 0 60px #005de9;
+    letter-spacing: 1.5px;
+    background: $color-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
+  &-text {
+    @include font(26px, false, 700);
+  }
 }
 
 .subtext {
   display: block;
 }
 
-.text {
+%text {
   margin: 0 0 13px;
+}
+
+.text {
+  letter-spacing: 1px;
 
   &-light {
-    @extend .text;
+    @extend %text;
+
     font-weight: 300;
   }
 
   &-big {
-    @extend .text;
+    @extend %text;
+
     font-size: 24px;
   }
 
@@ -59,10 +82,17 @@ li {
 
     &::after {
       @include pseudo-element;
+
       bottom: 24px;
-      height: 5px;
       width: 183px;
+      height: 5px;
       background-color: $default;
     }
   }
+}
+
+.user-name {
+  @include font(16px, $white, 700);
+
+  text-decoration: none;
 }

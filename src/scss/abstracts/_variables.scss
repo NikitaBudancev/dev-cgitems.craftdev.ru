@@ -1,19 +1,32 @@
 // ==== PATH ==== //
-$path: "../../images/";
+$path: "../..../images/";
+
 // ==== END PATH ==== //
 
 // ==== COLORS ==== //
 $white: #fff;
 $green: #09945c;
-$green_hover: #007b51;
+$green-hover: #007b51;
 $default: #0099e9;
-$color_link: #056ea6;
+$color-link: #056ea6;
 $dark: #202833;
 $bg-main: #171b1f;
 $border-dark: #2f3c4a;
-$color_gradient: #1c79d2;
+$color-gradient: radial-gradient(
+    48.44% 257.13% at 24.9% 51.56%,
+    #94404033 0%,
+    #0000 54.54%
+  ),
+  radial-gradient(
+    302.34% 536.75% at 79.05% 72.79%,
+    #962ac95c 0%,
+    #0000 55.73%
+  ),
+  #0099e9;
+
 // ==== END COLORS ==== //
 
 // ==== SIZES ==== //
-$base_button_size: 16px;
+$base-button-size: 16px;
+
 // ==== END SIZES ==== //
