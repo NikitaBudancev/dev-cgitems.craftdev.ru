@@ -423,8 +423,23 @@
 }
 
 .program {
+  position: relative;
   padding: 290px 0 232px;
   background-color: $bg-main;
+
+  &::before {
+    @include pseudo-element;
+
+    position: absolute;
+    top: 50%;
+    right: 38px;
+    display: block;
+    width: 1200px;
+    height: 850px;
+    content: "";
+    background-image: url("../images/home/course-dots-bg.png");
+    transform: translateY(-40%);
+  }
 
   &__title {
     margin-bottom: 136px;
@@ -457,6 +472,7 @@
   }
 
   &__right {
+    z-index: 0;
     width: 100%;
     max-width: 982px;
   }
@@ -472,14 +488,15 @@
   );
   background-color: #2f3c4a;
 
-
-  .slick-list{padding:0 10% 0 0;}
+  .slick-list {
+    padding: 0 10% 0 0;
+  }
 
   .slider__counter {
-      position: absolute;
-      right: 200px;
-      bottom: -93px;
-      font-size: 26px;
+    position: absolute;
+    right: 200px;
+    bottom: -93px;
+    font-size: 26px;
   }
 
   & .btn-slider {
@@ -501,25 +518,24 @@
     transition: all 0.3s ease-out;
   }
 
-  .btn-slider-arrow{
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-image: url("../images/icons/accordion-arrow.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  .btn-slider-arrow {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/icons/accordion-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 
-}
+  .btn-slider-prev {
+    right: 280px;
+    transform: rotate(90deg);
+  }
 
-.btn-slider-prev{
-  right: 280px;
-  transform: rotate(90deg);
-}
-
-.btn-slider-next{
-  right: 125px;
-  transform: rotate(270deg);
-}
+  .btn-slider-next {
+    right: 125px;
+    transform: rotate(270deg);
+  }
 
   &-container {
     padding-right: 0;
@@ -534,7 +550,7 @@
     width: 450px !important;
     height: 450px;
     padding: 35px 40px 0;
-    background-image: url('../images/home/reviews/reviews.png');
+    background-image: url("../images/home/reviews/reviews.png");
     background-repeat: no-repeat;
     background-position: center;
     border: 1px solid #26303d;
@@ -543,7 +559,6 @@
     &-inner {
       // padding: 40px 24px;
     }
-
   }
 
   &__user {
@@ -571,13 +586,38 @@
     letter-spacing: 1px;
   }
 
-
   &__link {
-
     @include font(14px, $white);
 
     text-transform: uppercase;
   }
-
 }
 
+.course-author {
+  padding: 350px 0 200px;
+  background-color: $bg-main;
+
+  &__title {
+    text-transform: initial;
+  }
+
+  &__inner {
+    @include flex(space-between, flex-start);
+  }
+
+  .author__photo {
+    max-width: 720px;
+  }
+
+  &__left {
+    max-width: 585px;
+  }
+
+  &__content {
+    max-width: 1290px;
+
+    &-inner {
+      @include flex(space-between, flex-start);
+    }
+  }
+}

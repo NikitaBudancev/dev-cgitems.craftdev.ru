@@ -20,6 +20,10 @@ button {
   cursor: pointer;
 }
 
+input {
+  outline: none;
+}
+
 ul {
   @include normilize-pm;
 }
