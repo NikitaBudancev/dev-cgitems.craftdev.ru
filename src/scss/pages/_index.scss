@@ -9,7 +9,7 @@
   background-image: url("../images/home/course-bg.png");
   background-repeat: no-repeat;
   background-position-x: 85%;
-  background-position-y: 10%;
+  background-position-y: 18%;
 
   &::before {
     @include pseudo-element;
@@ -22,7 +22,7 @@
   }
 
   &__inner {
-    padding: 180px 0 68px;
+    padding: 200px 0 68px;
   }
 
   &__left {
@@ -176,7 +176,7 @@
 }
 
 .advantages {
-  padding: 276px 0 120px;
+  padding: 260px 0 120px;
   background: radial-gradient(
     58.95% 96.31% at 50% 50%,
     #0a1623 0%,
@@ -480,7 +480,7 @@
 
 .reviews {
   position: relative;
-  padding: 200px 0 232px;
+  padding: 200px 0 250px;
   background: radial-gradient(
     58.95% 96.31% at 50% 50%,
     #0a1623 0%,
@@ -555,10 +555,6 @@
     background-position: center;
     border: 1px solid #26303d;
     border-radius: 10px;
-
-    &-inner {
-      // padding: 40px 24px;
-    }
   }
 
   &__user {
@@ -594,10 +590,11 @@
 }
 
 .course-author {
-  padding: 350px 0 200px;
+  padding: 400px 0 200px;
   background-color: $bg-main;
 
   &__title {
+    margin-bottom: 28px;
     text-transform: initial;
   }
 
@@ -610,14 +607,38 @@
   }
 
   &__left {
-    max-width: 585px;
+    max-width: 650px;
   }
 
   &__content {
     max-width: 1290px;
 
     &-inner {
-      @include flex(space-between, flex-start);
+      @include flex(flex-start, flex-start);
+
+      padding-left: 42px;
+      letter-spacing: 1px;
     }
+  }
+
+  &__right {
+    margin-right: 73px;
+  }
+
+  &__work-img {
+    margin-right: 10px;
+  }
+
+  &__text {
+    margin-bottom: 25px;
+
+    &-last {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__text-light {
+    margin-bottom: 0;
+    margin-left: -17px;
   }
 }
