@@ -590,7 +590,7 @@
 }
 
 .course-author {
-  padding: 400px 0 200px;
+  padding: 400px 0 307px;
   background-color: $bg-main;
 
   &__title {
@@ -611,13 +611,33 @@
   }
 
   &__content {
-    max-width: 1290px;
+    max-width: 1315px;
 
     &-inner {
       @include flex(flex-start, flex-start);
 
-      padding-left: 42px;
+      position: relative;
+      z-index: 1;
+      padding-bottom: 116px;
+      padding-left: 68px;
       letter-spacing: 1px;
+
+
+  &::before {
+    @include pseudo-element;
+
+    position: absolute;
+    top: 165px;
+    right: 0;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    height: 570px;
+    content: "";
+    background-image: url("../images/home/course-dots-bg.png");
+    transform: translateY(-40%);
+  }
+
     }
   }
 
@@ -627,13 +647,14 @@
 
   &__work-img {
     margin-right: 10px;
+    border-radius: 3px;
   }
 
   &__text {
     margin-bottom: 25px;
 
     &-last {
-      margin-bottom: 40px;
+      margin-bottom: 72px;
     }
   }
 
@@ -641,4 +662,11 @@
     margin-bottom: 0;
     margin-left: -17px;
   }
+
+  & .feedback__title {
+    max-width: 760px;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+
 }
