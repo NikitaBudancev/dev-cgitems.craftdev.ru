@@ -42,7 +42,15 @@ $(function () {
     $slider.slick({
       slidesToShow: 4,
       prevArrow: '<button class="btn-slider btn-slider-prev"><span class="btn-slider-arrow btn-slider-arrow-prev"></span></button>',
-      nextArrow: '<button class="btn-slider btn-slider-next"><span class="btn-slider-arrow btn-slider-arrow-next"></span></button>'
+      nextArrow: '<button class="btn-slider btn-slider-next"><span class="btn-slider-arrow btn-slider-arrow-next"></span></button>',
+      responsive: [
+        {
+          breakpoint: 2000,
+          settings: {
+            slidesToShow: 3,
+          }
+        },
+      ]
     });
   }
 

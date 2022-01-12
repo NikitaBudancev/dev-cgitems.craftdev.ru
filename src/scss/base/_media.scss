@@ -10,7 +10,7 @@
     }
 
     &__inner {
-      padding: 30px 0 70px;
+      padding: 38px 0 70px;
     }
 
     &__text {
@@ -61,17 +61,54 @@
   }
 
   .advantages {
+    padding-top: 280px;
+
     &__list {
       grid-template-columns: 388px 394px 517px;
     }
   }
 
-  .accordion {
+  .feedback {
+    padding: 165px 0 200px;
+  }
 
+  .program {
+    padding: 178px 0 263px;
+
+    &::before {
+      display: none;
+    }
+
+    &__title {
+      margin-bottom: 115px;
+    }
+
+    &-top-text {
+      margin-bottom: 60px;
+    }
+
+    &__left {
+      max-width: 868px;
+      margin-right: 78px;
+    }
+  }
+
+  .accordion {
     &__content-inner {
       max-width: 613px;
     }
-
   }
 
+  .reviews {
+    padding: 83px 0 250px;
+  }
+}
+
+.author__photo img {
+    width: 525px;
+    height: 789px;
+}
+
+.course-author {
+  padding: 305px 0 307px;
 }
