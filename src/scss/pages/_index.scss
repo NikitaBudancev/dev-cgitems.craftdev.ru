@@ -622,22 +622,20 @@
       padding-left: 68px;
       letter-spacing: 1px;
 
+      &::before {
+        @include pseudo-element;
 
-  &::before {
-    @include pseudo-element;
-
-    position: absolute;
-    top: 165px;
-    right: 0;
-    z-index: -1;
-    display: block;
-    width: 100%;
-    height: 570px;
-    content: "";
-    background-image: url("../images/home/course-dots-bg.png");
-    transform: translateY(-40%);
-  }
-
+        position: absolute;
+        top: 165px;
+        right: 0;
+        z-index: -1;
+        display: block;
+        width: 100%;
+        height: 570px;
+        content: "";
+        background-image: url("../images/home/course-dots-bg.png");
+        transform: translateY(-40%);
+      }
     }
   }
 
@@ -668,5 +666,47 @@
     margin-bottom: 12px;
     line-height: 1.2;
   }
+}
 
+.footer {
+  padding: 70px 0 87px;
+  background-color: #26303d;
+
+  &-container {
+    padding: 0 320px;
+  }
+
+  &__inner {
+    @include flex(flex-start);
+  }
+
+  &__logo {
+    width: 100%;
+    max-width: 368px;
+    margin-right: 300px;
+
+    &-img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__menu {
+    @include flex(flex-start, flex-start);
+
+    &-list {
+      &-item {
+        max-width: 190px;
+        margin-right: 220px;
+        margin-bottom: 12px;
+        line-height: 1.4;
+      }
+
+      &-link {
+        @include font(false, $white, 500);
+
+        text-decoration: none;
+      }
+    }
+  }
 }
