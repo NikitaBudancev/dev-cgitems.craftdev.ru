@@ -102,13 +102,91 @@
   .reviews {
     padding: 83px 0 250px;
   }
-}
 
-// .author__photo img {
-//     width: 525px;
-//     height: 789px;
-// }
+  .course-author {
+    padding: 305px 0 290px;
 
-.course-author {
-  padding: 305px 0 307px;
+    &__inner {
+      position: relative;
+      padding-bottom: 545px;
+    }
+
+    &__content {
+      width: 100%;
+
+      &-inner {
+        flex-direction: column;
+        padding-left: 50px;
+
+        &::before {
+          display: none;
+        }
+      }
+    }
+
+    .author__photo {
+      max-width: initial;
+
+      & img {
+        width: 525px;
+        height: 790px;
+      }
+    }
+
+    &__left {
+      @include flex(flex-start, flex-start);
+
+      max-width: 100%;
+
+      .col-left {
+        max-width: 520px;
+        margin-right: 54px;
+      }
+
+      .col-right {
+        max-width: 500px;
+      }
+    }
+
+    &__right {
+      margin-bottom: 50px;
+    }
+
+    &__text-light {
+      margin-bottom: 15px;
+      margin-left: 0;
+    }
+
+    .feedback {
+      &__inner {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+
+      &__title {
+        max-width: 100%;
+        margin-bottom: 90px;
+      }
+    }
+  }
+
+  .footer {
+    &-container {
+      padding: 0 84px;
+    }
+
+    &__inner {
+      align-items: flex-start;
+    }
+
+    &__logo {
+      margin-right: 250px;
+
+      &-img {
+        width: 386px;
+      }
+    }
+  }
 }

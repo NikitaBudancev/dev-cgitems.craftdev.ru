@@ -20,6 +20,17 @@ button {
   cursor: pointer;
 }
 
+.link {
+  color: $white;
+  outline: none;
+  transition: 0.3s;
+}
+
+.link:hover,
+.link:focus {
+  color: $hover-link;
+}
+
 input {
   outline: none;
 }

@@ -9,6 +9,7 @@ $green: #09945c;
 $green-hover: #007b51;
 $default: #0099e9;
 $color-link: #056ea6;
+$hover-link: #0377b4;
 $dark: #202833;
 $bg-main: #171b1f;
 $border-dark: #2f3c4a;
@@ -22,7 +23,7 @@ $color-gradient: radial-gradient(
     #962ac95c 0%,
     #0000 55.73%
   ),
-  #0099e9;
+  $default;
 
 // ==== END COLORS ==== //
 

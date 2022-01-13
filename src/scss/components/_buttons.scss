@@ -96,6 +96,8 @@
   &-default {
     color: $white;
     background: $default;
+    outline: none;
+    transition: all 0.3s;
 
     &-center {
       justify-content: center;
@@ -103,6 +105,7 @@
       text-align: center;
     }
 
+    &:focus,
     &:hover {
       background: #0377b4;
     }
