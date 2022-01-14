@@ -1,5 +1,6 @@
 @import "./vendors/normalize";
 @import "./vendors/slick";
+@import "./vendors/touch-sideswipe";
 
 @import "./abstracts/variables";
 @import "./abstracts/mixins";
@@ -14,6 +15,7 @@
 @import "./components/accordion";
 
 @import "./layout/header";
+@import "./layout/footer";
 
 @import "./pages/index";
 

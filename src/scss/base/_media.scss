@@ -190,3 +190,75 @@
     }
   }
 }
+
+@media (max-width: 1870px) {
+  .header {
+    &__search-form {
+      order: 1;
+      width: auto;
+      max-width: initial;
+    }
+
+    &__item-user {
+      order: 1;
+    }
+  }
+
+  .form-search-header {
+    display: none;
+  }
+
+  .mobile-search {
+    display: block;
+  }
+}
+
+@media (max-width: 1380px) {
+  .header {
+    padding: 10px 26px 10px 24px;
+
+    .logo__img {
+      width: 100px;
+    }
+
+    .menu {
+      background-color: #26303d;
+      
+      &__list {
+        flex-direction: column;
+      }
+    }
+
+    &__item {
+      margin-right: 44px;
+      margin-left: 0;
+    }
+
+    &__search-form {
+      margin-right: 18px;
+    }
+
+    &__item-button {
+      display: none;
+    }
+
+    & .user,
+    & .mobile-search {
+      width: 36px;
+      height: 36px;
+      background-color: #414f62;
+    }
+
+    .form-search-header {
+      position: absolute;
+      top: 56px;
+      right: 0;
+      left: 0;
+      z-index: 2;
+
+      .header__form-control {
+        border-radius: 0;
+      }
+    }
+  }
+}

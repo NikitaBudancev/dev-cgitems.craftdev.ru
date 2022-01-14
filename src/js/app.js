@@ -54,4 +54,33 @@ $(function () {
     });
   }
 
+
+  $('.mobile-search').on('click', function () {
+    $('.form-search-header').fadeToggle(300);
+    $('.fade').fadeToggle(300);
+    $('.header__form-control').focus();
+  })
+
+  $('.fade').on('click', function () {
+    $('.form-search-header').fadeOut(300);
+    $('.fade').fadeOut(300);
+  })
+
+  var config = {
+    elementID: 'touchSideSwipe',
+    elementWidth: 400, //px
+    elementMaxWidth: 1, // *100%
+    sideHookWidth: 44, //px
+    moveSpeed: 0.3, //sec
+    opacityBackground: 0.9,
+    shiftForStart: 100, // px
+    windowMaxWidth: 1024, // px
+  }
+  var touchSideSwipe = new TouchSideSwipe(config);
+
+  setTimeout(function () { touchSideSwipe.tssOpen() }, 2000);
+  setTimeout(function () { touchSideSwipe.tssClose() }, 3500);
+
+  document.querySelector('.menu__btn').addEventListener('click', function () { touchSideSwipe.tssOpen() });
+
 })
