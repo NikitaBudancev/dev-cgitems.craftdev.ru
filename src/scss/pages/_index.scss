@@ -6,7 +6,7 @@
   position: relative;
   padding-bottom: 63px;
   background-color: $bg-main;
-  background-image: url("../images/home/course-bg.png");
+  background-image: url("#{$path}home/course-bg.png");
   background-repeat: no-repeat;
   background-position-x: 85%;
   background-position-y: 18%;
@@ -18,7 +18,7 @@
     right: 0;
     width: 58%;
     height: 100%;
-    background-image: url("../images/home/course-dots-bg.png");
+    background-image: url("#{$path}home/course-dots-bg.png");
   }
 
   &__inner {
@@ -77,7 +77,7 @@
         left: 0;
         width: 28px;
         height: 28px;
-        background-image: url("../images/icons/check.svg");
+        background-image: url("#{$path}icons/check.svg");
       }
     }
   }
@@ -155,15 +155,15 @@
     }
 
     &-newbie::before {
-      background-image: url("../images/home/who-course/who-course-1.svg");
+      background-image: url("#{$path}home/who-course/who-course-1.svg");
     }
 
     &-2d-painters::before {
-      background-image: url("../images/home/who-course/who-course-2.svg");
+      background-image: url("#{$path}home/who-course/who-course-2.svg");
     }
 
     &-experienced-3d::before {
-      background-image: url("../images/home/who-course/who-course-3.svg");
+      background-image: url("#{$path}home/who-course/who-course-3.svg");
     }
   }
 
@@ -192,7 +192,7 @@
     display: grid;
     grid-template-rows: 120px 30px 120px;
     grid-template-columns: 600px 600px 740px;
-    background-image: url("../images/home/advantages/border-dashed.svg");
+    background-image: url("#{$path}home/advantages/border-dashed.svg");
     background-repeat: repeat-x;
     background-position: center;
   }
@@ -222,7 +222,7 @@
       left: 18px;
       width: 28px;
       height: 28px;
-      background-image: url("../images/home/advantages/border-circle.svg");
+      background-image: url("#{$path}home/advantages/border-circle.svg");
       background-position: center;
     }
 
@@ -240,7 +240,7 @@
 
       &::before {
         width: 58px;
-        background-image: url("../images/home/advantages/advantage-1.svg");
+        background-image: url("#{$path}home/advantages/advantage-1.svg");
       }
 
       &::after {
@@ -256,7 +256,7 @@
       &::before {
         width: 63px;
         height: 63px;
-        background-image: url("../images/home/advantages/advantage-2.svg");
+        background-image: url("#{$path}home/advantages/advantage-2.svg");
       }
     }
 
@@ -265,7 +265,7 @@
       grid-column: 3;
 
       &::before {
-        background-image: url("../images/home/advantages/advantage-3.svg");
+        background-image: url("#{$path}home/advantages/advantage-3.svg");
       }
     }
 
@@ -275,7 +275,7 @@
       margin-top: 56px;
 
       &::before {
-        background-image: url("../images/home/advantages/advantage-4.svg");
+        background-image: url("#{$path}home/advantages/advantage-4.svg");
       }
     }
   }
@@ -309,7 +309,7 @@
       left: 0;
       width: 28px;
       height: 28px;
-      background-image: url("../images/icons/check.svg");
+      background-image: url("#{$path}icons/check.svg");
     }
 
     &-text {
@@ -350,7 +350,7 @@
       z-index: -1;
       width: 540px;
       height: 415px;
-      background-image: url("../images/home/form-bg-cube.svg");
+      background-image: url("#{$path}home/form-bg-cube.svg");
       background-repeat: no-repeat;
     }
 
@@ -362,7 +362,7 @@
       z-index: -1;
       width: 500px;
       height: 100%;
-      background-image: url("../images/home/form-bg-pixel.svg");
+      background-image: url("#{$path}home/form-bg-pixel.svg");
       background-repeat: no-repeat;
     }
   }
@@ -438,7 +438,7 @@
     width: 1200px;
     height: 850px;
     content: "";
-    background-image: url("../images/home/course-dots-bg.png");
+    background-image: url("#{$path}home/course-dots-bg.png");
     transform: translateY(-40%);
   }
 
@@ -523,7 +523,7 @@
     display: block;
     width: 100%;
     height: 100%;
-    background-image: url("../images/icons/accordion-arrow.svg");
+    background-image: url("#{$path}icons/accordion-arrow.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -551,7 +551,7 @@
     width: 450px !important;
     height: 450px;
     padding: 35px 40px 0;
-    background-image: url("../images/home/reviews/reviews.png");
+    background-image: url("#{$path}home/reviews/reviews.png");
     background-repeat: no-repeat;
     background-position: center;
     border: 1px solid #26303d;
@@ -634,7 +634,7 @@
         width: 100%;
         height: 570px;
         content: "";
-        background-image: url("../images/home/course-dots-bg.png");
+        background-image: url("#{$path}home/course-dots-bg.png");
         transform: translateY(-40%);
       }
     }

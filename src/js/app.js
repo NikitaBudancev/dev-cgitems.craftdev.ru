@@ -74,7 +74,7 @@ $(function () {
     moveSpeed: 0.3, //sec
     opacityBackground: 0.9,
     shiftForStart: 100, // px
-    windowMaxWidth: 1024, // px
+    windowMaxWidth: 1380, // px
   }
   var touchSideSwipe = new TouchSideSwipe(config);
 

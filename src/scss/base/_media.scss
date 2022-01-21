@@ -211,6 +211,35 @@
   .mobile-search {
     display: block;
   }
+
+  .who-course__item {
+    min-width: auto;
+    max-width: 688px;
+  }
+
+  .advantages {
+    &__list {
+      grid-template-columns: 325px 358px 430px;
+    }
+  }
+}
+
+@media (max-width: 1640px) {
+  .who-course__item {
+    min-width: auto;
+    max-width: 560px;
+  }
+
+  .advantages {
+    &__list {
+      grid-template-columns: 250px 260px 250px;
+    }
+
+    &__item {
+      width: 485px;
+      max-width: auto;
+    }
+  }
 }
 
 @media (max-width: 1380px) {
@@ -222,8 +251,13 @@
     }
 
     .menu {
+      display: none;
       background-color: #26303d;
-      
+
+      &__btn {
+        display: block;
+      }
+
       &__list {
         flex-direction: column;
       }
@@ -259,6 +293,418 @@
       .header__form-control {
         border-radius: 0;
       }
+    }
+  }
+}
+
+@media (max-width: 1500px) {
+  .course {
+    background-position-x: 98%;
+    background-position-y: 21%;
+    background-size: 45%;
+
+    &::before {
+      width: 43%;
+    }
+
+    &__detail {
+      max-width: 1312px;
+
+      &-list {
+        padding-right: 60px;
+      }
+    }
+
+    &__detail-item {
+      font-size: 26px;
+    }
+  }
+
+  .mission {
+    &__inner {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__left {
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 80px;
+    }
+
+    &__bottom-item {
+      max-width: 520px;
+    }
+  }
+}
+
+@media (max-width: 1370px) {
+  .title {
+    font-size: 32px;
+  }
+
+  .container {
+    padding: 0 24px;
+  }
+
+  .course {
+    &__left {
+      max-width: 700px;
+    }
+
+    &__icon {
+      margin-right: 30px;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &__detail {
+      max-width: 1200px;
+
+      &-item {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1370px) {
+  .title {
+    font-size: 32px;
+  }
+
+  .course {
+    padding: 0 24px;
+
+    &__left {
+      padding: 0;
+    }
+
+    &__icon {
+      margin-right: 30px;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &__detail {
+      margin-left: -24px;
+
+      &-list {
+        padding-left: 24px;
+      }
+    }
+  }
+
+  .advantages {
+    &__list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-image: none !important;
+    }
+
+    &__item {
+      padding-bottom: 100px;
+      margin-top: 0 !important;
+
+      &::after {
+        top: -47px !important;
+        left: 5px;
+        width: 64px;
+        height: 2px;
+        background-image: url("#{$path}home/advantages/border-dashed.svg");
+        transform: rotate(90deg);
+      }
+
+      &:nth-child(1)::before {
+        left: 18px;
+      }
+
+      &:nth-child(1)::after {
+        display: none;
+      }
+
+      // &-top {
+      //   &::after {
+      //     top: 0;
+      //   }
+      // }
+    }
+  }
+}
+
+@media (max-width: 1170px) {
+  .who-course {
+    &-title {
+      width: 100%;
+    }
+
+    &__list {
+      flex-direction: column;
+    }
+
+    &__item {
+      max-width: 90%;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .course {
+    background-position-x: 2%;
+    background-size: 60%;
+
+    &::before {
+      display: none;
+    }
+
+    &__inner {
+      background-image: url("../images/home/course-dots-bg.webp");
+      background-repeat: no-repeat;
+      background-position-y: 38px;
+    }
+
+    &__icons {
+      padding-bottom: 400px;
+    }
+
+    &__detail {
+      &-list {
+        padding-right: 15px;
+      }
+
+      &-item {
+        padding-left: 30px;
+        font-size: 16px;
+
+        &::before {
+          width: 20px;
+          height: 20px;
+          background-size: cover;
+        }
+      }
+    }
+  }
+
+  .mission {
+    &-text-big {
+      font-size: 20px;
+    }
+
+    &__bottom {
+      flex-direction: column;
+
+      &-item {
+        &:first-child {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .course {
+    background-position-x: 2%;
+    background-size: 60%;
+
+    &::before {
+      display: none;
+    }
+
+    &__inner {
+      background-image: url("../images/home/course-dots-bg.webp");
+      background-repeat: no-repeat;
+      background-position-y: 38px;
+    }
+
+    &__detail {
+      margin: 0;
+
+      &-list {
+        flex-direction: column;
+        align-items: flex-start;
+
+        // background-image: url("#{$path}home/course/course-mobile-bg.png");
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        border-radius: 10px;
+      }
+
+      &-item {
+        padding-left: 30px;
+        margin-bottom: 24px;
+        font-size: 16px;
+
+        &::before {
+          width: 20px;
+          height: 20px;
+          background-size: cover;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 26px;
+
+    &-blue {
+      font-size: 26px;
+    }
+
+    &-text {
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+
+  .course {
+    background-size: 90%;
+
+    &__detail {
+      &-list {
+        background-image: url("#{$path}home/course/course-mobile-bg.png");
+        background-repeat: no-repeat;
+        background-position: 100% 100%;
+      }
+    }
+  }
+
+  .btn-course {
+    position: relative;
+    width: 100%;
+    height: 44px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: none;
+
+    &::before {
+      left: 28px;
+      width: 61px;
+      height: 100%;
+      background-image: url("#{$path}home/course/course-btn-mobile.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      box-shadow: none;
+    }
+
+    &::after {
+      @include pseudo-element;
+
+      top: 0;
+      right: -2px;
+      width: 61px;
+      height: 100%;
+      background-image: url("#{$path}home/course/course-btn-mobile.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      transform: rotate(180deg);
+    }
+  }
+
+  .mission {
+    &__left-item {
+      background-image: url("#{$path}home/mission-bg-mobile.png");
+      background-repeat: no-repeat;
+      background-position: 100% 100%;
+    }
+
+    &__right {
+      display: none;
+    }
+
+    .mission-text-big {
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    &__bottom {
+      font-size: 14px;
+    }
+  }
+
+  .who-course {
+    padding: 20px 0;
+
+    &-title {
+      padding-left: 0 !important;
+    }
+
+    &__item {
+      max-width: 100%;
+      padding-left: 80px;
+      margin-bottom: 25px;
+
+      &::before {
+        width: 48px;
+        height: 55px;
+        background-size: contain;
+      }
+
+      &-title {
+        margin-top: 10px;
+        margin-bottom: 54px;
+      }
+
+      &-text {
+        margin-left: -80px;
+        font-size: 14px;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .course {
+    background-size: 100%;
+
+    &__detail {
+      &-list {
+        background-image: url("#{$path}home/course/course-mobile-bg.png");
+        background-repeat: no-repeat;
+        background-position: 100% 100%;
+      }
+    }
+  }
+
+  .btn-course {
+    position: relative;
+    width: 100%;
+    height: 44px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: none;
+
+    &::before {
+      left: 28px;
+      width: 61px;
+      height: 100%;
+      background-image: url("#{$path}home/course/course-btn-mobile.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      box-shadow: none;
+    }
+
+    &::after {
+      @include pseudo-element;
+
+      top: 0;
+      right: -2px;
+      width: 61px;
+      height: 100%;
+      background-image: url("#{$path}home/course/course-btn-mobile.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      transform: rotate(180deg);
     }
   }
 }
