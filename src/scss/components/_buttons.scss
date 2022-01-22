@@ -158,6 +158,10 @@
     border-radius: 5px;
     box-shadow: 0 0 160px #005DE9;
 
+    &-mobile {
+      display: none;
+    }
+
     &::before {
       @include pseudo-element;
       @include сentering-xy;

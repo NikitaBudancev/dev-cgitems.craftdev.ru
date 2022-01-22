@@ -150,7 +150,7 @@
             </div>
         </div>
     </section>
-                <!-- 
+
     <section class="course-learn">
         <div class="container">
             <div class="course-learn__inner">
@@ -208,8 +208,10 @@
             </div>
         </div>
     </section>
+
     <section class="feedback">
         <div class="container">
+            <button class="btn btn-course btn-course-mobile">Записаться на курс</button>
             <div class="feedback__inner">
                 <div class="feedback__title">Запишись на курс или получи консультацию</div>
                 <form action="" class="feedback__form">
@@ -253,6 +255,7 @@
             </div>
         </div>
     </section>
+
     <section class="program">
         <div class="container">
             <div class="title-blue program__title">
@@ -782,11 +785,16 @@
             </div>
         </div>
     </section>
+
     <section class="course-author">
         <div class="container">
             <div class="course-author__inner">
                 <div class="author__photo">
-                    <img src="images/home/course-author/author-photo.jpg" alt="">
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="images/home/course-author/author-photo-mobile-550.png">
+                        <source media="(max-width: 376px)" srcset="images/home/course-author/author-photo-mobile.png">
+                        <img src="images/home/course-author/author-photo.jpg" alt="">
+                    </picture>
                 </div>
                 <div class="course-author__content">
                     <div class="course-author__content-inner">
@@ -826,6 +834,7 @@
                             </div>
                         </div>
                     </div>
+                    <button class="btn btn-course btn-course-mobile">Записаться на курс</button>
                     <div class="feedback__inner">
                         <div class="feedback__title">Запишись на курс или получи консультацию</div>
                         <form action="" class="feedback__form">
@@ -872,8 +881,8 @@
             </div>
         </div>
     </section>
-
-    @@include("chunk/footer.html") -->
+    
+    @@include("chunk/footer.html")
 
     <script src="js/app.js"></script>
 </body>

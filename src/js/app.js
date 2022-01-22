@@ -50,6 +50,18 @@ $(function () {
             slidesToShow: 3,
           }
         },
+        {
+          breakpoint: 1680,
+          settings: {
+            slidesToShow: 2,
+          }
+        },
+        {
+          breakpoint: 1000,
+          settings: {
+            slidesToShow: 1,
+          }
+        },
       ]
     });
   }
