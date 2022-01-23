@@ -210,10 +210,12 @@
 
       top: 0;
       left: 0;
-      width: 73px;
+      width: 63px;
       height: 63px;
       filter: drop-shadow(0 0 60px #005de9);
+      background-repeat: no-repeat;
       background-position: center;
+      background-size: cover;
     }
 
     &::after {
@@ -237,9 +239,10 @@
     &:nth-child(1) {
       grid-row: 1;
       grid-column: 1/2;
+      padding-left: 66px;
 
       &::before {
-        width: 58px;
+        left: -12px;
         background-image: url("#{$path}home/advantages/advantage-1.svg");
       }
 
@@ -254,8 +257,6 @@
       margin-top: 56px;
 
       &::before {
-        width: 63px;
-        height: 63px;
         background-image: url("#{$path}home/advantages/advantage-2.svg");
       }
     }

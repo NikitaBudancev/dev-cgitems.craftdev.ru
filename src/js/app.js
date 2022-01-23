@@ -5,11 +5,11 @@ $(function () {
     e.preventDefault();
     let $this = $(this);
 
-    if (!$this.hasClass("accordion-active")) {
-      $(".accordion__content").slideUp(300);
-      $(".accordion__title").removeClass("accordion-active");
-      $('.accordion__arrow').removeClass('accordion__rotate');
-    }
+    // if (!$this.hasClass("accordion-active")) {
+    //   $(".accordion__content").slideUp(300);
+    //   $(".accordion__title").removeClass("accordion-active");
+    //   $('.accordion__arrow').removeClass('accordion__rotate');
+    // }
 
     $this.toggleClass("accordion-active");
     $this.next().slideToggle();
