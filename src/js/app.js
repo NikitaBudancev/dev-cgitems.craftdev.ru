@@ -78,21 +78,47 @@ $(function () {
     $('.fade').fadeOut(300);
   })
 
-  var config = {
-    elementID: 'touchSideSwipe',
-    elementWidth: 400, //px
-    elementMaxWidth: 1, // *100%
-    sideHookWidth: 44, //px
-    moveSpeed: 0.3, //sec
-    opacityBackground: 0.9,
-    shiftForStart: 100, // px
-    windowMaxWidth: 1380, // px
+
+  const p1 = document.querySelector('.page1');
+
+  function hanleTouchStart(e) {
+    startingX = e.touches[0].clientX;
   }
-  var touchSideSwipe = new TouchSideSwipe(config);
 
-  setTimeout(function () { touchSideSwipe.tssOpen() }, 2000);
-  setTimeout(function () { touchSideSwipe.tssClose() }, 3500);
+  function hanleTouchMove(e) {
+    let touch = e.touches[0];
+    let change = startingX - touch.clientX;
+    if (change < 0) {
+      return;
+    };
 
-  document.querySelector('.menu__btn').addEventListener('click', function () { touchSideSwipe.tssOpen() });
+    p1.style.left = '-' + change + 'px';
+    e.preventDefault();
+  }
+
+
+  function hanleTouchEnd(e) {
+    let change = startingX - e.changedTouches[0].clientX;
+    let treshold = screen.width / 3;
+    if (change < treshold) {
+      p1.style.left = 0;
+      p1.style.opacity = 1;
+      $('body').css({ 'overflow': 'hidden' });
+    } else {
+      p1.style.left = '-95%';
+      p1.style.opacity = 0;
+      $('body').css({ 'overflow': 'initial' });
+    }
+  }
+
+  p1.addEventListener("touchstart", hanleTouchStart, false);
+  p1.addEventListener("touchmove", hanleTouchMove, false);
+  p1.addEventListener("touchend", hanleTouchEnd, false);
+
+
+  $('.menu__btn').on('click', function () {
+    $('.page1').css({ 'left': 0, 'opacity': 1 });
+    $('body').css({ 'overflow': 'hidden' });
+  })
 
 })

@@ -1,4 +1,5 @@
 <div class="fade"></div>
+<div class="page2" id="page2"></div>
 <header class="header">
     <div class="header__inner">
         <div class="logo header-logo">
@@ -6,7 +7,20 @@
                 <img class="logo__img" src="images/logo-cg-items.svg" alt="">
             </a>
         </div>
-        <nav class="header__item menu touch-side-swipe" id="touchSideSwipe">
+        <style>
+            .page1 {
+       position: fixed;
+       top: 0;
+       left: -95%;
+       width: 100vw;
+       height:100vh;
+       background-color: red;
+       z-index: 1000;
+       transition: all 0.3s;
+       opacity: 0;
+}
+        </style>
+        <nav class="header__item menu page1" id="page1">
             <ul class="menu__list">
                 <li class="menu__item">
                     <a class="link menu__link" href="#">О курсе</a>
