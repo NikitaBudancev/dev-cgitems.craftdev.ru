@@ -1,0 +1,27 @@
+.social {
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    margin-right: 8px;
+  }
+
+  &__link {
+    outline: none;
+
+    path {
+      transition: 0.3s;
+    }
+
+    &:hover .social__icon path,
+    &:focus .social__icon path {
+      fill: #d6e7ff;
+    }
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+}
