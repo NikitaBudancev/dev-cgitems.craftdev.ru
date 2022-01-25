@@ -1,4 +1,5 @@
 .header {
+  position: relative;
   padding: 7px 26px 7px 24px;
   background-color: $dark;
 
@@ -22,9 +23,27 @@
   &__form-control {
     width: 100%;
   }
+
+  .tss-label {
+    display: none;
+  }
+}
+
+.mobile-search {
+  display: none;
 }
 
 .menu {
+  &__btn {
+    position: absolute;
+    right: 0;
+    display: none;
+    width: 56px;
+    height: 100%;
+    background-color: #414f62;
+    border: none;
+  }
+
   &__list {
     @include flex;
   }

@@ -45,6 +45,7 @@ function scripts() {
     return src([
         'node_modules/jquery/dist/jquery.js',
         'node_modules/slick-carousel/slick/slick.js',
+        'src/js/touch-sideswipe.min.js',
         'src/js/app.js'
     ])
         .pipe(concat('app.js'))
