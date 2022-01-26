@@ -121,4 +121,11 @@ $(function () {
     $('body').css({ 'overflow': 'hidden' });
   })
 
+  $('.btn-course-mobile,.btn-course').on('click', function () {
+    $.fancybox.open({
+      src: '.modal-course',
+      type: 'inline'
+    });
+  });
+
 })

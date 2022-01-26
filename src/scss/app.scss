@@ -1,6 +1,6 @@
 @import "./vendors/normalize";
 @import "./vendors/slick";
-@import "./vendors/touch-sideswipe";
+@import "./vendors/fancybox.scss";
 
 @import "./abstracts/variables";
 @import "./abstracts/mixins";
@@ -14,6 +14,8 @@
 @import "./components/buttons";
 @import "./components/accordion";
 @import "./components/socials";
+@import "./components/modals";
+
 
 @import "./layout/header";
 @import "./layout/footer";
