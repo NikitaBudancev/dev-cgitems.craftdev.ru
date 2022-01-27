@@ -148,9 +148,7 @@
 .btn {
   font-weight: 700;
   color: $white;
-  cursor: pointer;
   background-color: $default;
-  border: none;
 
   &-course {
     position: relative;
@@ -161,7 +159,7 @@
     text-transform: uppercase;
     background: #1c79d2;
     border-radius: 5px;
-    box-shadow: 0 0 160px #005DE9;
+    box-shadow: 0 0 160px #005de9;
 
     &-mobile {
       display: none;
@@ -175,6 +173,24 @@
       width: 1px;
       height: 1px;
       box-shadow: 0 0 100px 100px #0192e142;
+    }
+  }
+
+  &-scroll-up {
+    position: fixed;
+    right: 30px;
+    bottom: 20px;
+  }
+
+  &-icon {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    background-color: transparent;
+
+    svg {
+      width: 40px;
+      height: 40px;
     }
   }
 }

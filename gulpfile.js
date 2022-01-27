@@ -46,6 +46,7 @@ function scripts() {
         'node_modules/jquery/dist/jquery.js',
         'node_modules/slick-carousel/slick/slick.js',
         'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
+        'src/js/mesonry.js',
         'src/js/app.js'
     ])
         .pipe(concat('app.js'))

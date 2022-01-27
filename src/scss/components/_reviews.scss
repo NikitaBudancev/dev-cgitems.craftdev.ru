@@ -1,0 +1,172 @@
+.reviews {
+  &__wrapper {
+    height: 1200px;
+    margin-right: -25px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      background-color: #010203;
+      border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #384557;
+      border-radius: 5px;
+    }
+  }
+
+  &-slider {
+    position: relative;
+    padding: 200px 0 250px;
+    background: radial-gradient(
+      58.95% 96.31% at 50% 50%,
+      #0a1623 0%,
+      #121618 100%
+    );
+    background-color: #2f3c4a;
+  }
+
+  .slick-list {
+    padding: 0 10% 0 0;
+  }
+
+  .slider__counter {
+    position: absolute;
+    right: 200px;
+    bottom: -93px;
+    font-size: 26px;
+  }
+
+  .btn-slider {
+    position: absolute;
+    bottom: -95px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+    font-size: 0;
+    font-weight: 700;
+    line-height: 30px;
+    color: $white;
+    text-align: center;
+    vertical-align: middle;
+    background-color: $default;
+    border: 1px solid #26303d;
+    border-radius: 50%;
+    transition: all 0.3s ease-out;
+  }
+
+  .btn-slider-arrow {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url("#{$path}icons/accordion-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .btn-slider-prev {
+    right: 280px;
+    transform: rotate(90deg);
+  }
+
+  .btn-slider-next {
+    right: 125px;
+    transform: rotate(270deg);
+  }
+
+  &-container {
+    padding-right: 0;
+  }
+
+  &__title {
+    margin-bottom: 95px;
+  }
+
+  &__item {
+    width: 100%;
+    max-width: 448px;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    background-color: #202833;
+    border: 1px solid #26303d;
+    border-radius: 10px;
+
+    &-slider {
+      display: block !important;
+      width: 450px !important;
+      height: 450px;
+      padding: 35px 40px 0;
+      background-image: url("#{$path}reviews/reviews.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      border: 1px solid #26303d;
+      border-radius: 10px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  &__user {
+    @include flex(flex-start);
+
+    padding: 16px 0 16px 20px;
+
+    &-slider {
+      padding: 0;
+      margin-bottom: 35px;
+      letter-spacing: 1px;
+    }
+  }
+
+  &__user-right {
+    margin-left: 10px;
+    font-size: 16px;
+  }
+
+  &__date {
+    @include font(14px, #7b8ea9, 700);
+  }
+
+  &__text {
+    padding: 0 16px;
+    margin-bottom: 15px;
+    @include font(16px, false, 300);
+
+    letter-spacing: 1px;
+
+    &-slider {
+      @include font(false, false, 300);
+
+      height: 260px;
+      padding: 0;
+      margin-bottom: 20px;
+      overflow-y: hidden;
+      letter-spacing: 1px;
+    }
+  }
+
+  &__link {
+    @include font(16px, $white);
+
+    margin: 0 16px;
+    text-transform: uppercase;
+
+    &-slider {
+      @include font(14px, $white);
+
+      margin: 0;
+    }
+  }
+}

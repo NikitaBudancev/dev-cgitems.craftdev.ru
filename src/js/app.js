@@ -16,7 +16,7 @@ $(function () {
     $('.accordion__arrow', this).toggleClass('accordion__rotate');
   });
 
-  let $slider = $('.reviews__list');
+  let $slider = $('.reviews__list-slider');
 
   if ($slider.length) {
     let currentSlide;
@@ -127,5 +127,17 @@ $(function () {
       type: 'inline'
     });
   });
+
+  $('.reviews__list').masonry({
+    // options
+    itemSelector: '.reviews__item',
+    columnWidth: 448,
+    gutter: 16
+  });
+
+  $('.btn-scroll-up').on('click', function () {
+    $('html, body').animate({scrollTop: 0}, 500);
+    $('.reviews__wrapper').animate({scrollTop: 0}, 500);
+    });
 
 })
