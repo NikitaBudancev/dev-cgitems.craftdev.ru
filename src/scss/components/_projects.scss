@@ -3,6 +3,8 @@
 }
 
 .projects {
+  padding-bottom: 30px;
+
   &__list {
     display: flex;
     flex-wrap: wrap;
@@ -18,6 +20,8 @@
     width: 100%;
     max-width: 448px;
     padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #26303d;
   }
 
   &__top {
