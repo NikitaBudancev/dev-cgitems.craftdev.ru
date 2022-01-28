@@ -1,3 +1,11 @@
+@media (max-width: 2550px) {
+  .reviews {
+    &__item {
+      max-width: 404px;
+    }
+  }
+}
+
 @media (max-width: 2000px) {
   .course {
     background-position-x: 97%;
@@ -273,6 +281,10 @@
   }
 
   .reviews {
+    &__item {
+      max-width: 344px;
+    }
+
     .slick-list {
       padding: 0 !important;
     }
@@ -351,6 +363,10 @@
   .reviews {
     .slick-list {
       padding: 0 10% 0 0 !important;
+    }
+
+    &__item {
+      max-width: 384px;
     }
   }
 
@@ -690,6 +706,12 @@
 
     &__item {
       max-width: 90%;
+    }
+  }
+
+  .reviews {
+    &__item {
+      max-width: 470px;
     }
   }
 }
@@ -1133,6 +1155,16 @@
     }
   }
 
+  .content-scroll {
+    height: auto;
+    margin-right: 0;
+    overflow: initial;
+  }
+
+  .btn-scroll-up {
+    display: none;
+  }
+
   .reviews {
     padding: 10px 0 120px;
     background: none;
@@ -1143,9 +1175,15 @@
     }
 
     &__item {
+      max-width: 100%;
+
       &-slider {
         padding: 0;
       }
+    }
+
+    &__img {
+      display: none;
     }
 
     &__text {
@@ -1154,6 +1192,19 @@
         line-height: 1.4;
         letter-spacing: 0.8px;
       }
+
+      &-desk {
+        height: 100px;
+        overflow: hidden;
+      }
+    }
+
+    &__link-desk {
+      display: none;
+    }
+
+    &__detail {
+      top: 15px;
     }
 
     &__user {

@@ -179,7 +179,16 @@
   &-scroll-up {
     position: fixed;
     right: 30px;
-    bottom: 20px;
+    bottom: 25px;
+
+    svg path{
+      transition: all 0.3s;
+    }
+
+    &:hover svg path,
+    &:focus svg path {
+      fill: #7d92b0;
+    }
   }
 
   &-icon {

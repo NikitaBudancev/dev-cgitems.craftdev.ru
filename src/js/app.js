@@ -128,16 +128,17 @@ $(function () {
     });
   });
 
+
+
   $('.reviews__list').masonry({
-    // options
     itemSelector: '.reviews__item',
-    columnWidth: 448,
+    columnWidth: '.reviews__item',
     gutter: 16
   });
 
   $('.btn-scroll-up').on('click', function () {
-    $('html, body').animate({scrollTop: 0}, 500);
-    $('.reviews__wrapper').animate({scrollTop: 0}, 500);
-    });
+    $('html, body').animate({ scrollTop: 0 }, 500);
+    $('.content-scroll').animate({ scrollTop: 0 }, 500);
+  });
 
 })

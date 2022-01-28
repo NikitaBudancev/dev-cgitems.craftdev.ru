@@ -17,6 +17,8 @@
 @import "./components/modals";
 @import "./components/reviews";
 @import "./components/breadcrumbs";
+@import "./components/projects";
+
 
 
 @import "./layout/header";
@@ -55,7 +57,7 @@ form {
 
     &-elements {
       display: flex;
-      justify-content: center;
+      margin-left: 64px;
 
       .bar-element {
         @at-root .add-shrink#{&} {

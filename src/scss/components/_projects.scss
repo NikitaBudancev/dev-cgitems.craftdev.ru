@@ -1,0 +1,46 @@
+.panel-bar {
+  margin-bottom: 40px;
+}
+
+.projects {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  &__item {
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 270px;
+    width: 100%;
+    max-width: 448px;
+    padding: 20px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-user-name {
+    max-width: 110px;
+  }
+
+  .reviews__user-projects {
+    padding: 0;
+  }
+
+  .stage {
+    background-color: #2ea1e5;
+    font-size: 12px;
+    line-height: 0;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 7px;
+    border-radius: 5px;
+  }
+}

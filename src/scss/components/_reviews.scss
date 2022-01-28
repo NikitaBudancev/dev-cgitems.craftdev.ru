@@ -1,26 +1,4 @@
 .reviews {
-  &__wrapper {
-    height: 1200px;
-    margin-right: -25px;
-    overflow-y: auto;
-
-    &::-webkit-scrollbar {
-      width: 8px;
-    }
-
-    &::-webkit-scrollbar-track {
-      margin-top: 20px;
-      margin-bottom: 20px;
-      background-color: #010203;
-      border-radius: 5px;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background-color: #384557;
-      border-radius: 5px;
-    }
-  }
-
   &-slider {
     position: relative;
     padding: 200px 0 250px;
@@ -30,6 +8,12 @@
       #121618 100%
     );
     background-color: #2f3c4a;
+  }
+
+  &__detail {
+    position: absolute;
+    top: 86px;
+    right: 16px;
   }
 
   .slick-list {
