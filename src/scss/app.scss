@@ -14,6 +14,7 @@
 @import "./components/buttons";
 @import "./components/accordion";
 @import "./components/socials";
+@import "./components/share";
 @import "./components/modals";
 @import "./components/reviews";
 @import "./components/breadcrumbs";
@@ -47,6 +48,12 @@ form {
     color: $white;
     background: $dark;
 
+    &.shadow {
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 24px 16px 4px #171B1F;
+    }
+
     &-default {
       padding: 10px 26px;
     }
@@ -65,9 +72,24 @@ form {
         }
 
         position: relative;
-        padding: 14px 16px 11px;
+        padding: 14px 57px 11px;
         font-weight: bold;
         text-align: center;
+        transition: all 0.3s;
+
+        &::before {
+          position: absolute;
+          top: 0;
+          left: calc(50% - 10px);
+          width: 0;
+          height: 0;
+          content: "";
+          border-color: $white transparent transparent transparent;
+          border-style: solid;
+          border-width: 10px;
+          opacity: 0;
+          transition: all 0.3s;
+        }
 
         &:hover,
         &.active {
@@ -79,19 +101,12 @@ form {
           }
 
           &::before {
-            position: absolute;
-            top: 0;
-            left: calc(50% - 10px);
-            width: 0;
-            height: 0;
-            content: "";
-            border-color: $white transparent transparent transparent;
-            border-style: solid;
-            border-width: 10px;
+            opacity: 1;
           }
         }
 
         &-title {
+          margin-bottom: 4px;
           font-size: 18px;
           line-height: 21px;
         }

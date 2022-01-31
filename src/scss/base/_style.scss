@@ -33,6 +33,7 @@ body {
 button {
   cursor: pointer;
   border: none;
+  outline: none;
 }
 
 .link {
@@ -183,9 +184,23 @@ li {
       border-radius: 5px;
     }
   }
-}
 
+  &-top {
+    padding: 30px 0;
 
-.top-content {
-  min-height: 240px;
+    &__title {
+      @include font(35px, false, 700, 1.2);
+
+      margin-bottom: 7px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    &__text {
+      @include font(24px, false, 500);
+
+      max-width: 1068px;
+      line-height: 1.2;
+    }
+  }
 }
