@@ -185,6 +185,15 @@ li {
     }
   }
 
+  &-scroll-projects {
+    margin-right: -20px;
+
+    &::-webkit-scrollbar-track {
+      margin-top: 40px;
+      margin-bottom: 170px;
+    }
+  }
+
   &-top {
     padding: 30px 0;
 
