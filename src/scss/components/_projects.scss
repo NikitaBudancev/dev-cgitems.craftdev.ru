@@ -1,5 +1,5 @@
 .projects {
-  padding: 40px 0 30px;
+  padding: 40px 0 170px;
 
   &__list {
     display: flex;
@@ -40,12 +40,23 @@
     height: 100%;
     content: "";
     background-color: #0000004f;
+    border-radius: 10px;
     opacity: 0;
     transition: 0.3s;
   }
 
-  &:hover {
+  &:hover,
+  &:focus-within {
     &::before {
+      opacity: 1;
+    }
+
+    .share {
+      display: block;
+    }
+
+    .project__info {
+      height: 25px;
       opacity: 1;
     }
   }
@@ -58,6 +69,7 @@
     width: 100%;
     height: 100%;
     font-size: 0;
+    outline: none;
   }
 
   &__top {
@@ -71,12 +83,44 @@
     line-height: 1;
   }
 
+  &__bottom {
+    z-index: 4;
+  }
+
   &__title {
-    z-index: 1;
     letter-spacing: 1.3px;
   }
 
   .reviews__user-project {
     padding: 0;
+  }
+
+  &__info {
+    @include flex(flex-start);
+
+    height: 0;
+    opacity: 0;
+    transition: all 0.3s;
+
+    &-item {
+      @include font(12px, #e0edff);
+
+      padding-left: 20px;
+      margin-right: 7px;
+      background-repeat: no-repeat;
+      background-position: left;
+
+      &-wiews {
+        background-image: url("#{$path}socials/wiews.svg");
+      }
+
+      &-likes {
+        background-image: url("#{$path}socials/likes.svg");
+      }
+
+      &-comments {
+        background-image: url("#{$path}socials/comments.svg");
+      }
+    }
   }
 }
