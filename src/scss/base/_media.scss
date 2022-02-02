@@ -345,6 +345,11 @@
       margin-right: 160px;
     }
   }
+
+  .project {
+    max-width: 344px;
+    height: 223px;
+  }
 }
 
 @media (max-width: 1640px) {
@@ -382,6 +387,11 @@
     &__menu-list-item {
       margin-right: 135px;
     }
+  }
+
+  .project {
+    max-width: 384px;
+    height: 242px;
   }
 }
 
@@ -534,6 +544,10 @@
     &__left {
       max-width: 570px;
     }
+  }
+
+  .panel-bar-elements .bar-element {
+    padding: 14px 40px 11px;
   }
 }
 
@@ -696,6 +710,11 @@
       height: auto;
     }
   }
+
+  .project {
+    max-width: 318px;
+    height: 200px;
+  }
 }
 
 @media (max-width: 1170px) {
@@ -716,6 +735,20 @@
   .reviews {
     &__item {
       max-width: 470px;
+    }
+  }
+
+  .panel-bar-elements .bar-element {
+    padding: 14px 30px 11px;
+  }
+
+  .content-scroll-projects {
+    height: auto;
+    margin-right: 0;
+    overflow: initial;
+
+    .btn-scroll-up {
+      display: none;
     }
   }
 }
@@ -771,6 +804,12 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 1023px) {
+  .panel-bar {
+    display: none;
   }
 }
 
@@ -1183,6 +1222,7 @@
 
       &-slider {
         padding: 0;
+        background: none;
       }
     }
 
@@ -1198,7 +1238,9 @@
       }
 
       &-desk {
-        height: 100px;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
         overflow: hidden;
       }
     }
@@ -1280,6 +1322,10 @@
 
   ::-webkit-scrollbar {
     width: 5px;
+  }
+
+  .content-top {
+    display: none;
   }
 }
 

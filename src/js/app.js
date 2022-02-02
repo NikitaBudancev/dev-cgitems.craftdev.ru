@@ -130,7 +130,7 @@ $(function () {
 
 
 
-  $('.reviews__list').masonry({
+  $('.reviews__list-review').masonry({
     itemSelector: '.reviews__item',
     columnWidth: '.reviews__item',
     gutter: 16
