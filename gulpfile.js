@@ -13,7 +13,8 @@ import webpCss from 'gulp-webp-css';
 import fileInclude from 'gulp-file-include';
 import tildeImporter from 'node-sass-tilde-importer';
 import browserSync from 'browser-sync';
-import webpack from 'webpack-stream';
+import webpack from 'webpack';
+import webpackStream from 'webpack-stream';
 
 function server() {
     browserSync.init({
@@ -56,8 +57,14 @@ function scripts() {
     ])
         .pipe(concat('app.js'))
         .pipe(babel())
-        .pipe(webpack({
-            mode: "development"
+        .pipe(webpackStream({
+            plugins: [
+                new webpack.ProvidePlugin({
+                    $: 'jquery',
+                    jQuery: 'jquery',
+                    'window.jQuery': 'jquery'
+                })
+            ],
         }))
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'))
