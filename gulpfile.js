@@ -3,7 +3,7 @@ import gulp from 'gulp';
 import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 import autoprefixer from 'gulp-autoprefixer';
-import uglify from 'gulp-uglify-es';
+import uglify from 'gulp-uglify';
 import babel from 'gulp-babel';
 import concat from 'gulp-concat';
 import imagemin from 'gulp-imagemin';
@@ -13,6 +13,7 @@ import webpCss from 'gulp-webp-css';
 import fileInclude from 'gulp-file-include';
 import tildeImporter from 'node-sass-tilde-importer';
 import browserSync from 'browser-sync';
+import webpack from 'webpack-stream';
 
 function server() {
     browserSync.init({
@@ -55,7 +56,10 @@ function scripts() {
     ])
         .pipe(concat('app.js'))
         .pipe(babel())
-        // .pipe(uglify().default)
+        .pipe(webpack({
+            mode: "development"
+        }))
+        .pipe(uglify())
         .pipe(gulp.dest('dist/js'))
         .pipe(browserSync.stream())
 }

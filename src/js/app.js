@@ -1,7 +1,4 @@
-import * as THREE from 'https://cdn.skypack.dev/three@0.135.0/build/three.module.js';
-import { OrbitControls } from 'https://cdn.skypack.dev/three@0.135.0/examples/jsm/controls/OrbitControls.js';
-import { FBXLoader } from 'https://cdn.skypack.dev/three@0.135.0/examples/jsm/loaders/FBXLoader.js';
-import Stats from 'https://cdn.skypack.dev/three@0.135.0/examples/jsm/libs/stats.module.js';
+import FBXLoader from './module/FBXLoader.js';
 
 $(function () {
 
@@ -153,99 +150,45 @@ $(function () {
   })
 
 
+  console.log(FBXLoader);
 
 
+  // var scene = new THREE.Scene();
+  // var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
+  // var renderer = new THREE.WebGLRenderer();
+  // renderer.setSize(window.innerWidth, window.innerHeight);
+  // document.body.appendChild(renderer.domElement);
 
+  // var geometry = new THREE.BoxGeometry(1, 1, 1);
+  // var material = new THREE.MeshBasicMaterial({ color: 0xc1c1cc });
+  // var cube = new THREE.Mesh(geometry, material);
+  // scene.add(cube);
 
+  // camera.position.z = 5;
 
+  // var animate = function () {
+  //   requestAnimationFrame(animate);
 
-  // ====================================================
+  //   cube.rotation.x += 0.01;
+  //   cube.rotation.y += 0.01;
 
+  //   renderer.render(scene, camera);
+  // };
 
+  // animate();
 
-  const scene = new THREE.Scene()
-  scene.add(new THREE.AxesHelper(5))
+  // loader.load('Test.fbx', function (object) {
+  //   object.traverse(function (child) {
+  //     if (child.isMesh) {
+  //       child.castShadow = true;
+  //       child.receiveShadow = false;
+  //       child.flatshading = true;
+  //     }
+  //   });
 
-  const light = new THREE.PointLight()
-  light.position.set(0.8, 1.4, 1.0)
-  scene.add(light)
-
-  const ambientLight = new THREE.AmbientLight()
-  scene.add(ambientLight)
-
-  const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
-  camera.position.set(0.8, 1.4, 1.0)
-
-  const renderer = new THREE.WebGLRenderer()
-  renderer.setSize(window.innerWidth, window.innerHeight)
-  document.body.appendChild(renderer.domElement)
-
-  const controls = new OrbitControls(camera, renderer.domElement)
-  controls.enableDamping = true
-  controls.target.set(0, 1, 0)
-
-  const material = new THREE.MeshNormalMaterial()
-
-  const fbxLoader = new FBXLoader()
-  fbxLoader.load(
-    'models/xbot.fbx',
-    (object) => {
-      object.traverse(function (child) {
-        if (child.isMesh) {
-          child.material = material
-          if (child.material) {
-            child.material.transparent = false
-          }
-        }
-      })
-      object.scale.set(0.01, 0.01, 0.01)
-      scene.add(object)
-      progressBar.style.display = 'none'
-    },
-    (xhr) => {
-      if (xhr.lengthComputable) {
-        var percentComplete = (xhr.loaded / xhr.total) * 100
-        progressBar.value = percentComplete
-        progressBar.style.display = 'block'
-      }
-    },
-    (error) => {
-      console.log(error)
-    }
-  )
-
-  window.addEventListener('resize', onWindowResize, false)
-  function onWindowResize() {
-    camera.aspect = window.innerWidth / window.innerHeight
-    camera.updateProjectionMatrix()
-    renderer.setSize(window.innerWidth, window.innerHeight)
-    render()
-  }
-
-  const stats = Stats()
-  document.body.appendChild(stats.dom)
-
-  function animate() {
-    requestAnimationFrame(animate)
-
-    controls.update()
-
-    render()
-
-    stats.update()
-  }
-
-  function render() {
-    renderer.render(scene, camera)
-  }
-
-  animate()
-
-
-  const a = (a) => {
-    return a * 2;
-  }
+  //   scene.add(object);
+  // });
 
 })
 
