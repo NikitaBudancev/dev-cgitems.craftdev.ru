@@ -16,6 +16,7 @@ import browserSync from 'browser-sync';
 import webpack from 'webpack';
 import webpackStream from 'webpack-stream';
 
+
 function server() {
     browserSync.init({
         server: {
@@ -57,15 +58,7 @@ function scripts() {
     ])
         .pipe(concat('app.js'))
         .pipe(babel())
-        .pipe(webpackStream({
-            plugins: [
-                new webpack.ProvidePlugin({
-                    $: 'jquery',
-                    jQuery: 'jquery',
-                    'window.jQuery': 'jquery'
-                })
-            ],
-        }))
+        .pipe(webpackStream({mode: "development"}))
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'))
         .pipe(browserSync.stream())
