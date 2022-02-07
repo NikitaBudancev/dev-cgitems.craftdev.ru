@@ -49,16 +49,9 @@ function scss() {
 }
 
 function scripts() {
-    return gulp.src([
-        'node_modules/jquery/dist/jquery.js',
-        'node_modules/slick-carousel/slick/slick.js',
-        'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
-        'src/js/mesonry.js',
-        'src/js/app.js'
-    ])
-        .pipe(concat('app.js'))
+    return gulp.src('src/js/*.js')
         .pipe(babel())
-        .pipe(webpackStream({mode: "development"}))
+        .pipe(webpackStream({ mode: "development" }))
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'))
         .pipe(browserSync.stream())
@@ -68,7 +61,7 @@ function images() {
     return gulp.src('src/images/**/*')
         .pipe(webp())
         .pipe(gulp.dest('dist/images'))
-        .pipe(src('src/images/**/*'))
+        .pipe(gulp.src('src/images/**/*'))
         .pipe(imagemin([
             imagemin.gifsicle({ interlaced: true }),
             imagemin.mozjpeg({ quality: 75, progressive: true }),
