@@ -46,6 +46,8 @@
     },
     "dependencies": {
         "@fancyapps/fancybox": "^3.5.7",
+        "imagesloaded": "^4.1.4",
+        "jquery-bridget": "^3.0.1",
         "masonry-layout": "^4.2.2",
         "normalize.css": "^8.0.1",
         "slick-carousel": "^1.8.1",

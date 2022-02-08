@@ -1,6 +1,13 @@
+import $ from 'jquery'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js'
+
+
+// const iframe = document.querySelector('.iframe');
+
+// var iframeBody = 
+// iframeBody.append('<div class="iframe-test">hello</div>');
 
 
 let camera, scene, renderer;
@@ -14,15 +21,18 @@ animate();
 
 function init() {
 
-    const container = document.createElement('div');
-    document.body.appendChild(container);
+    const iframeDataSrc = $('.iframe').attr('data-src');
 
-    camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 2000);
+    const container = $(".iframe").contents().find("body");
+
+    document.body.append(container);
+
+    camera = new THREE.PerspectiveCamera(45, container.width() / container.height(), 1, 2000);
     camera.position.set(100, 200, 300);
 
     scene = new THREE.Scene();
     scene.background = new THREE.Color(0xa0a0a0);
-    scene.fog = new THREE.Fog(0xa0a0a0, 200, 1000);
+    // scene.fog = new THREE.Fog(0xa0a0a0, 200, 1000);
 
     const hemiLight = new THREE.HemisphereLight(0xffffff, 0x444444);
     hemiLight.position.set(0, 200, 0);
@@ -52,11 +62,11 @@ function init() {
 
     // model
     const loader = new FBXLoader();
-    loader.load('Test.fbx', function(object) {
+    loader.load(iframeDataSrc, function (object) {
 
         mixer = new THREE.AnimationMixer(object);
 
-        object.traverse(function(child) {
+        object.traverse(function (child) {
 
             if (child.isMesh) {
 
@@ -72,10 +82,10 @@ function init() {
     });
 
     renderer = new THREE.WebGLRenderer({ antialias: true });
-    renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(container.devicePixelRatio);
+    renderer.setSize(container.width(), container.height());
     renderer.shadowMap.enabled = true;
-    container.appendChild(renderer.domElement);
+    container.append(renderer.domElement);
 
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.target.set(0, 100, 0);
@@ -87,10 +97,10 @@ function init() {
 
 function onWindowResize() {
 
-    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.aspect = container.width() / container.height();
     camera.updateProjectionMatrix();
 
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(container.width(), container.height());
 
 }
 

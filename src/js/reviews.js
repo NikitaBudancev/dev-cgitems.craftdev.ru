@@ -1,12 +1,17 @@
+import $ from 'jquery';
 import Masonry from 'masonry-layout';
+import jQueryBridget from 'jquery-bridget';
+import imagesLoaded from 'imagesloaded';
 
+jQueryBridget('masonry', Masonry, $);
+jQueryBridget('imagesLoaded', imagesLoaded, $);
 
-const masonryElem = document.querySelector('.reviews__list-review');
+const $container = $('.reviews__list-review');
 
-const reviewsMasonryLayout = new Masonry(masonryElem, {
-    itemSelector: '.reviews__item',
-    columnWidth: '.reviews__item',
-    gutter: 16
+$container.imagesLoaded(() => {
+    $container.masonry({
+        itemSelector: '.reviews__item',
+        columnWidth: '.reviews__item',
+        gutter: 16
+    });
 });
-
-reviewsMasonryLayout.layout();
