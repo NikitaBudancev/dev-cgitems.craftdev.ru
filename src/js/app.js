@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 $(function () {
 
   $(".accordion__title").on("click", function (e) {
@@ -16,57 +18,6 @@ $(function () {
     $('.accordion__arrow', this).toggleClass('accordion__rotate');
   });
 
-  let $slider = $('.reviews__list');
-
-  if ($slider.length) {
-    let currentSlide;
-    let slidesCount;
-    let sliderCounter = document.createElement('div');
-    sliderCounter.classList.add('slider__counter');
-
-    let updateSliderCounter = function (slick, currentIndex) {
-      currentSlide = slick.slickCurrentSlide() + 1;
-      slidesCount = slick.slideCount;
-      $(sliderCounter).text(currentSlide + '/' + slidesCount)
-    };
-
-    $slider.on('init', function (event, slick) {
-      $slider.append(sliderCounter);
-      updateSliderCounter(slick);
-    });
-
-    $slider.on('afterChange', function (event, slick, currentSlide) {
-      updateSliderCounter(slick, currentSlide);
-    });
-
-    $slider.slick({
-      slidesToShow: 4,
-      prevArrow: '<button class="btn-slider btn-slider-prev"><span class="btn-slider-arrow btn-slider-arrow-prev"></span></button>',
-      nextArrow: '<button class="btn-slider btn-slider-next"><span class="btn-slider-arrow btn-slider-arrow-next"></span></button>',
-      responsive: [
-        {
-          breakpoint: 2000,
-          settings: {
-            slidesToShow: 3,
-          }
-        },
-        {
-          breakpoint: 1680,
-          settings: {
-            slidesToShow: 2,
-          }
-        },
-        {
-          breakpoint: 1000,
-          settings: {
-            slidesToShow: 1,
-          }
-        },
-      ]
-    });
-  }
-
-
   $('.mobile-search').on('click', function () {
     $('.form-search-header').fadeToggle(300);
     $('.fade').fadeToggle(300);
@@ -80,6 +31,7 @@ $(function () {
 
 
   const p1 = document.querySelector('.page1');
+  let startingX = 0;
 
   function hanleTouchStart(e) {
     startingX = e.touches[0].clientX;
@@ -121,4 +73,24 @@ $(function () {
     $('body').css({ 'overflow': 'hidden' });
   })
 
+  $('.btn-course-mobile,.btn-course').on('click', function () {
+    $.fancybox.open({
+      src: '.modal-course',
+      type: 'inline'
+    });
+  });
+
+  $('.btn-scroll-up').on('click', function () {
+    $('html, body').animate({ scrollTop: 0 }, 500);
+    $('.content-scroll').animate({ scrollTop: 0 }, 500);
+  });
+
+
+
+  $('.copy__url').on('click', function () {
+    $(this).select()
+  })
+
 })
+
+

@@ -1,0 +1,25 @@
+.breadcrumbs {
+  background-color: #171b1f;
+
+  &__inner {
+    padding: 36px 0;
+  }
+
+  &__item {
+    display: inline-block;
+
+    &:last-child .link {
+      color: $color-link;
+      cursor: default;
+    }
+  }
+
+  &__separator {
+    color: #889dba;
+  }
+
+  &__link {
+    font-size: 17px;
+    color: #889dba;
+  }
+}

@@ -1,35 +1,42 @@
-const { src, dest, watch, parallel, series } = require('gulp');
+import gulp from 'gulp';
 
-const sass = require('gulp-sass')(require('sass'));
-const autoprefixer = require('gulp-autoprefixer');
-const uglify = require('gulp-uglify-es').default;
-const concat = require('gulp-concat');
-const imagemin = require('gulp-imagemin');
-const webp = require('gulp-webp');
-const webpHtml = require('gulp-webp-html');
-const webpCss = require('gulp-webp-css');
-const fileInclude = require('gulp-file-include');
-const tildeImporter = require('node-sass-tilde-importer');
-const browserSync = require('browser-sync').create();
+import dartSass from 'sass';
+import gulpSass from 'gulp-sass';
+import autoprefixer from 'gulp-autoprefixer';
+import uglify from 'gulp-uglify';
+import babel from 'gulp-babel';
+import concat from 'gulp-concat';
+import imagemin from 'gulp-imagemin';
+import webp from 'gulp-webp';
+import webpHtml from 'gulp-webp-html';
+import webpCss from 'gulp-webp-css';
+import fileInclude from 'gulp-file-include';
+import tildeImporter from 'node-sass-tilde-importer';
+import browserSync from 'browser-sync';
+import webpack from 'webpack';
+import webpackStream from 'webpack-stream';
+
 
 function server() {
     browserSync.init({
         server: {
             baseDir: './dist'
         }
-    })
+    });
 }
 
 function html() {
-    return src('src/html/*.html')
+    return gulp.src('src/html/*.html')
         .pipe(fileInclude())
         .pipe(webpHtml())
-        .pipe(dest('dist/'))
+        .pipe(gulp.dest('dist/'))
         .pipe(browserSync.stream())
 }
 
+const sass = gulpSass(dartSass);
+
 function scss() {
-    return src('src/scss/*.scss')
+    return gulp.src('src/scss/*.scss')
         .pipe(sass({ outputStyle: 'compressed', importer: tildeImporter }))
         .pipe(webpCss())
         .pipe(autoprefixer({
@@ -37,28 +44,24 @@ function scss() {
             grid: true
         }))
         .on('error', sass.logError)
-        .pipe(dest('dist/css'))
+        .pipe(gulp.dest('dist/css'))
         .pipe(browserSync.stream())
 }
 
 function scripts() {
-    return src([
-        'node_modules/jquery/dist/jquery.js',
-        'node_modules/slick-carousel/slick/slick.js',
-        'src/js/touch-sideswipe.min.js',
-        'src/js/app.js'
-    ])
-        .pipe(concat('app.js'))
+    return gulp.src('src/js/*.js')
+        .pipe(babel())
+        .pipe(webpackStream({ mode: "development" }))
         .pipe(uglify())
-        .pipe(dest('dist/js'))
+        .pipe(gulp.dest('dist/js'))
         .pipe(browserSync.stream())
 }
 
 function images() {
-    return src('src/images/**/*')
+    return gulp.src('src/images/**/*')
         .pipe(webp())
-        .pipe(dest('dist/images'))
-        .pipe(src('src/images/**/*'))
+        .pipe(gulp.dest('dist/images'))
+        .pipe(gulp.src('src/images/**/*'))
         .pipe(imagemin([
             imagemin.gifsicle({ interlaced: true }),
             imagemin.mozjpeg({ quality: 75, progressive: true }),
@@ -70,20 +73,16 @@ function images() {
                 ]
             })
         ]))
-        .pipe(dest('dist/images'))
+        .pipe(gulp.dest('dist/images'))
         .pipe(browserSync.stream())
 }
 
 function watching() {
-    watch(['src/html/**/*.html'], html);
-    watch(['src/**/*.scss'], scss);
-    watch(['src/js/**/*.js'], scripts);
+    gulp.watch(['src/html/**/*.html'], html);
+    gulp.watch(['src/**/*.scss'], scss);
+    gulp.watch(['src/js/**/*.js'], scripts);
 }
 
-exports.scss = scss;
-exports.scripts = scripts;
-exports.watching = watching;
-exports.images = images;
-exports.html = html;
+export { scss, scripts, watching, images, html }
 
-exports.default = series(scss, scripts, html, parallel(watching, server));
+export default gulp.series(scss, scripts, html, gulp.parallel(watching, server));

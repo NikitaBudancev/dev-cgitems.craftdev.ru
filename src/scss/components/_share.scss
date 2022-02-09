@@ -1,0 +1,65 @@
+.share {
+  display: none;
+  max-width: 220px;
+  width: 100%;
+  padding: 16px;
+  background-color: #202833;
+  border: 1px solid #26303d;
+  border-radius: 10px;
+  position: absolute;
+  right: 12px;
+  bottom: -144px;
+  z-index: 5;
+  cursor: default;
+
+  &__title {
+    @include font(15px, #e0edff, 700);
+
+    margin-bottom: 10px;
+  }
+}
+
+.social {
+  &__list-share {
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  &__item-share {
+    margin-right: 0;
+  }
+
+  &__icon-share {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.copy {
+  position: relative;
+
+  &__url {
+    padding: 6px;
+    font-size: 12px;
+    border: 1px solid #26303d;
+  }
+
+  &__btn {
+    position: absolute;
+    top: 10px;
+    right: 1px;
+    width: 50%;
+    font-size: 12px;
+    font-weight: 500;
+    color: #0099e9;
+    text-transform: uppercase;
+    background: none;
+    background-color: #13171a;
+    transition: 0.3s;
+
+    &:hover,
+    &:focus {
+      color: #0487ce;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+.modal {
+  display: none;
+  background: #202833;
+  border-radius: 10px;
+
+  &__left {
+    width: 100%;
+    max-width: 322px;
+  }
+
+  &__desc {
+    margin-bottom: 60px;
+    color: #889dba;
+    text-align: end;
+
+    &-date {
+      display: block;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+  }
+
+  &__right {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  &-logo {
+    margin: 40px 0 30px;
+
+    &__img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &-course {
+    width: 864px;
+    height: 464px;
+    padding: 58px 72px 33px 80px;
+  }
+
+  &__form {
+    &-course {
+      @include flex(space-between, flex-start);
+    }
+  }
+
+  &-check__text {
+    font-size: 12px;
+  }
+
+  .fancybox-button {
+    display: none;
+  }
+
+}

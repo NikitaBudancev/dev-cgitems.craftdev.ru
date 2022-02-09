@@ -1,3 +1,11 @@
+@media (max-width: 2550px) {
+  .reviews {
+    &__item {
+      max-width: 404px;
+    }
+  }
+}
+
 @media (max-width: 2000px) {
   .course {
     background-position-x: 97%;
@@ -100,7 +108,9 @@
   }
 
   .reviews {
-    padding: 83px 0 250px;
+    &-slider {
+      padding: 83px 0 250px;
+    }
   }
 
   .course-author {
@@ -189,6 +199,10 @@
       }
     }
   }
+
+  .project {
+    max-width: 401px;
+  }
 }
 
 @media (max-width: 1870px) {
@@ -271,6 +285,10 @@
   }
 
   .reviews {
+    &__item {
+      max-width: 344px;
+    }
+
     .slick-list {
       padding: 0 !important;
     }
@@ -327,6 +345,11 @@
       margin-right: 160px;
     }
   }
+
+  .project {
+    max-width: 344px;
+    height: 223px;
+  }
 }
 
 @media (max-width: 1640px) {
@@ -350,6 +373,10 @@
     .slick-list {
       padding: 0 10% 0 0 !important;
     }
+
+    &__item {
+      max-width: 384px;
+    }
   }
 
   .footer {
@@ -360,6 +387,11 @@
     &__menu-list-item {
       margin-right: 135px;
     }
+  }
+
+  .project {
+    max-width: 384px;
+    height: 242px;
   }
 }
 
@@ -513,6 +545,10 @@
       max-width: 570px;
     }
   }
+
+  .panel-bar-elements .bar-element {
+    padding: 14px 40px 11px;
+  }
 }
 
 @media (max-width: 1370px) {
@@ -555,6 +591,14 @@
 
   .course {
     padding: 0 24px;
+
+    &-author__inner {
+      padding-bottom: 0;
+
+      &::before {
+        background-image: none !important;
+      }
+    }
 
     &__left {
       padding: 0;
@@ -666,6 +710,11 @@
       height: auto;
     }
   }
+
+  .project {
+    max-width: 318px;
+    height: 200px;
+  }
 }
 
 @media (max-width: 1170px) {
@@ -680,6 +729,26 @@
 
     &__item {
       max-width: 90%;
+    }
+  }
+
+  .reviews {
+    &__item {
+      max-width: 470px;
+    }
+  }
+
+  .panel-bar-elements .bar-element {
+    padding: 14px 30px 11px;
+  }
+
+  .content-scroll-projects {
+    height: auto;
+    margin-right: 0;
+    overflow: initial;
+
+    .btn-scroll-up {
+      display: none;
     }
   }
 }
@@ -738,25 +807,49 @@
   }
 }
 
+@media (max-width: 1023px) {
+  .panel-bar {
+    display: none;
+  }
+}
+
 @media (max-width: 1000px) {
   .reviews {
     &__item {
-      width: 100% !important;
-      height: auto;
-      padding-bottom: 35px;
-      background-image: none !important;
-      border: none;
+      &-slider {
+        width: 100% !important;
+        height: auto;
+        padding-bottom: 35px;
+        background-image: none !important;
+        border: none;
+      }
     }
 
     &__text {
-      height: auto;
-      overflow: inherit;
+      &-slider {
+        height: auto;
+        overflow: inherit;
+      }
     }
   }
 
   .course-author {
     .col-right {
       flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .modal {
+    &-course {
+      width: 95%;
+      height: auto;
+      padding: 30px 40px 20px;
+    }
+
+    &__left {
+      max-width: 260px;
     }
   }
 }
@@ -796,6 +889,23 @@
           background-size: cover;
         }
       }
+    }
+  }
+
+  .modal {
+    &__form-course {
+      position: relative;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 50px;
+    }
+
+    &__btn {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      max-width: 320px;
     }
   }
 }
@@ -1088,6 +1198,16 @@
     }
   }
 
+  .content-scroll {
+    height: auto;
+    margin-right: 0;
+    overflow: initial;
+  }
+
+  .btn-scroll-up {
+    display: none;
+  }
+
   .reviews {
     padding: 10px 0 120px;
     background: none;
@@ -1098,17 +1218,45 @@
     }
 
     &__item {
-      padding: 0;
+      max-width: 100%;
+
+      &-slider {
+        padding: 0;
+        background: none;
+      }
+    }
+
+    &__img {
+      display: none;
     }
 
     &__text {
-      font-size: 14px;
-      line-height: 1.4;
-      letter-spacing: 0.8px;
+      &-slider {
+        font-size: 14px;
+        line-height: 1.4;
+        letter-spacing: 0.8px;
+      }
+
+      &-desk {
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+    }
+
+    &__link-desk {
+      display: none;
+    }
+
+    &__detail {
+      top: 15px;
     }
 
     &__user {
-      margin-bottom: 15px;
+      &-slider {
+        margin-bottom: 15px;
+      }
     }
 
     .btn-slider {
@@ -1133,14 +1281,6 @@
 
   .course-author {
     padding: 30px 0 40px;
-
-    &__inner {
-      padding-bottom: 0;
-
-      &::before {
-        background-image: none !important;
-      }
-    }
 
     &__title {
       position: absolute;
@@ -1178,6 +1318,14 @@
         letter-spacing: 0.3px;
       }
     }
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .content-top {
+    display: none;
   }
 }
 
