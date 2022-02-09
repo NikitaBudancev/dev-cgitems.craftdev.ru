@@ -3,13 +3,6 @@ import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js'
 
-
-// const iframe = document.querySelector('.iframe');
-
-// var iframeBody = 
-// iframeBody.append('<div class="iframe-test">hello</div>');
-
-
 let camera, scene, renderer;
 
 const clock = new THREE.Clock();
@@ -97,10 +90,10 @@ function init() {
 
 function onWindowResize() {
 
-    camera.aspect = container.width() / container.height();
+    camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
 
-    renderer.setSize(container.width(), container.height());
+    renderer.setSize(window.innerWidth, window.innerHeight);
 
 }
 

@@ -1,8 +1,4 @@
 import $ from 'jquery';
-import * as THREE from 'three'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
-import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js'
-
 
 $(function () {
 
@@ -22,57 +18,6 @@ $(function () {
     $('.accordion__arrow', this).toggleClass('accordion__rotate');
   });
 
-  let $slider = $('.reviews__list-slider');
-
-  if ($slider.length) {
-    let currentSlide;
-    let slidesCount;
-    let sliderCounter = document.createElement('div');
-    sliderCounter.classList.add('slider__counter');
-
-    let updateSliderCounter = function (slick, currentIndex) {
-      currentSlide = slick.slickCurrentSlide() + 1;
-      slidesCount = slick.slideCount;
-      $(sliderCounter).text(currentSlide + '/' + slidesCount)
-    };
-
-    $slider.on('init', function (event, slick) {
-      $slider.append(sliderCounter);
-      updateSliderCounter(slick);
-    });
-
-    $slider.on('afterChange', function (event, slick, currentSlide) {
-      updateSliderCounter(slick, currentSlide);
-    });
-
-    $slider.slick({
-      slidesToShow: 4,
-      prevArrow: '<button class="btn-slider btn-slider-prev"><span class="btn-slider-arrow btn-slider-arrow-prev"></span></button>',
-      nextArrow: '<button class="btn-slider btn-slider-next"><span class="btn-slider-arrow btn-slider-arrow-next"></span></button>',
-      responsive: [
-        {
-          breakpoint: 2000,
-          settings: {
-            slidesToShow: 3,
-          }
-        },
-        {
-          breakpoint: 1680,
-          settings: {
-            slidesToShow: 2,
-          }
-        },
-        {
-          breakpoint: 1000,
-          settings: {
-            slidesToShow: 1,
-          }
-        },
-      ]
-    });
-  }
-
-
   $('.mobile-search').on('click', function () {
     $('.form-search-header').fadeToggle(300);
     $('.fade').fadeToggle(300);
@@ -86,6 +31,7 @@ $(function () {
 
 
   const p1 = document.querySelector('.page1');
+  let startingX = 0;
 
   function hanleTouchStart(e) {
     startingX = e.touches[0].clientX;
@@ -134,14 +80,6 @@ $(function () {
     });
   });
 
-
-
-  $('.reviews__list-review').masonry({
-    itemSelector: '.reviews__item',
-    columnWidth: '.reviews__item',
-    gutter: 16
-  });
-
   $('.btn-scroll-up').on('click', function () {
     $('html, body').animate({ scrollTop: 0 }, 500);
     $('.content-scroll').animate({ scrollTop: 0 }, 500);
@@ -152,112 +90,6 @@ $(function () {
   $('.copy__url').on('click', function () {
     $(this).select()
   })
-
-  
-  let camera, scene, renderer;
-
-  const clock = new THREE.Clock();
-
-  let mixer;
-
-  init();
-  animate();
-
-  function init() {
-
-    const container = document.createElement( 'div' );
-    document.body.appendChild( container );
-
-    camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
-    camera.position.set( 100, 200, 300 );
-
-    scene = new THREE.Scene();
-    scene.background = new THREE.Color( 0xa0a0a0 );
-    scene.fog = new THREE.Fog( 0xa0a0a0, 200, 1000 );
-
-    const hemiLight = new THREE.HemisphereLight( 0xffffff, 0x444444 );
-    hemiLight.position.set( 0, 200, 0 );
-    scene.add( hemiLight );
-
-    const dirLight = new THREE.DirectionalLight( 0xffffff );
-    dirLight.position.set( 0, 200, 100 );
-    dirLight.castShadow = true;
-    dirLight.shadow.camera.top = 180;
-    dirLight.shadow.camera.bottom = - 100;
-    dirLight.shadow.camera.left = - 120;
-    dirLight.shadow.camera.right = 120;
-    scene.add( dirLight );
-
-    // scene.add( new THREE.CameraHelper( dirLight.shadow.camera ) );
-
-    // ground
-    const mesh = new THREE.Mesh( new THREE.PlaneGeometry( 2000, 2000 ), new THREE.MeshPhongMaterial( { color: 0x999999, depthWrite: false } ) );
-    mesh.rotation.x = - Math.PI / 2;
-    mesh.receiveShadow = true;
-    scene.add( mesh );
-
-    const grid = new THREE.GridHelper( 2000, 20, 0x000000, 0x000000 );
-    grid.material.opacity = 0.2;
-    grid.material.transparent = true;
-    scene.add( grid );
-
-    // model
-    const loader = new FBXLoader();
-    loader.load( 'Test.fbx', function ( object ) {
-
-      mixer = new THREE.AnimationMixer( object );
-
-      object.traverse( function ( child ) {
-
-        if ( child.isMesh ) {
-
-          child.castShadow = true;
-          child.receiveShadow = true;
-
-        }
-
-      } );
-
-      scene.add( object );
-
-    } );
-
-    renderer = new THREE.WebGLRenderer( { antialias: true } );
-    renderer.setPixelRatio( window.devicePixelRatio );
-    renderer.setSize( window.innerWidth, window.innerHeight );
-    renderer.shadowMap.enabled = true;
-    container.appendChild( renderer.domElement );
-
-    const controls = new OrbitControls( camera, renderer.domElement );
-    controls.target.set( 0, 100, 0 );
-    controls.update();
-
-    window.addEventListener( 'resize', onWindowResize );
-
-  }
-
-  function onWindowResize() {
-
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-
-    renderer.setSize( window.innerWidth, window.innerHeight );
-
-  }
-
-  //
-
-  function animate() {
-
-    requestAnimationFrame( animate );
-
-    const delta = clock.getDelta();
-
-    if ( mixer ) mixer.update( delta );
-
-    renderer.render( scene, camera );
-
-  }
 
 })
 
