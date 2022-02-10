@@ -1,6 +1,6 @@
 @import "./vendors/normalize";
 @import "./vendors/slick";
-@import "./vendors/fancybox.scss";
+@import "./vendors/fancybox";
 
 @import "./abstracts/variables";
 @import "./abstracts/mixins";
@@ -20,11 +20,9 @@
 @import "./components/breadcrumbs";
 @import "./components/projects";
 
-
-
 @import "./layout/header";
 @import "./layout/footer";
+@import "./layout/sidebar";
 
 @import "./pages/index";
-
 @import "./base/media";
