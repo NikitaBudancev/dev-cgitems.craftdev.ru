@@ -181,7 +181,7 @@
     right: 30px;
     bottom: 25px;
 
-    svg path{
+    svg path {
       transition: all 0.3s;
     }
 
@@ -200,6 +200,15 @@
     svg {
       width: 40px;
       height: 40px;
+    }
+
+    &__profile-edit {
+      width: 28px;
+      height: 28px;
+      line-height: 28px;
+      background: transparent;
+      border: 1px solid #26303d;
+      border-radius: 50px;
     }
   }
 }

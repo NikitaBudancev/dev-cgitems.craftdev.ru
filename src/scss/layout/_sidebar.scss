@@ -1,5 +1,23 @@
 .sidebar {
   width: 100%;
   max-width: 384px;
+  height: 100vh;
+  padding: 18px 0 32px;
   border-right: 1px solid #26303d;
+
+  &__wrapper {
+    padding: 0 24px 0 18px;
+  }
+
+  &__user-name {
+    @include font(24px, false, 700);
+
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}
+
+.profile-edit {
+  margin-bottom: 10px;
+  text-align: end;
 }
