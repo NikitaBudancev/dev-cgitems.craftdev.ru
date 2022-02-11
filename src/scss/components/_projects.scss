@@ -56,7 +56,7 @@
       display: block;
     }
 
-    .project__info {
+    .project__info-show {
       height: 25px;
       opacity: 1;
     }
@@ -104,9 +104,11 @@
   &__info {
     @include flex(flex-start);
 
-    height: 0;
-    opacity: 0;
-    transition: all 0.3s;
+    &-show {
+      height: 0;
+      opacity: 0;
+      transition: all 0.3s;
+    }
 
     &-item {
       @include font(12px, #e0edff);
