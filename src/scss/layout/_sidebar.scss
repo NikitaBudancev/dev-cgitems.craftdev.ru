@@ -4,12 +4,39 @@
   justify-content: space-between;
   width: 100%;
   max-width: 384px;
-  height: calc(100vh - 57px);
+  height: 100vh;
   padding: 18px 0 32px;
   border-right: 1px solid #26303d;
 
+  &__left {
+    position: absolute;
+    top: 57px;
+    left: -384px;
+    justify-content: flex-start;
+    padding-top: 0;
+    background: #0e1112;
+    border-right: 1px solid #26303d;
+    transition: all 0.3s;
+
+    &-projects.active {
+      left: 0;
+    }
+
+    &-replies {
+      left: 0;
+    }
+  }
+
+  &__top-project {
+    @include flex;
+
+    padding: 8px 24px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #26303d;
+  }
+
   &__wrapper {
-    padding: 0 24px 0 18px;
+    padding: 0 10px 0 23px;
   }
 
   &__user {
@@ -46,26 +73,15 @@
       overflow: auto;
       font-weight: 300;
       letter-spacing: 0.5px;
-
-      &::-webkit-scrollbar {
-        width: 8px;
-      }
-
-      &::-webkit-scrollbar-track {
-        background-color: #010203;
-        border-radius: 5px;
-      }
-
-      &::-webkit-scrollbar-thumb {
-        background-color: #0099e9;
-        border: none;
-      }
     }
   }
 
   &__link {
     display: block;
+    width: 100%;
     padding: 8px 24px;
+    text-align: inherit;
+    background: transparent;
     border-top: 1px solid #26303d;
 
     & path {
@@ -83,6 +99,12 @@
 
     &:last-child {
       border-bottom: 1px solid #26303d;
+    }
+
+    &-back {
+      padding-left: 0;
+      cursor: pointer;
+      border: none;
     }
   }
 
@@ -143,6 +165,7 @@
 
   &-text {
     display: inline-block;
+    display: none;
     padding: 0 7px;
     color: #e0edff;
     background-color: #010203;

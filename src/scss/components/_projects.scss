@@ -5,6 +5,13 @@
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
+
+    &-sidebar {
+      display: block;
+      height: calc(100vh - 100px);
+      padding-right: 23px;
+      overflow: auto;
+    }
   }
 
   .stage {
@@ -60,6 +67,13 @@
       height: 25px;
       opacity: 1;
     }
+  }
+
+  &-sidebar {
+    width: 100%;
+    max-width: initial !important;
+    height: 200px;
+    margin-bottom: 20px;
   }
 
   &__link {
@@ -118,6 +132,10 @@
       background-repeat: no-repeat;
       background-position: left;
 
+      &-date {
+        background-image: url("#{$path}socials/clock.svg");
+      }
+
       &-wiews {
         background-image: url("#{$path}socials/wiews.svg");
       }
@@ -130,5 +148,14 @@
         background-image: url("#{$path}socials/comments.svg");
       }
     }
+  }
+
+  &__category {
+    padding: 2px 16px;
+    font-size: 14px;
+    color: #7d92b0;
+    background-color: #010203;
+    border: 1px solid #26303d;
+    border-radius: 5px;
   }
 }

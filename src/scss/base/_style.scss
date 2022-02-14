@@ -30,10 +30,32 @@ body {
   border-radius: 10px;
 }
 
+.scroll {
+  &-blue {
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: #010203;
+      border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #0099e9;
+      border: none;
+    }
+  }
+}
+
 button {
   cursor: pointer;
   border: none;
   outline: none;
+}
+
+.text-bold {
+  font-weight: 700;
 }
 
 .link {
@@ -236,7 +258,7 @@ form {
     &.shadow {
       position: relative;
       z-index: 1;
-      box-shadow: 0 24px 16px 4px #171B1F;
+      box-shadow: 0 24px 16px 4px #171b1f;
     }
 
     &-default {
@@ -379,4 +401,3 @@ form {
     }
   }
 }
-

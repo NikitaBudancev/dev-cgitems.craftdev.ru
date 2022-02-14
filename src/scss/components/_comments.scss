@@ -1,0 +1,59 @@
+.comments {
+  height: calc(100vh - 250px);
+  padding: 0 24px;
+  overflow: auto;
+
+  .reviews {
+    &__date {
+      font-weight: 400;
+    }
+
+    &__user {
+      padding-left: 0;
+    }
+  }
+}
+
+.comment {
+  &__text {
+    @include font(16px, #7b8ea9, 300);
+  }
+
+  &:first-child .reviews__user {
+    padding-top: 0;
+  }
+}
+
+.replies {
+  &__buttons {
+    margin: 5px 0 10px;
+  }
+
+  &__btn {
+    margin-right: 10px;
+    font-size: 13px;
+  }
+
+  &__list {
+    display: none;
+    padding-left: 20px;
+    margin-left: 17px;
+    border-left: 1px solid #7b8ea9;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__item:first-child .reviews__user {
+    padding-top: 0;
+  }
+
+  &__text {
+    @include font(16px, #7b8ea9, 300);
+  }
+
+  &__name {
+    color: #0099e9;
+  }
+}
