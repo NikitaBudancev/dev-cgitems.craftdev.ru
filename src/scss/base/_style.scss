@@ -63,11 +63,15 @@ button {
   text-decoration: none;
   outline: none;
   transition: 0.3s;
-}
 
-.link:hover,
-.link:focus {
-  color: $hover-link;
+  &:hover,
+  &:focus {
+    color: $hover-link;
+  }
+
+  &-blue {
+    color: #0099e9;
+  }
 }
 
 input {

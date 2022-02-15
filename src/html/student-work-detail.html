@@ -355,170 +355,243 @@
                 </ul>
             </div>
         </div>
-        <div class="sidebar sidebar__left sidebar__left-replies">
-            <div class="sidebar__top-project">
-                <div class="link sidebar__link comments__link sidebar__link-back sidebar-back" href="#">
-                    <svg class="link__icon" width="24" height="25" viewBox="0 0 24 25" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M3 3.55566C2.44772 3.55566 2 4.00338 2 4.55566V18.5557C2 19.1079 2.44772 19.5557 3 19.5557H13.4285V23.5558L18.2673 19.5557H21C21.5523 19.5557 22 19.1079 22 18.5557V4.55566C22 4.00338 21.5523 3.55566 21 3.55566H3Z"
-                            fill="white" />
-                    </svg>
+        <div class="sidebar sidebar__left sidebar__left-comments">
+            <div class="sidebar__top">
+                <div class="sidebar__top-project">
+                    <div class="link sidebar__link comments__link sidebar__link-back sidebar-back" href="#">
+                        <svg class="link__icon" width="24" height="25" viewBox="0 0 24 25" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M3 3.55566C2.44772 3.55566 2 4.00338 2 4.55566V18.5557C2 19.1079 2.44772 19.5557 3 19.5557H13.4285V23.5558L18.2673 19.5557H21C21.5523 19.5557 22 19.1079 22 18.5557V4.55566C22 4.00338 21.5523 3.55566 21 3.55566H3Z"
+                                fill="white" />
+                        </svg>
 
-                    Коментарии <span class="comments__counter">33</span>
+                        Коментарии <span class="comments__counter">33</span>
+                    </div>
+                    <button class="button-tr button-tr-blue sidebar-back">Назад</button>
                 </div>
-                <button class="button-tr button-tr-blue sidebar-back">Назад</button>
+                <ul class="comments  scroll-blue">
+                    <li class="comment">
+                        <div class="reviews__user">
+                            <div class="reviews__user-left">
+                                <a href="#" class="user user__default user-reviews" style="background-color:#af848e">
+                                    <span class="icon icon-initials icon-reviews">АЕ</span>
+                                </a>
+                            </div>
+                            <div class="reviews__user-right">
+                                <a class="user-name" href="/">
+                                    Андрей Ерохин
+                                </a>
+                                <div class="reviews__date">
+                                    20 марта 2021 в 13:45
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment__text">
+                            Проблема в том, что на сайте куда больше людей не из геймдева. Большая часть участников
+                            используют dtf для развлечения. Выходит, большая часть людей в этом подсайте, по сути, будет
+                            лишь в режиме ридонли?
+                        </div>
+                        <div class="replies">
+                            <div class="replies__buttons">
+                                <button class="btn-text text-bold replies__btn">Ответить</button>
+                                <button class="btn-text btn-text-blue replies__btn replies-show">Показать
+                                    ответы</button>
+                            </div>
+                            <ul class="replies__list">
+                                <li class="replies__item">
+                                    <div class="reviews__user">
+                                        <div class="reviews__user-left">
+                                            <a href="#" class="user user__default user-reviews"
+                                                style="background-color:#bfc900">
+                                                <span class="icon icon-initials icon-reviews">MP</span>
+                                            </a>
+                                        </div>
+                                        <div class="reviews__user-right">
+                                            <a class="user-name" href="/">
+                                                Михаил Резин
+                                            </a>
+                                            <div class="reviews__date">
+                                                20 марта 2021 в 13:45
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="replies__text">
+                                        <span class="replies__name">Андрей Ерохин, </span> Да
+                                    </div>
+                                    <button class="btn-text text-bold replies__btn">Ответить</button>
+                                </li>
+                                <li class="replies__item">
+                                    <div class="reviews__user">
+                                        <div class="reviews__user-left">
+                                            <a href="#" class="user user__default user-reviews"
+                                                style="background-color:#af848e">
+                                                <span class="icon icon-initials icon-reviews">АЕ</span>
+                                            </a>
+                                        </div>
+                                        <div class="reviews__user-right">
+                                            <a class="user-name" href="/">
+                                                Андрей Ерохин
+                                            </a>
+                                            <div class="reviews__date">
+                                                20 марта 2021 в 13:45
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="replies__text">
+                                        <span class="replies__name">Михаил Резин, </span> Проблема в том, что на сайте
+                                        куда больше людей не из геймдева. Большая часть участников
+                                        используют dtf для развлечения. Выходит, большая часть людей в этом подсайте, по
+                                        сути, будет
+                                        лишь в режиме ридонли?
+                                    </div>
+                                    <button class="btn-text text-bold replies__btn">Ответить</button>
+                                </li>
+                                <li class="replies__item">
+                                    <div class="reviews__user">
+                                        <div class="reviews__user-left">
+                                            <a href="#" class="user user__default user-reviews"
+                                                style="background-color:#bfc900">
+                                                <span class="icon icon-initials icon-reviews">MP</span>
+                                            </a>
+                                        </div>
+                                        <div class="reviews__user-right">
+                                            <a class="user-name" href="/">
+                                                Михаил Резин
+                                            </a>
+                                            <div class="reviews__date">
+                                                20 марта 2021 в 13:45
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="replies__text">
+                                        <span class="replies__name">Андрей Ерохин, </span> Да
+                                    </div>
+                                    <button class="btn-text text-bold replies__btn">Ответить</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="comment">
+                        <div class="reviews__user">
+                            <div class="reviews__user-left">
+                                <a href="#" class="user user__default user-reviews" style="background-color:#f25d7f">
+                                    <span class="icon icon-initials icon-reviews">МЩ</span>
+                                </a>
+                            </div>
+                            <div class="reviews__user-right">
+                                <a class="user-name" href="/">
+                                    Марина Щербакова
+                                </a>
+                                <div class="reviews__date">
+                                    20 марта 2021 в 13:45
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment__text">
+                            Проблема в том, что на сайте куда больше людей не из геймдева. Большая часть участников
+                            используют dtf для развлечения. Выходит, большая часть людей в этом подсайте, по сути, будет
+                            лишь в режиме ридонли?
+                        </div>
+                        <div class="replies">
+                            <div class="replies__buttons">
+                                <button class="btn-text text-bold replies__btn">Ответить</button>
+                                <button class="btn-text btn-text-blue replies__btn replies-show">Показать
+                                    ответы</button>
+                            </div>
+                            <ul class="replies__list">
+                                <li class="replies__item">
+                                    <div class="reviews__user">
+                                        <div class="reviews__user-left">
+                                            <a href="#" class="user user__default user-reviews"
+                                                style="background-color:#af848e">
+                                                <span class="icon icon-initials icon-reviews">АЕ</span>
+                                            </a>
+                                        </div>
+                                        <div class="reviews__user-right">
+                                            <a class="user-name" href="/">
+                                                Андрей Ерохин
+                                            </a>
+                                            <div class="reviews__date">
+                                                20 марта 2021 в 13:45
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="replies__text">
+                                        <span class="replies__name">Андрей Ерохин, </span> Да
+                                    </div>
+                                    <button class="btn-text text-bold replies__btn">Ответить</button>
+                                </li>
+                                <li class="replies__item">
+                                    <div class="reviews__user">
+                                        <div class="reviews__user-left">
+                                            <a href="#" class="user user__default user-reviews"
+                                                style="background-color:#af848e">
+                                                <span class="icon icon-initials icon-reviews">АЕ</span>
+                                            </a>
+                                        </div>
+                                        <div class="reviews__user-right">
+                                            <a class="user-name" href="/">
+                                                Андрей Ерохин
+                                            </a>
+                                            <div class="reviews__date">
+                                                20 марта 2021 в 13:45
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="replies__text">
+                                        <span class="replies__name">Андрей Ерохин, </span> Да
+                                    </div>
+                                    <button class="btn-text text-bold replies__btn">Ответить</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
             </div>
-            <ul class="comments">
-                <li class="comment">
-                    <div class="reviews__user">
-                        <div class="reviews__user-left">
-                            <a href="#" class="user user__default user-reviews" style="background-color:#af848e">
-                                <span class="icon icon-initials icon-reviews">АЕ</span>
-                            </a>
-                        </div>
-                        <div class="reviews__user-right">
-                            <a class="user-name" href="/">
-                                Андрей Ерохин
-                            </a>
-                            <div class="reviews__date">
-                                20 марта 2021 в 13:45
-                            </div>
-                        </div>
+            <div class="sidebar__bottom sidebar__bottom-comments">
+                <div class="sidebar__form-box">
+                    <div class="sidebar__bottom-text">
+                        Укажите ваше имя,
+                        комментарий будет оставлен,
+                        после прохождения модерации.
                     </div>
-                    <div class="comment__text">
-                        Проблема в том, что на сайте куда больше людей не из геймдева. Большая часть участников
-                        используют dtf для развлечения. Выходит, большая часть людей в этом подсайте, по сути, будет
-                        лишь в режиме ридонли?
+                </div>
+                <div class="sidebar__form-box">
+                    <label class="input__box">
+                        <span class="input__text input__text-dark">Имя и Фамилия*</span>
+                        <input class="input input-dark" type="text">
+                    </label>
+                    <div class="form__policy form__policy-sidebar">
+                        Отправляя сообщение, вы соглашаетесь с условиями обработки
+                        <a class="link link-blue" href="/">персональных данных</a>
                     </div>
-                    <div class="replies">
-                        <div class="replies__buttons">
-                            <button class="btn-text text-bold replies__btn">Ответить</button>
-                            <button class="btn-text btn-text-blue replies__btn replies-show">Показать ответы</button>
-                        </div>
-                        <ul class="replies__list">
-                            <li class="replies__item">
-                                <div class="reviews__user">
-                                    <div class="reviews__user-left">
-                                        <a href="#" class="user user__default user-reviews"
-                                            style="background-color:#bfc900">
-                                            <span class="icon icon-initials icon-reviews">MP</span>
-                                        </a>
-                                    </div>
-                                    <div class="reviews__user-right">
-                                        <a class="user-name" href="/">
-                                            Михаил Резин
-                                        </a>
-                                        <div class="reviews__date">
-                                            20 марта 2021 в 13:45
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="replies__text">
-                                    <span class="replies__name">Андрей Ерохин, </span> Да
-                                </div>
-                                <button class="btn-text text-bold replies__btn">Ответить</button>
-                            </li>
-                            <li class="replies__item">
-                                <div class="reviews__user">
-                                    <div class="reviews__user-left">
-                                        <a href="#" class="user user__default user-reviews"
-                                            style="background-color:#af848e">
-                                            <span class="icon icon-initials icon-reviews">АЕ</span>
-                                        </a>
-                                    </div>
-                                    <div class="reviews__user-right">
-                                        <a class="user-name" href="/">
-                                            Андрей Ерохин
-                                        </a>
-                                        <div class="reviews__date">
-                                            20 марта 2021 в 13:45
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="replies__text">
-                                    <span class="replies__name">Андрей Ерохин, </span> Да
-                                </div>
-                                <button class="btn-text text-bold replies__btn">Ответить</button>
-                            </li>
-                        </ul>
+                </div>
+                <div class="form__btn-box form__btn-box-sidebar">
+                    <button class="button-small button-default button-default-sidebar">Написать</button>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar sidebar__left sidebar__left-message">
+            <div class="sidebar__top sidebar__top-message">
+                <div class="sidebar__top-project">
+                    <div class="link sidebar__link comments__link sidebar__link-back sidebar-back" href="#">
+                        <svg class="link__icon" width="24" height="25" viewBox="0 0 24 25" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M3 3.55566C2.44772 3.55566 2 4.00338 2 4.55566V18.5557C2 19.1079 2.44772 19.5557 3 19.5557H13.4285V23.5558L18.2673 19.5557H21C21.5523 19.5557 22 19.1079 22 18.5557V4.55566C22 4.00338 21.5523 3.55566 21 3.55566H3Z"
+                                fill="white" />
+                        </svg>
+
+                        Коментарии <span class="comments__counter">33</span>
                     </div>
-                </li>
-                <li class="comment">
-                    <div class="reviews__user">
-                        <div class="reviews__user-left">
-                            <a href="#" class="user user__default user-reviews" style="background-color:#f25d7f">
-                                <span class="icon icon-initials icon-reviews">МЩ</span>
-                            </a>
-                        </div>
-                        <div class="reviews__user-right">
-                            <a class="user-name" href="/">
-                                Марина Щербакова
-                            </a>
-                            <div class="reviews__date">
-                                20 марта 2021 в 13:45
-                            </div>
-                        </div>
-                    </div>
-                    <div class="comment__text">
-                        Проблема в том, что на сайте куда больше людей не из геймдева. Большая часть участников
-                        используют dtf для развлечения. Выходит, большая часть людей в этом подсайте, по сути, будет
-                        лишь в режиме ридонли?
-                    </div>
-                    <div class="replies">
-                        <div class="replies__buttons">
-                            <button class="btn-text text-bold replies__btn">Ответить</button>
-                            <button class="btn-text btn-text-blue replies__btn replies-show">Показать ответы</button>
-                        </div>
-                        <ul class="replies__list">
-                            <li class="replies__item">
-                                <div class="reviews__user">
-                                    <div class="reviews__user-left">
-                                        <a href="#" class="user user__default user-reviews"
-                                            style="background-color:#af848e">
-                                            <span class="icon icon-initials icon-reviews">АЕ</span>
-                                        </a>
-                                    </div>
-                                    <div class="reviews__user-right">
-                                        <a class="user-name" href="/">
-                                            Андрей Ерохин
-                                        </a>
-                                        <div class="reviews__date">
-                                            20 марта 2021 в 13:45
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="replies__text">
-                                    <span class="replies__name">Андрей Ерохин, </span> Да
-                                </div>
-                                <button class="btn-text text-bold replies__btn">Ответить</button>
-                            </li>
-                            <li class="replies__item">
-                                <div class="reviews__user">
-                                    <div class="reviews__user-left">
-                                        <a href="#" class="user user__default user-reviews"
-                                            style="background-color:#af848e">
-                                            <span class="icon icon-initials icon-reviews">АЕ</span>
-                                        </a>
-                                    </div>
-                                    <div class="reviews__user-right">
-                                        <a class="user-name" href="/">
-                                            Андрей Ерохин
-                                        </a>
-                                        <div class="reviews__date">
-                                            20 марта 2021 в 13:45
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="replies__text">
-                                    <span class="replies__name">Андрей Ерохин, </span> Да
-                                </div>
-                                <button class="btn-text text-bold replies__btn">Ответить</button>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
+                    <button class="button-tr button-tr-blue sidebar-back">Назад</button>
+                </div>
+                <textarea class="input input-dark sidebar__textarea scroll-blue"></textarea>
+            </div>
+            <div class="form__btn-box form__btn-box-sidebar">
+                <button class="button-small button-default button-default-sidebar">Написать</button>
+            </div>
         </div>
 
         <div class="container">

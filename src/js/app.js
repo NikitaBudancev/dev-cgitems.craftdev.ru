@@ -88,17 +88,15 @@ $(function () {
     $(".sidebar__left-projects").addClass("active");
   });
 
+  $(".comments__link").on("click", function () {
+    $(".sidebar__left-comments").addClass("active");
+  });
+
   $(".sidebar-back").on("click", function () {
-    $(this).parent().parent().removeClass("active");
+    $(this).parents(".sidebar__left").removeClass("active");
   });
 
   $(".replies-show").on("click", function () {
-    if ($(this).text() == "Показать ответы") {
-      $(this).text("Скрыть ответы");
-    } else {
-      $(this).text("Показать ответы");
-    }
-
     $(this).parent().parent().find(".replies__list").toggleClass("active");
   });
 });

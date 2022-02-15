@@ -4,7 +4,7 @@
   justify-content: space-between;
   width: 100%;
   max-width: 384px;
-  height: 100vh;
+  height: calc(100vh - 57px);
   padding: 18px 0 32px;
   border-right: 1px solid #26303d;
 
@@ -18,35 +18,50 @@
     border-right: 1px solid #26303d;
     transition: all 0.3s;
 
-    &-projects.active {
+    &-projects.active,
+    &-comments.active {
       left: 0;
     }
 
-    &-replies {
+    &-comments {
+      padding-bottom: 0;
+      background-image: url("#{$path}cgitems-bg.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &-message {
       left: 0;
+      padding-bottom: 0;
     }
   }
 
-  &__top-project {
-    @include flex;
+  &__top {
+    &-project {
+      @include flex;
 
-    padding: 8px 24px;
-    margin-bottom: 24px;
-    border-bottom: 1px solid #26303d;
-  }
+      padding: 3px 20px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #26303d;
+    }
 
-  &__wrapper {
-    padding: 0 10px 0 23px;
-  }
+    &__wrapper {
+      padding: 0 10px 0 23px;
+    }
 
-  &__user {
-    margin-bottom: 30px;
-
-    &-name {
-      @include font(24px, false, 700);
-
+    &__user {
       margin-bottom: 30px;
-      text-align: center;
+
+      &-name {
+        @include font(24px, false, 700);
+
+        margin-bottom: 30px;
+        text-align: center;
+      }
+    }
+
+    &-message {
+      flex: 1;
     }
   }
 
@@ -125,6 +140,56 @@
     .social {
       padding: 0 24px;
     }
+
+    &-comments {
+      position: absolute;
+      bottom: 0;
+      padding: 6px 0;
+      background: #0e1112;
+      border-top: 1px solid #26303d;
+    }
+
+    &-text {
+      @include font(13px, #7b8ea9, 300);
+
+      position: relative;
+      max-width: 250px;
+      padding-left: 60px;
+
+      &::before {
+        @include pseudo-element;
+
+        top: 50%;
+        left: 0;
+        width: 45px;
+        height: 30px;
+        background-image: url("#{$path}cgitems-bg-violet.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        transform: translateY(-50%);
+      }
+    }
+    .input__text-dark {
+      @include font(false, #7b8ea9, 400);
+    }
+
+    .input-dark {
+      background-color: #0e1112;
+      border: 1px solid #26303d;
+    }
+  }
+
+  &__form-box {
+    padding: 0 30px;
+  }
+
+  &__textarea {
+    width: 100%;
+    height: calc(100% - 60px);
+    padding: 5px;
+    resize: none;
+    background-color: #0e1112;
+    outline: none;
   }
 }
 
@@ -172,4 +237,10 @@
     border: 1px solid #e0edff;
     border-radius: 3px;
   }
+}
+
+.form__btn-box-sidebar {
+  padding: 10px 30px;
+  text-align: end;
+  border-top: 1px solid #26303d;
 }
