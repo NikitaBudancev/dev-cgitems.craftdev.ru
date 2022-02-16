@@ -1,4 +1,5 @@
 import $ from "jquery";
+import "slick-carousel";
 
 $(function () {
   $(".accordion__title").on("click", function (e) {
@@ -15,6 +16,74 @@ $(function () {
     $this.next().slideToggle();
     $(".accordion__arrow", this).toggleClass("accordion__rotate");
   });
+
+  // ==================== Slider =========================
+
+  function slickSliderCounter(selector, params) {
+    let $slider = $(selector);
+
+    if ($slider.length) {
+      let currentSlide;
+      let slidesCount;
+      let sliderCounter = document.createElement("div");
+      sliderCounter.classList.add("slider__counter");
+
+      let updateSliderCounter = function (slick, currentIndex) {
+        currentSlide = slick.slickCurrentSlide() + 1;
+        slidesCount = slick.slideCount;
+        $(sliderCounter).text(currentSlide + "/" + slidesCount);
+      };
+
+      $slider.on("init", function (event, slick) {
+        $slider.append(sliderCounter);
+        updateSliderCounter(slick);
+      });
+
+      $slider.on("afterChange", function (event, slick, currentSlide) {
+        updateSliderCounter(slick, currentSlide);
+      });
+    }
+
+    $slider.slick(params);
+  }
+
+  slickSliderCounter(".reviews__list-slider", {
+    slidesToShow: 4,
+    prevArrow:
+      '<button class="btn-slider btn-slider-prev"><span class="btn-slider-arrow btn-slider-arrow-prev"></span></button>',
+    nextArrow:
+      '<button class="btn-slider btn-slider-next"><span class="btn-slider-arrow btn-slider-arrow-next"></span></button>',
+    responsive: [
+      {
+        breakpoint: 2000,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 1680,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+
+  slickSliderCounter(".projects__list-slider", {
+    slidesToShow: 1,
+    prevArrow:
+      '<button class="btn-slider btn-slider-prev"><span class="btn-slider-arrow btn-slider-arrow-prev"></span></button>',
+    nextArrow:
+      '<button class="btn-slider btn-slider-next"><span class="btn-slider-arrow btn-slider-arrow-next"></span></button>',
+  });
+
+  // ==================== Slider =========================
 
   $(".mobile-search").on("click", function () {
     $(".form-search-header").fadeToggle(300);
@@ -90,6 +159,10 @@ $(function () {
 
   $(".comments__link").on("click", function () {
     $(".sidebar__left-comments").addClass("active");
+  });
+
+  $(".button-message").on("click", function () {
+    $(".sidebar__left-message").addClass("active");
   });
 
   $(".sidebar-back").on("click", function () {

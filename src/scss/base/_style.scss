@@ -189,6 +189,26 @@ li {
 .content {
   background-color: #171b1f;
 
+  &-right {
+    display: flex;
+
+    .content__left-col {
+      width: 100%;
+      max-width: 384px;
+    }
+
+    .content__center-col {
+      width: 100%;
+
+      &-project {
+        background-image: url("#{$path}projects/project-bg.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+    }
+  }
+
   &-scroll {
     height: 1180px;
     margin-right: -25px;
@@ -236,6 +256,26 @@ li {
 
       max-width: 1068px;
       line-height: 1.2;
+    }
+  }
+}
+
+.container {
+  padding: 0 128px;
+
+  .container-projects {
+    width: 100%;
+    max-width: 1428px;
+    padding: 0;
+    margin: 0 auto;
+
+    &-slider {
+      position: relative;
+      padding: 0 72px;
+
+      .slick-slider {
+        position: static;
+      }
     }
   }
 }

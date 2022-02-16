@@ -6,6 +6,7 @@
   max-width: 384px;
   height: calc(100vh - 57px);
   padding: 18px 0 32px;
+  background-color: #13171a;
   border-right: 1px solid #26303d;
 
   &__left {
@@ -19,7 +20,8 @@
     transition: all 0.3s;
 
     &-projects.active,
-    &-comments.active {
+    &-comments.active,
+    &-message.active {
       left: 0;
     }
 
@@ -31,7 +33,6 @@
     }
 
     &-message {
-      left: 0;
       padding-bottom: 0;
     }
   }
@@ -44,24 +45,23 @@
       margin-bottom: 10px;
       border-bottom: 1px solid #26303d;
     }
-
-    &__wrapper {
-      padding: 0 10px 0 23px;
-    }
-
-    &__user {
-      margin-bottom: 30px;
-
-      &-name {
-        @include font(24px, false, 700);
-
-        margin-bottom: 30px;
-        text-align: center;
-      }
-    }
-
     &-message {
       flex: 1;
+    }
+  }
+
+  &__wrapper {
+    padding: 0 10px 0 23px;
+  }
+
+  &__user {
+    margin-bottom: 30px;
+
+    &-name {
+      @include font(24px, false, 700);
+
+      margin-bottom: 30px;
+      text-align: center;
     }
   }
 
