@@ -1,6 +1,14 @@
 .breadcrumbs {
   background-color: #171b1f;
 
+  &-projects {
+    background-color: transparent;
+  }
+
+  &__box-btn {
+    @include flex;
+  }
+
   &__inner {
     padding: 36px 0;
   }

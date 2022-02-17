@@ -1,14 +1,36 @@
 .social {
   &__list {
     display: flex;
+
+    &-dark {
+      justify-content: center;
+    }
   }
 
   &__item {
     margin-right: 8px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &-dark {
+      margin-right: 16px;
+    }
   }
 
   &__link {
-    outline: none;
+    position: relative;
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+
+    &-dark {
+      width: 32px;
+      height: 32px;
+      border: 1px solid #26303d;
+    }
 
     path {
       transition: 0.3s;
@@ -21,7 +43,6 @@
   }
 
   &__icon {
-    width: 24px;
-    height: 24px;
+    @include сentering-xy;
   }
 }

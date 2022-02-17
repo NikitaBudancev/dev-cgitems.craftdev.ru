@@ -1,0 +1,246 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 384px;
+  height: calc(100vh - 57px);
+  padding: 18px 0 32px;
+  background-color: #13171a;
+  border-right: 1px solid #26303d;
+
+  &__left {
+    position: absolute;
+    top: 57px;
+    left: -384px;
+    justify-content: flex-start;
+    padding-top: 0;
+    background: #0e1112;
+    border-right: 1px solid #26303d;
+    transition: all 0.3s;
+
+    &-projects.active,
+    &-comments.active,
+    &-message.active {
+      left: 0;
+    }
+
+    &-comments {
+      padding-bottom: 0;
+      background-image: url("#{$path}cgitems-bg.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &-message {
+      padding-bottom: 0;
+    }
+  }
+
+  &__top {
+    &-project {
+      @include flex;
+
+      padding: 3px 20px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #26303d;
+    }
+    &-message {
+      flex: 1;
+    }
+  }
+
+  &__wrapper {
+    padding: 0 10px 0 23px;
+  }
+
+  &__user {
+    margin-bottom: 30px;
+
+    &-name {
+      @include font(24px, false, 700);
+
+      margin-bottom: 30px;
+      text-align: center;
+    }
+  }
+
+  &__project {
+    &-name {
+      display: block;
+      margin-bottom: 16px;
+      text-transform: none;
+
+      &::after {
+        top: 0;
+      }
+
+      &-subtext {
+        @include font(14px, false, 400);
+      }
+    }
+
+    &-desc {
+      height: 140px;
+      padding: 0 15px 0 30px;
+      margin-right: 8px;
+      margin-bottom: 16px;
+      overflow: auto;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+    padding: 8px 24px;
+    text-align: inherit;
+    background: transparent;
+    border-top: 1px solid #26303d;
+
+    & path {
+      transition: all 0.3s;
+    }
+
+    &:hover,
+    &:focus {
+      color: #7d92b0;
+
+      .link__icon path {
+        fill: #7d92b0;
+      }
+    }
+
+    &:last-child {
+      border-bottom: 1px solid #26303d;
+    }
+
+    &-back {
+      padding-left: 0;
+      cursor: pointer;
+      border: none;
+    }
+  }
+
+  .link__icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    vertical-align: sub;
+  }
+
+  .other__projects-couter,
+  .comments__counter {
+    color: #7d92b0;
+  }
+
+  &__bottom {
+    .social {
+      padding: 0 24px;
+    }
+
+    &-comments {
+      position: absolute;
+      bottom: 0;
+      padding: 6px 0;
+      background: #0e1112;
+      border-top: 1px solid #26303d;
+    }
+
+    &-text {
+      @include font(13px, #7b8ea9, 300);
+
+      position: relative;
+      max-width: 250px;
+      padding-left: 60px;
+
+      &::before {
+        @include pseudo-element;
+
+        top: 50%;
+        left: 0;
+        width: 45px;
+        height: 30px;
+        background-image: url("#{$path}cgitems-bg-violet.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        transform: translateY(-50%);
+      }
+    }
+    .input__text-dark {
+      @include font(false, #7b8ea9, 400);
+    }
+
+    .input-dark {
+      background-color: #0e1112;
+      border: 1px solid #26303d;
+    }
+  }
+
+  &__form-box {
+    padding: 0 30px;
+  }
+
+  &__textarea {
+    width: 100%;
+    height: calc(100% - 60px);
+    padding: 5px;
+    resize: none;
+    background-color: #0e1112;
+    outline: none;
+  }
+}
+
+.profile-edit {
+  margin-bottom: 10px;
+  text-align: end;
+}
+
+.menu-mobile {
+  display: block;
+
+  &__list {
+    padding: 0 24px;
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    font-size: 16px;
+    font-weight: 500;
+    color: #7d92b0;
+    text-decoration: none;
+    transition: 0.3s;
+
+    &:hover,
+    &:focus {
+      color: #e0edff;
+    }
+  }
+}
+
+.achive-desc {
+  position: absolute;
+  top: 45px;
+  left: 30px;
+  z-index: 1;
+  display: block;
+  width: 450px;
+
+  &-text {
+    display: inline-block;
+    display: none;
+    padding: 0 7px;
+    color: #e0edff;
+    background-color: #010203;
+    border: 1px solid #e0edff;
+    border-radius: 3px;
+  }
+}
+
+.form__btn-box-sidebar {
+  padding: 10px 30px;
+  text-align: end;
+  border-top: 1px solid #26303d;
+}

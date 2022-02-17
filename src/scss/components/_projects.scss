@@ -5,6 +5,13 @@
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
+
+    &-sidebar {
+      display: block;
+      height: calc(100vh - 10%);
+      padding-right: 23px;
+      overflow: auto;
+    }
   }
 
   .stage {
@@ -15,6 +22,53 @@
     line-height: 20px;
     padding: 0 10px;
     border-radius: 5px;
+  }
+
+  &__list-slider {
+    .slider__counter {
+      position: absolute;
+      top: 0;
+      right: 82px;
+    }
+
+    .btn-slider {
+      position: absolute;
+      top: 50%;
+      width: 40px;
+      height: 40px;
+      background: transparent;
+      background-image: url("#{$path}buttons/button-scroll-up.svg");
+      transition: all 0.3s;
+      transform: translateY(-50%);
+
+      &:hover,
+      &:focus {
+        background-image: url("#{$path}buttons/button-scroll-up-light.svg");
+      }
+
+      &-prev {
+        left: 0;
+        transform: rotate(-90deg);
+      }
+
+      &-next {
+        right: 0;
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  &-slider {
+    margin-top: 70px;
+
+    &__top {
+      padding-left: 5px;
+      margin-bottom: 5px;
+    }
+
+    &__name {
+      margin-right: 10px;
+    }
   }
 }
 
@@ -56,10 +110,17 @@
       display: block;
     }
 
-    .project__info {
+    .project__info-show {
       height: 25px;
       opacity: 1;
     }
+  }
+
+  &-sidebar {
+    width: 100%;
+    max-width: initial !important;
+    height: 200px;
+    margin-bottom: 20px;
   }
 
   &__link {
@@ -104,9 +165,11 @@
   &__info {
     @include flex(flex-start);
 
-    height: 0;
-    opacity: 0;
-    transition: all 0.3s;
+    &-show {
+      height: 0;
+      opacity: 0;
+      transition: all 0.3s;
+    }
 
     &-item {
       @include font(12px, #e0edff);
@@ -115,6 +178,16 @@
       margin-right: 7px;
       background-repeat: no-repeat;
       background-position: left;
+
+      &-date {
+        background-image: url("#{$path}socials/clock.svg");
+
+        &-slider {
+          @include font(14px, #68788f);
+
+          background-image: url("#{$path}socials/clock-violet.svg");
+        }
+      }
 
       &-wiews {
         background-image: url("#{$path}socials/wiews.svg");
@@ -126,6 +199,46 @@
 
       &-comments {
         background-image: url("#{$path}socials/comments.svg");
+      }
+    }
+  }
+
+  &__category {
+    padding: 2px 16px;
+    font-size: 14px;
+    color: #7d92b0;
+    background-color: #010203;
+    border: 1px solid #26303d;
+    border-radius: 5px;
+
+    &-slider {
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+      z-index: 1;
+    }
+  }
+
+  &-item {
+    &__slider {
+      position: relative;
+
+      &-img {
+        width: 100%;
+        height: auto;
+        padding: 0 5px;
+        filter: drop-shadow(4px 0 4px #00000040);
+      }
+
+      .image-expand {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        width: 24px;
+        height: 24px;
+        background-image: url("#{$path}icons/expand.svg");
+        background-repeat: no-repeat;
+        background-position: center;
       }
     }
   }

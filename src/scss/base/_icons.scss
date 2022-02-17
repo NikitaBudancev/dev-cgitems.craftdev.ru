@@ -11,6 +11,15 @@
 
   &-initials {
     @include font(14px, $white, 700);
+
+    &-big {
+      font-size: 74px;
+    }
+  }
+
+  &-achive {
+    top: 30px;
+    left: 20px;
   }
 
   &-plus {
@@ -39,6 +48,13 @@
 
   &__default {
     background: #010203;
+
+    &-big {
+      width: 176px;
+      height: 176px;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
   }
 
   &-reviews {

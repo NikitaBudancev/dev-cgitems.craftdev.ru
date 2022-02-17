@@ -23,6 +23,14 @@
       outline: none;
     }
   }
+
+  &__policy {
+    @include font(13px, #7b8ea9, 300);
+
+    &-sidebar {
+      margin-bottom: 20px;
+    }
+  }
 }
 
 .check {
