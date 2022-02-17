@@ -45,7 +45,7 @@
         "webpack-stream": "^7.0.0"
     },
     "dependencies": {
-        "@fancyapps/fancybox": "^3.5.7",
+        "@fancyapps/ui": "^4.0.25",
         "imagesloaded": "^4.1.4",
         "jquery-bridget": "^3.0.1",
         "masonry-layout": "^4.2.2",

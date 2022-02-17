@@ -263,15 +263,15 @@ li {
 .container {
   padding: 0 128px;
 
-  .container-projects {
-    width: 100%;
-    max-width: 1428px;
-    padding: 0;
-    margin: 0 auto;
+  &-projects {
+    padding: 0 112px 0 64px;
 
     &-slider {
       position: relative;
+      width: 100%;
+      max-width: 1428px;
       padding: 0 72px;
+      margin: 0 auto;
 
       .slick-slider {
         position: static;

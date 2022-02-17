@@ -1,5 +1,6 @@
 import $ from "jquery";
 import "slick-carousel";
+import { Fancybox } from "@fancyapps/ui/src/Fancybox/Fancybox.js";
 
 $(function () {
   $(".accordion__title").on("click", function (e) {
@@ -74,6 +75,13 @@ $(function () {
       },
     ],
   });
+
+  Fancybox.bind(
+    ".projects__list-slider .slick-slide:not(.slick-cloned) .image-expand",
+    {
+      groupAll: true, // Group all items
+    }
+  );
 
   slickSliderCounter(".projects__list-slider", {
     slidesToShow: 1,
