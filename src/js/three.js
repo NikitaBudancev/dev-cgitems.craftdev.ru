@@ -1,7 +1,7 @@
-import $ from 'jquery'
-import * as THREE from 'three'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
-import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js'
+import $ from "jquery";
+import * as THREE from "three";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader.js";
 
 let camera, scene, renderer;
 
@@ -13,100 +13,94 @@ init();
 animate();
 
 function init() {
+  const iframeDataSrc = $(".iframe").attr("data-src");
 
-    const iframeDataSrc = $('.iframe').attr('data-src');
+  const container = $(".iframe").contents().find("body");
 
-    const container = $(".iframe").contents().find("body");
+  camera = new THREE.PerspectiveCamera(
+    45,
+    container.width() / container.height(),
+    1,
+    2000
+  );
+  camera.position.set(100, 200, 300);
 
-    document.body.append(container);
+  scene = new THREE.Scene();
+  scene.background = new THREE.Color(0x1b1b1d);
+  // scene.fog = new THREE.Fog(0xa0a0a0, 200, 1000);
 
-    camera = new THREE.PerspectiveCamera(45, container.width() / container.height(), 1, 2000);
-    camera.position.set(100, 200, 300);
+  const hemiLight = new THREE.HemisphereLight(0xffffff, 0x444444);
+  hemiLight.position.set(0, 200, 0);
+  scene.add(hemiLight);
 
-    scene = new THREE.Scene();
-    scene.background = new THREE.Color(0xa0a0a0);
-    // scene.fog = new THREE.Fog(0xa0a0a0, 200, 1000);
+  const dirLight = new THREE.DirectionalLight(0xffffff);
+  dirLight.position.set(0, 200, 100);
+  dirLight.castShadow = true;
+  dirLight.shadow.camera.top = 180;
+  dirLight.shadow.camera.bottom = -100;
+  dirLight.shadow.camera.left = -120;
+  dirLight.shadow.camera.right = 120;
+  scene.add(dirLight);
 
-    const hemiLight = new THREE.HemisphereLight(0xffffff, 0x444444);
-    hemiLight.position.set(0, 200, 0);
-    scene.add(hemiLight);
+  // scene.add( new THREE.CameraHelper( dirLight.shadow.camera ) );
 
-    const dirLight = new THREE.DirectionalLight(0xffffff);
-    dirLight.position.set(0, 200, 100);
-    dirLight.castShadow = true;
-    dirLight.shadow.camera.top = 180;
-    dirLight.shadow.camera.bottom = -100;
-    dirLight.shadow.camera.left = -120;
-    dirLight.shadow.camera.right = 120;
-    scene.add(dirLight);
+  // ground
+  const mesh = new THREE.Mesh(
+    new THREE.PlaneGeometry(2000, 2000),
+    new THREE.MeshPhongMaterial({ color: 0x999999, depthWrite: false })
+  );
+  mesh.rotation.x = -Math.PI / 2;
+  mesh.receiveShadow = true;
+  scene.add(mesh);
 
-    // scene.add( new THREE.CameraHelper( dirLight.shadow.camera ) );
+  const grid = new THREE.GridHelper(2000, 60, 0x000000, 0x000000);
+  grid.material.opacity = 0.1;
+  grid.material.transparent = true;
+  scene.add(grid);
 
-    // ground
-    const mesh = new THREE.Mesh(new THREE.PlaneGeometry(2000, 2000), new THREE.MeshPhongMaterial({ color: 0x999999, depthWrite: false }));
-    mesh.rotation.x = -Math.PI / 2;
-    mesh.receiveShadow = true;
-    scene.add(mesh);
+  // model
+  const loader = new FBXLoader();
+  loader.load(iframeDataSrc, function (object) {
+    mixer = new THREE.AnimationMixer(object);
 
-    const grid = new THREE.GridHelper(2000, 20, 0x000000, 0x000000);
-    grid.material.opacity = 0.2;
-    grid.material.transparent = true;
-    scene.add(grid);
-
-    // model
-    const loader = new FBXLoader();
-    loader.load(iframeDataSrc, function (object) {
-
-        mixer = new THREE.AnimationMixer(object);
-
-        object.traverse(function (child) {
-
-            if (child.isMesh) {
-
-                child.castShadow = true;
-                child.receiveShadow = true;
-
-            }
-
-        });
-
-        scene.add(object);
-
+    object.traverse(function (child) {
+      if (child.isMesh) {
+        child.castShadow = true;
+        child.receiveShadow = true;
+      }
     });
 
-    renderer = new THREE.WebGLRenderer({ antialias: true });
-    renderer.setPixelRatio(container.devicePixelRatio);
-    renderer.setSize(container.width(), container.height());
-    renderer.shadowMap.enabled = true;
-    container.append(renderer.domElement);
+    scene.add(object);
+  });
 
-    const controls = new OrbitControls(camera, renderer.domElement);
-    controls.target.set(0, 100, 0);
-    controls.update();
+  renderer = new THREE.WebGLRenderer({ antialias: true });
+  renderer.setPixelRatio(container.devicePixelRatio);
+  renderer.setSize(container.width(), container.height());
+  renderer.shadowMap.enabled = true;
+  container.append(renderer.domElement);
 
-    window.addEventListener('resize', onWindowResize);
+  const controls = new OrbitControls(camera, renderer.domElement);
+  controls.target.set(0, 100, 0);
+  controls.update();
 
+  window.addEventListener("resize", onWindowResize);
 }
 
 function onWindowResize() {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
 
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-
-    renderer.setSize(window.innerWidth, window.innerHeight);
-
+  renderer.setSize(window.innerWidth, window.innerHeight);
 }
 
 //
 
 function animate() {
+  requestAnimationFrame(animate);
 
-    requestAnimationFrame(animate);
+  const delta = clock.getDelta();
 
-    const delta = clock.getDelta();
+  if (mixer) mixer.update(delta);
 
-    if (mixer) mixer.update(delta);
-
-    renderer.render(scene, camera);
-
+  renderer.render(scene, camera);
 }

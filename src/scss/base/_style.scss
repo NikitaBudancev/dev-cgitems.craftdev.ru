@@ -276,6 +276,10 @@ li {
       .slick-slider {
         position: static;
       }
+
+      &-3d {
+        padding: 0;
+      }
     }
   }
 }
@@ -369,6 +373,23 @@ form {
         }
       }
     }
+
+    &-container-projects {
+      @include flex(flex-start);
+
+      gap: 16px;
+      width: 100%;
+      max-width: 1416px;
+      margin: 0 auto;
+    }
+
+    &-like {
+      width: 100%;
+
+      &__inner {
+        padding: 13px 16px;
+      }
+    }
   }
 
   &-sort {
@@ -443,5 +464,11 @@ form {
         color: $color-primary-400;
       }
     }
+  }
+}
+
+.iframe {
+  &-projects {
+    border: 0;
   }
 }
