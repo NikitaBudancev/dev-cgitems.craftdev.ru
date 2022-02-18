@@ -1,6 +1,6 @@
 .footer {
   padding: 70px 0 87px;
-  background-color: #26303d;
+  background-color: $color-secondary-820;
 
   &-container {
     padding: 0 320px;
@@ -33,7 +33,7 @@
       }
 
       &-link {
-        @include font(false, $white, 500);
+        @include font(false, $color-light, 500);
 
         text-decoration: none;
       }

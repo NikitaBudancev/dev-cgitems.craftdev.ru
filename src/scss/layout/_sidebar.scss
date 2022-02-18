@@ -6,8 +6,8 @@
   max-width: 384px;
   height: calc(100vh - 57px);
   padding: 18px 0 32px;
-  background-color: #13171a;
-  border-right: 1px solid #26303d;
+  background-color: $color-secondary-940;
+  border-right: 1px solid $color-secondary-820;
 
   &__left {
     position: absolute;
@@ -16,7 +16,7 @@
     justify-content: flex-start;
     padding-top: 0;
     background: #0e1112;
-    border-right: 1px solid #26303d;
+    border-right: 1px solid $color-secondary-820;
     transition: all 0.3s;
 
     &-projects.active,
@@ -43,7 +43,7 @@
 
       padding: 3px 20px;
       margin-bottom: 10px;
-      border-bottom: 1px solid #26303d;
+      border-bottom: 1px solid $color-secondary-820;
     }
     &-message {
       flex: 1;
@@ -97,7 +97,7 @@
     padding: 8px 24px;
     text-align: inherit;
     background: transparent;
-    border-top: 1px solid #26303d;
+    border-top: 1px solid $color-secondary-820;
 
     & path {
       transition: all 0.3s;
@@ -105,15 +105,15 @@
 
     &:hover,
     &:focus {
-      color: #7d92b0;
+      color: $color-secondary-400;
 
       .link__icon path {
-        fill: #7d92b0;
+        fill: $color-secondary-400;
       }
     }
 
     &:last-child {
-      border-bottom: 1px solid #26303d;
+      border-bottom: 1px solid $color-secondary-820;
     }
 
     &-back {
@@ -133,7 +133,7 @@
 
   .other__projects-couter,
   .comments__counter {
-    color: #7d92b0;
+    color: $color-secondary-400;
   }
 
   &__bottom {
@@ -146,11 +146,11 @@
       bottom: 0;
       padding: 6px 0;
       background: #0e1112;
-      border-top: 1px solid #26303d;
+      border-top: 1px solid $color-secondary-820;
     }
 
     &-text {
-      @include font(13px, #7b8ea9, 300);
+      @include font(13px, $color-secondary-500, 300);
 
       position: relative;
       max-width: 250px;
@@ -170,12 +170,12 @@
       }
     }
     .input__text-dark {
-      @include font(false, #7b8ea9, 400);
+      @include font(false, $color-secondary-500, 400);
     }
 
     .input-dark {
       background-color: #0e1112;
-      border: 1px solid #26303d;
+      border: 1px solid $color-secondary-820;
     }
   }
 
@@ -209,13 +209,13 @@
   &__link {
     font-size: 16px;
     font-weight: 500;
-    color: #7d92b0;
+    color: $color-secondary-400;
     text-decoration: none;
     transition: 0.3s;
 
     &:hover,
     &:focus {
-      color: #e0edff;
+      color: $color-primary-150;
     }
   }
 }
@@ -232,9 +232,9 @@
     display: inline-block;
     display: none;
     padding: 0 7px;
-    color: #e0edff;
-    background-color: #010203;
-    border: 1px solid #e0edff;
+    color: $color-primary-150;
+    background-color: $color-secondary-970;
+    border: 1px solid $color-primary-150;
     border-radius: 3px;
   }
 }
@@ -242,5 +242,5 @@
 .form__btn-box-sidebar {
   padding: 10px 30px;
   text-align: end;
-  border-top: 1px solid #26303d;
+  border-top: 1px solid $color-secondary-820;
 }

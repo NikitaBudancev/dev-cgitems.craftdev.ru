@@ -29,7 +29,7 @@
     &-dark {
       width: 32px;
       height: 32px;
-      border: 1px solid #26303d;
+      border: 1px solid $color-secondary-820;
     }
 
     path {
@@ -38,7 +38,7 @@
 
     &:hover .social__icon path,
     &:focus .social__icon path {
-      fill: #d6e7ff;
+      fill: $color-primary-160;
     }
   }
 

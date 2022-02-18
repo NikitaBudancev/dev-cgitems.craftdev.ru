@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  @include font(18px, $white, 400, 1.5);
+  @include font(18px, $color-light, 400, 1.5);
 
   padding: 0;
   margin: 0;
@@ -21,12 +21,12 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #010203;
+  background-color: $color-secondary-970;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #384557;
-  border: 1px solid #010203;
+  background-color: $color-secondary-700;
+  border: 1px solid $color-secondary-970;
   border-radius: 10px;
 }
 
@@ -37,12 +37,12 @@ body {
     }
 
     &::-webkit-scrollbar-track {
-      background-color: #010203;
+      background-color: $color-secondary-970;
       border-radius: 5px;
     }
 
     &::-webkit-scrollbar-thumb {
-      background-color: #0099e9;
+      background-color: $color-primary-400;
       border: none;
     }
   }
@@ -59,18 +59,18 @@ button {
 }
 
 .link {
-  color: $white;
+  color: $color-text-light;
   text-decoration: none;
   outline: none;
   transition: 0.3s;
 
   &:hover,
   &:focus {
-    color: $hover-link;
+    color: $color-primary-500;
   }
 
   &-blue {
-    color: #0099e9;
+    color: $color-primary-400;
   }
 }
 
@@ -88,18 +88,18 @@ input {
 
   &-dark {
     margin-bottom: 3px;
-    color: $white;
-    background-color: #13171a;
+    color: $color-text-light;
+    background-color: $color-secondary-940;
     border: none;
 
     &::placeholder {
-      @include font(10px, #889dba);
+      @include font(10px, $color-secondary-300);
     }
   }
 
   &__text {
     &-dark {
-      @include font(12px, #7d92b0, 700);
+      @include font(12px, $color-secondary-400, 700);
     }
   }
 }
@@ -120,7 +120,7 @@ li {
   &-blue {
     font-size: 48px;
     font-weight: 700;
-    text-shadow: 0 0 60px #005de9;
+    text-shadow: 0 0 60px $color-primary-800;
     letter-spacing: 1.5px;
     background: $color-gradient;
     -webkit-background-clip: text;
@@ -166,13 +166,13 @@ li {
       bottom: 24px;
       width: 183px;
       height: 5px;
-      background-color: $default;
+      background-color: $color-primary-400;
     }
   }
 }
 
 .user-name {
-  @include font(16px, $white, 700);
+  @include font(16px, $color-light, 700);
 
   text-decoration: none;
 }
@@ -187,7 +187,7 @@ li {
 }
 
 .content {
-  background-color: #171b1f;
+  background-color: $color-secondary-900;
 
   &-right {
     display: flex;
@@ -221,12 +221,12 @@ li {
     &::-webkit-scrollbar-track {
       margin-top: 100px;
       margin-bottom: 20px;
-      background-color: #010203;
+      background-color: $color-secondary-970;
       border-radius: 5px;
     }
 
     &::-webkit-scrollbar-thumb {
-      background-color: #384557;
+      background-color: $color-secondary-700;
       border-radius: 5px;
     }
   }
@@ -296,13 +296,13 @@ form {
 
 .panel {
   &-bar {
-    color: $white;
-    background: $dark;
+    color: $color-text-light;
+    background: $color-secondary-850;
 
     &.shadow {
       position: relative;
       z-index: 1;
-      box-shadow: 0 24px 16px 4px #171b1f;
+      box-shadow: 0 24px 16px 4px $color-secondary-900;
     }
 
     &-default {
@@ -310,7 +310,7 @@ form {
     }
 
     &-border {
-      border: 1px solid #26303d;
+      border: 1px solid $color-secondary-820;
     }
 
     &-elements {
@@ -335,7 +335,7 @@ form {
           width: 0;
           height: 0;
           content: "";
-          border-color: $white transparent transparent transparent;
+          border-color: $color-light transparent transparent transparent;
           border-style: solid;
           border-width: 10px;
           opacity: 0;
@@ -345,10 +345,10 @@ form {
         &:hover,
         &.active {
           cursor: pointer;
-          background-color: $default;
+          background-color: $color-primary-400;
 
           &-title {
-            color: #384557;
+            color: $color-secondary-700;
           }
 
           &::before {
@@ -365,7 +365,7 @@ form {
         &-subtitle {
           font-size: 14px;
           line-height: 16px;
-          color: #384557;
+          color: $color-secondary-700;
         }
       }
     }
@@ -385,7 +385,7 @@ form {
       font-weight: bolder;
       line-height: 32px;
       text-align: center;
-      background-color: $default;
+      background-color: $color-primary-400;
       border-radius: 10px 0 0 10px;
 
       @at-root %for-icon-bottom:after,
@@ -401,13 +401,13 @@ form {
 
       &::after {
         width: 7px;
-        background-color: $dark;
+        background-color: $color-secondary-850;
         border-radius: 10px 0 0 10px;
       }
 
       &::before {
         width: 71.68px;
-        background-color: $white;
+        background-color: $color-light;
         border-radius: 10px 0 0 10px;
       }
     }
@@ -435,12 +435,12 @@ form {
     }
 
     a {
-      color: $color-link;
+      color: $color-primary-500;
       text-decoration: none;
 
       &:hover,
       &.active {
-        color: $default;
+        color: $color-primary-400;
       }
     }
   }

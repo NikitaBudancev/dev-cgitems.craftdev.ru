@@ -3,8 +3,8 @@
   max-width: 220px;
   width: 100%;
   padding: 16px;
-  background-color: #202833;
-  border: 1px solid #26303d;
+  background-color: $color-secondary-850;
+  border: 1px solid $color-secondary-820;
   border-radius: 10px;
   position: absolute;
   right: 12px;
@@ -13,7 +13,7 @@
   cursor: default;
 
   &__title {
-    @include font(15px, #e0edff, 700);
+    @include font(15px, $color-primary-150, 700);
 
     margin-bottom: 10px;
   }
@@ -41,7 +41,7 @@
   &__url {
     padding: 6px;
     font-size: 12px;
-    border: 1px solid #26303d;
+    border: 1px solid $color-secondary-820;
   }
 
   &__btn {
@@ -51,10 +51,10 @@
     width: 50%;
     font-size: 12px;
     font-weight: 500;
-    color: #0099e9;
+    color: $color-primary-400;
     text-transform: uppercase;
     background: none;
-    background-color: #13171a;
+    background-color: $color-secondary-940;
     transition: 0.3s;
 
     &:hover,

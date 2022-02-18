@@ -10,7 +10,7 @@
   @include сentering-xy;
 
   &-initials {
-    @include font(14px, $white, 700);
+    @include font(14px, $color-light, 700);
 
     &-big {
       font-size: 74px;
@@ -30,7 +30,7 @@
     height: 28px;
     font-size: 32px;
     color: #04476b;
-    background-color: $default;
+    background-color: $color-primary-400;
     border-radius: 50%;
   }
 
@@ -47,7 +47,7 @@
   @extend %circle;
 
   &__default {
-    background: #010203;
+    background: $color-secondary-970;
 
     &-big {
       width: 176px;
@@ -66,8 +66,8 @@
 .mobile-search {
   @extend %circle;
 
-  background: #010203;
-  border: 1px solid $border-dark;
+  background: $color-secondary-970;
+  border: 1px solid $color-secondary-800;
 
   & svg {
     position: relative;

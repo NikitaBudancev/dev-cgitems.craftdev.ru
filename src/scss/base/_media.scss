@@ -426,13 +426,13 @@
         flex-direction: column;
         align-items: flex-start;
         padding: 0 24px;
-        border-bottom: 1px solid $border-dark;
+        border-bottom: 1px solid $color-secondary-800;
       }
 
       &__item {
         width: 100%;
         padding: 22px 0;
-        border-bottom: 1px solid $border-dark;
+        border-bottom: 1px solid $color-secondary-800;
 
         &:last-child {
           border-bottom: none;
@@ -457,7 +457,7 @@
     & .mobile-search {
       width: 36px;
       height: 36px;
-      background-color: #414f62;
+      background-color: $color-secondary-650;
     }
 
     .form-search-header {
@@ -1185,7 +1185,7 @@
   .reviews {
     padding: 10px 0 120px;
     background: none;
-    background-color: #171b1f;
+    background-color: $color-secondary-900;
 
     &__title {
       margin-bottom: 50px;

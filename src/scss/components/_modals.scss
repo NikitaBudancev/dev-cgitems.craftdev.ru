@@ -1,6 +1,6 @@
 .modal {
   display: none;
-  background: #202833;
+  background: $color-secondary-850;
   border-radius: 10px;
 
   &__left {
@@ -10,7 +10,7 @@
 
   &__desc {
     margin-bottom: 60px;
-    color: #889dba;
+    color: $color-secondary-300;
     text-align: end;
 
     &-date {
@@ -55,5 +55,4 @@
   .fancybox-button {
     display: none;
   }
-
 }

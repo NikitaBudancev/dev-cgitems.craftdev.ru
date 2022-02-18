@@ -1,12 +1,12 @@
 .accordion {
   overflow: hidden;
   background-color: transparent;
-  border: 1px solid #414f62;
+  border: 1px solid $color-secondary-650;
   border-radius: 10px;
 
   &__item {
-    background-color: #232c38;
-    border-bottom: 1px solid #2f3c4a;
+    background-color: $color-secondary-830;
+    border-bottom: 1px solid $color-secondary-800;
 
     &:first-child {
       border-radius: 10px 10px 0 0;
@@ -22,7 +22,7 @@
     display: block;
     padding: 14px 60px 14px 23px;
     font-size: 26px;
-    color: #f3f4f4;
+    color: $color-light-200;
     text-decoration: none;
     cursor: pointer;
     transition: background-color 0.2s;
@@ -30,11 +30,11 @@
 }
 
 // .accordion__item .accordion__title:hover {
-//   background-color: #2f3c4a;
+//   background-color: $color-secondary-800;
 //   transition: all 0.5s ease-out;
 // }
 .accordion__item .accordion-active {
-  background-color: #2f3c4a;
+  background-color: $color-secondary-800;
 }
 .accordion__item .accordion__title .accordion__arrow {
   position: absolute;
@@ -45,12 +45,12 @@
   width: 30px;
   height: 30px;
   text-align: center;
-  color: #fff;
+  color: $color-text-light;
   line-height: 30px;
   font-size: 20px;
   font-weight: 700;
   margin-right: 5px;
-  background-color: $default;
+  background-color: $color-primary-400;
   border-radius: 50%;
   transition: all 0.3s ease-out;
 }
@@ -62,7 +62,6 @@
   background-image: url("../images/icons/accordion-arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
-
 }
 
 .accordion__item .accordion__rotate {
@@ -71,7 +70,7 @@
 .accordion__item .accordion__content {
   display: none;
   padding: 0 24px 35px;
-  background-color: #2f3c4a;
+  background-color: $color-secondary-800;
 }
 
 .accordion__content-inner {

@@ -1,5 +1,5 @@
 .breadcrumbs {
-  background-color: #171b1f;
+  background-color: $color-secondary-900;
 
   &-projects {
     background-color: transparent;
@@ -17,17 +17,17 @@
     display: inline-block;
 
     &:last-child .link {
-      color: $color-link;
+      color: $color-primary-500;
       cursor: default;
     }
   }
 
   &__separator {
-    color: #889dba;
+    color: $color-secondary-300;
   }
 
   &__link {
     font-size: 17px;
-    color: #889dba;
+    color: $color-secondary-300;
   }
 }

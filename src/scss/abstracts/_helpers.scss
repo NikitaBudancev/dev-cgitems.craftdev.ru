@@ -28,7 +28,7 @@ $radius-sizes: (
 
 .shadow {
   &-more {
-    box-shadow: 0 24px 16px 4px #171b1f;
+    box-shadow: 0 24px 16px 4px $color-secondary-900;
   }
 }
 

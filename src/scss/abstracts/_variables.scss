@@ -5,25 +5,40 @@ $path: "../images/";
 
 // ==== COLORS ==== //
 $white: #fff;
+$black: #0000;
+$color-primary-150: #e0edff;
+$color-primary-160: #d6e7ff;
+$color-primary-300: #2ea1e5;
+$color-primary-400: #0099e9;
+$color-primary-500: #0377b4;
+$color-primary-600: #056ea6;
+$color-primary-800: #005de9;
+$color-secondary-300: #889dba;
+$color-secondary-400: #7d92b0;
+$color-secondary-500: #7b8ea9;
+$color-secondary-600: #68788f;
+$color-secondary-650: #414f62;
+$color-secondary-700: #384557;
+$color-secondary-800: #2f3c4a;
+$color-secondary-820: #26303d;
+$color-secondary-830: #232c38;
+$color-secondary-850: #202833;
+$color-secondary-900: #171b1f;
+$color-secondary-940: #13171a;
+$color-secondary-970: #010203;
+$color-light: $white;
+$color-light-200: #f3f4f4;
+$color-text-light: $white;
+$color-text-dark: $color-secondary-300;
 $green: #09945c;
 $green-hover: #007b51;
-$default: #0099e9;
-$color-link: #056ea6;
-$hover-link: #0377b4;
-$dark: #202833;
-$bg-main: #171b1f;
-$border-dark: #2f3c4a;
 $color-gradient: radial-gradient(
     48.44% 257.13% at 24.9% 51.56%,
     #94404033 0%,
     #0000 54.54%
   ),
-  radial-gradient(
-    302.34% 536.75% at 79.05% 72.79%,
-    #962ac95c 0%,
-    #0000 55.73%
-  ),
-  $default;
+  radial-gradient(302.34% 536.75% at 79.05% 72.79%, #962ac95c 0%, #0000 55.73%),
+  $color-primary-400;
 
 // ==== END COLORS ==== //
 

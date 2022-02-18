@@ -5,17 +5,17 @@
     font-size: 16px;
     font-weight: 300;
     line-height: 140%;
-    color: $white;
-    background: #13171a;
+    color: $color-text-light;
+    background: $color-secondary-940;
     background-image: url(#{$path}forms/form-darck.svg);
     background-repeat: no-repeat;
     background-position: left center;
-    border: 1px solid #26303d;
+    border: 1px solid $color-secondary-820;
     border-radius: 60px;
 
     &-search {
       background: url(#{$path}forms/form-darck.svg) no-repeat left center,
-        url(#{$path}icons/search.svg) no-repeat 95% center #13171a;
+        url(#{$path}icons/search.svg) no-repeat 95% center $color-secondary-940;
     }
 
     &:focus,
@@ -25,7 +25,7 @@
   }
 
   &__policy {
-    @include font(13px, #7b8ea9, 300);
+    @include font(13px, $color-secondary-500, 300);
 
     &-sidebar {
       margin-bottom: 20px;
@@ -59,7 +59,7 @@
     height: 24px;
     margin-left: -30px;
     cursor: pointer;
-    background-color: #f3f4f4;
+    background-color: $color-light-200;
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 4px;
@@ -69,7 +69,7 @@
       width: 12px;
       height: 12px;
       margin-left: -20px;
-      background-color: #0099e9;
+      background-color: $color-primary-400;
       border-radius: 2px;
     }
   }

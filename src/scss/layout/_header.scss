@@ -1,7 +1,7 @@
 .header {
   position: relative;
   padding: 7px 26px 7px 24px;
-  background-color: $dark;
+  background-color: $color-secondary-850;
 
   &__inner {
     @include flex;
@@ -40,7 +40,7 @@
     display: none;
     width: 56px;
     height: 100%;
-    background-color: #414f62;
+    background-color: $color-secondary-650;
     border: none;
   }
 
@@ -58,7 +58,7 @@
 
   &__link {
     font-weight: 500;
-    color: $white;
+    color: $color-text-light;
     text-decoration: none;
   }
 }
