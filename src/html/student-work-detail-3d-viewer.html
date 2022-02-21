@@ -215,7 +215,7 @@
                     <button class="button-tr button-tr-blue sidebar-back">Назад</button>
                 </div>
 
-                <div class="sidebar__wrapper">
+                <div class="sidebar__wrapper sidebar__wrapper-projects scroll-blue">
                     <ul class="projects__list projects__list-sidebar scroll-blue">
                         <li class="project project-sidebar"
                             style="background-image: url('images/projects/reviews.jpg');">
@@ -631,7 +631,7 @@
                     </div>
                 </section>
                 <div class="panel-bar-container panel-bar-container-projects">
-                    <div class="panel-bar border-radius-10 panel-bar-border">
+                    <div class="panel-bar panel-bar-left border-radius-10 panel-bar-border">
                         <div class="panel-bar-elements">
 
                             <div class="bar-element">
@@ -666,23 +666,57 @@
 
                         </div>
                     </div>
-
-
-
                     <div class="panel-bar panel-bar-like border-radius-10 panel-bar-border">
                         <div class="panel-bar-like__inner">
                             <div class="panel-bar-col">
-                                <div class="text-bold ">Пулемет</div>
+                                <div class="text-bold text-blue">Пулемет</div>
                                 <div class="project__info project__info-sidebar">
-                                    <div class="project__info-item project__info-item-wiews"> 121 871 </div>
-                                    <div class="project__info-item project__info-item-likes"> 12 109 </div>
-                                    <div class="project__info-item project__info-item-comments">12 225 </div>
+                                    <div
+                                        class="project__info-item project__info-item-dark project__info-item-dark-wiews">
+                                        871 </div>
+                                    <div
+                                        class="project__info-item project__info-item-dark project__info-item-dark-likes">
+                                        109 </div>
+                                    <div
+                                        class="project__info-item project__info-item-dark project__info-item-dark-comments">
+                                        225 </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="panel-bar-col"></div>
+                        <div class="panel-bar-col">
+                            <button class="btn-circle"><svg width="16" height="15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M15.024 5.857c.322-1.315-.297-1.357-1.085-1.357l-4.11-.008.44-3.291c.145-1.056-.804-2.002-2.042-.143L5.761 4.366c-.364.41-.372.486-.432.88v6.75c0 .713.534.604 1.373.604h5.644c.864 0 1.034-.117 1.229-.905l1.449-5.838zM3.82 4.5H1.499a.61.61 0 00-.61.603v6.894c0 .335.28.603.61.603H3.82a.611.611 0 00.618-.603V5.103A.611.611 0 003.82 4.5z"
+                                        fill="#68788f" />
+                                </svg></button>
+                            <button class="btn-circle btn-circle-blue">
+                                <svg width="19" height="17" viewBox="0 0 19 17" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M9.18138 0.189453L18.6917 8.4766L9.18138 16.5362V11.3781C6.12821 11.3117 2.43977 11.9565 0.77096 14.7631C0.0408562 9.4722 4.32666 5.0916 9.18138 5.00626V0.189453Z"
+                                        fill="white" />
+                                </svg>
+
+                            </button>
+                        </div>
                     </div>
 
+                </div>
+                <div class="student">
+                    <div class="student__item">
+                        <a class="student__link student__link-prev" href="#">
+                            <span class="text-dark student__arrow">предыдущий студент</span>
+                            <span class="student__name text-bold">Шилимина Наталья</span>
+                        </a>
+                    </div>
+                    <div class="text-dark">7 / 34 из отзывов</div>
+                    <div class="student__item">
+                        <a class="student__link student__link-next" href="#">
+                            <span class="text-dark student__arrow">следующий студент</span>
+                            <span class="student__name text-bold">Шилимина Наталья</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

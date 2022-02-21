@@ -52,6 +52,13 @@
 
   &__wrapper {
     padding: 0 10px 0 23px;
+
+    &-projects {
+      height: calc(100vh - 10%);
+      padding-right: 23px;
+      margin-right: 7px;
+      overflow: auto;
+    }
   }
 
   &__user {

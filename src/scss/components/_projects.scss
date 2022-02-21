@@ -8,9 +8,6 @@
 
     &-sidebar {
       display: block;
-      height: calc(100vh - 10%);
-      padding-right: 23px;
-      overflow: auto;
     }
   }
 
@@ -176,6 +173,7 @@
 
       padding-left: 20px;
       margin-right: 7px;
+      line-height: 19px;
       background-repeat: no-repeat;
       background-position: left;
 
@@ -199,6 +197,22 @@
 
       &-comments {
         background-image: url("#{$path}socials/comments.svg");
+      }
+
+      &-dark {
+        color: $color-secondary-400;
+
+        &-wiews {
+          background-image: url("#{$path}socials/wiews-dark.svg");
+        }
+
+        &-likes {
+          background-image: url("#{$path}socials/likes-dark.svg");
+        }
+
+        &-comments {
+          background-image: url("#{$path}socials/comments-dark.svg");
+        }
       }
     }
   }
@@ -241,5 +255,61 @@
         background-position: center;
       }
     }
+  }
+}
+
+.student {
+  @include flex;
+
+  width: 100%;
+  max-width: 716px;
+  margin: 0 auto;
+
+  &__arrow {
+    font-size: 14px;
+  }
+
+  &__name {
+    font-size: 17px;
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    text-decoration: none;
+
+    &::before {
+      @include pseudo-element;
+      @include сentering-y;
+
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+
+    &-prev {
+      padding-left: 32px;
+
+      &::before {
+        left: 0;
+        border-color: transparent $white transparent transparent;
+        border-width: 8.5px 9px 8.5px 0;
+      }
+    }
+
+    &-next {
+      padding-right: 32px;
+
+      &::before {
+        right: 0;
+        border-color: transparent transparent transparent $white;
+        border-width: 8.5px 0 8.5px 9px;
+      }
+    }
+  }
+
+  &__name {
+    display: block;
+    color: $color-text-light;
   }
 }

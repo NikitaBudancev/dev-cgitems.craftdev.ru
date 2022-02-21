@@ -242,9 +242,24 @@
     color: $color-text-light;
     background: transparent;
     border: none;
+  }
+
+  &-circle {
+    position: relative;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    background-color: $black;
+    border: 1px solid $color-secondary-820;
+    border-radius: 50px;
 
     &-blue {
-      color: $color-primary-400;
+      background-color: $color-primary-400;
+      border: none;
+    }
+
+    svg {
+      @include сentering-xy;
     }
   }
 }

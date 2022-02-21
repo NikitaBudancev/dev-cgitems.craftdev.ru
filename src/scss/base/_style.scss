@@ -58,6 +58,14 @@ button {
   font-weight: 700;
 }
 
+.text-blue {
+  color: $color-primary-400;
+}
+
+.text-dark {
+  color: $color-secondary-400;
+}
+
 .link {
   color: $color-text-light;
   text-decoration: none;
@@ -201,6 +209,7 @@ li {
       width: 100%;
 
       &-project {
+        height: calc(100vh - 56px);
         background-image: url("#{$path}projects/project-bg.jpg");
         background-repeat: no-repeat;
         background-position: center;
@@ -380,15 +389,35 @@ form {
       gap: 16px;
       width: 100%;
       max-width: 1416px;
-      margin: 0 auto;
+      margin: 0 auto 35px;
+
+      .panel-bar {
+        &-elements {
+          justify-content: center;
+          margin-left: 0;
+        }
+
+        .bar-element {
+          pointer-events: none;
+        }
+
+        &-left {
+          width: 100%;
+        }
+      }
+
+      .bar-element {
+        padding: 14px 25px 11px;
+      }
     }
 
     &-like {
+      display: flex;
+      gap: 24px;
+      align-items: center;
       width: 100%;
-
-      &__inner {
-        padding: 13px 16px;
-      }
+      max-width: fit-content;
+      padding: 10px 16px;
     }
   }
 
