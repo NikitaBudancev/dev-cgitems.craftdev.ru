@@ -166,6 +166,41 @@
       }
     }
   }
+
+  &__articles {
+    &-marmoset {
+      color: $color-secondary-900;
+      background-color: $color-marmoset;
+      border: 1px solid transparent;
+
+      &:hover,
+      &:focus {
+        color: $color-marmoset;
+        background-color: transparent;
+        border: 1px solid $color-marmoset;
+      }
+    }
+
+    &-unreal {
+      color: $color-secondary-900;
+      background-color: $color-unreal;
+    }
+
+    &-zbrush {
+      color: $color-secondary-900;
+      background-color: $color-zbrush;
+    }
+
+    &-unity {
+      color: $color-unity;
+      border: 1px solid $color-unity;
+    }
+
+    &-maya {
+      color: $color-maya;
+      border: 1px solid $color-maya;
+    }
+  }
 }
 
 /* // BUTTONS // */

@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("chunk/head.html")
+
+<body>
+
+  @@include("chunk/header.html")
+  <div class="content content-right">
+    <div class="content__left-col">
+      <div class="sidebar">
+        <div class="sidebar__top">
+          <div class="sidebar__wrapper">
+            <div class="profile-edit">
+              <button class="btn btn-icon__profile-edit">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M9.42698 2.33108L11.6803 4.5845L13.7925 2.47227L11.5391 0.218844L9.42698 2.33108ZM0.214841 13.7849L3.04287 13.2156L10.9482 5.31956L8.68948 3.06088L0.793504 10.9662L0.214841 13.7849Z"
+                    fill="#68788F" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="sidebar__user">
+            <a href="#" class="user user__default user__default-big" style="background-color:#af848e">
+
+              <img class="icon icon-achive" src="images/icons/achive.png" alt="">
+              <span class="achive-desc">
+                <span class="achive-desc-text">Сидит до последнего, выполняет работу на 101%</span>
+              </span>
+              <span class="icon icon-initials icon-initials-big">АЕ</span>
+            </a>
+            <div class="sidebar__user-name">
+              <a class="link sidebar__user-link" href="#">Андрей Ерохин</a>
+            </div>
+
+            <div class="social">
+              <ul class="social__list social__list-dark">
+                <li class="social__item social__item-dark">
+                  <a href="#" class="social__link social__link-dark"><svg class="social__icon" width="10" height="18"
+                      viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M3.14406 17.7678H6.39891V9.80438H9.06862L9.49834 6.5495H6.39891V4.29121C6.39891 3.66035 6.91091 3.14835 7.53262 3.14835H9.54406V0.222656H6.7372C4.7532 0.222656 3.14406 1.8318 3.14406 3.82494V6.5495H0.456055V9.80438H3.14406V17.7678Z"
+                        fill="#0099E9" />
+                    </svg>
+
+                  </a>
+                </li>
+                <li class="social__item social__item-dark">
+                  <a href="#" class="social__link social__link-dark">
+                    <svg class="social__icon" width="20" height="12" viewBox="0 0 20 12" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M19.1973 11.9427H17.0213C16.1893 11.9427 15.9333 11.2936 14.4522 9.78499C13.163 8.54156 12.5962 8.36786 12.2762 8.36786C11.8282 8.36786 11.7002 8.49586 11.7002 9.10843V11.0833C11.7002 11.6136 11.5356 11.9244 10.1368 11.9244C7.83276 11.9244 5.27277 10.5256 3.47162 7.92899C0.756195 4.11642 0.015625 1.25472 0.015625 0.660435C0.015625 0.349578 0.143623 0.0478516 0.756194 0.0478516H2.94134C3.48991 0.0478516 3.70019 0.303845 3.91048 0.898131C4.98933 4.0067 6.79048 6.74043 7.53105 6.74043C7.80534 6.74043 7.93333 6.61244 7.93333 5.91758V2.69928C7.85104 1.20899 7.06476 1.09014 7.06476 0.559849C7.06476 0.303849 7.27505 0.0478516 7.61334 0.0478516H11.0419C11.5082 0.0478516 11.6819 0.303856 11.6819 0.852428V5.19529C11.6819 5.66157 11.8922 5.82614 12.0202 5.82614C12.2945 5.82614 12.5322 5.66155 13.035 5.14955C14.6076 3.39413 15.723 0.687863 15.723 0.687863C15.8693 0.367863 16.1253 0.075279 16.683 0.075279H18.8591C19.5173 0.075279 19.6636 0.404417 19.5173 0.870703C19.243 2.14156 16.5733 5.90843 16.5733 5.90843C16.3356 6.29243 16.2533 6.45701 16.5733 6.88672C16.8019 7.20672 17.5699 7.85585 18.0728 8.45014C19.0053 9.51071 19.7276 10.3976 19.9196 11.0101C20.1299 11.6227 19.8099 11.9427 19.1973 11.9427Z"
+                        fill="#0099E9" />
+                    </svg>
+
+                  </a>
+                </li>
+                <li class="social__item social__item-dark">
+                  <a href="#" class="social__link social__link-dark">
+                    <svg class="social__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M15.0016 6.26102C14.3616 6.26102 13.8496 5.74902 13.8496 5.11817C13.8496 4.48731 14.3616 3.97531 15.0016 3.97531C15.6324 3.97531 16.1444 4.48731 16.1444 5.11817C16.1444 5.74902 15.6324 6.26102 15.0016 6.26102ZM10.0004 5.2553C12.6793 5.2553 14.8553 7.42215 14.8553 10.101C14.8553 12.7799 12.6793 14.9467 10.0004 14.9467C7.32156 14.9467 5.1547 12.7799 5.1547 10.101C5.1547 7.42215 7.32156 5.2553 10.0004 5.2553ZM10.0004 7.30329C11.5456 7.30329 12.7981 8.55586 12.7981 10.101C12.7981 11.6461 11.5456 12.8987 10.0004 12.8987C8.45528 12.8987 7.20271 11.6461 7.20271 10.101C7.20271 8.55586 8.45528 7.30329 10.0004 7.30329ZM19.3993 14.7547C19.3993 17.3696 17.269 19.4999 14.6541 19.4999H5.34671C2.73185 19.4999 0.601562 17.3696 0.601562 14.7547V5.44729C0.601562 2.83244 2.73185 0.702148 5.34671 0.702148H14.6541C17.269 0.702148 19.3993 2.83244 19.3993 5.44729V14.7547ZM14.6541 2.75014H5.34671C3.85642 2.75014 2.64957 3.95701 2.64957 5.44729V14.7547C2.64957 16.245 3.85642 17.4519 5.34671 17.4519H14.6541C16.1444 17.4519 17.3513 16.245 17.3513 14.7547V5.44729C17.3513 3.95701 16.1444 2.75014 14.6541 2.75014Z"
+                        fill="#0099E9" />
+                    </svg>
+
+                  </a>
+                </li>
+                <li class="social__item social__item-dark">
+                  <a href="#" class="social__link social__link-dark">
+                    <svg class="social__icon" width="21" height="14" viewBox="0 0 21 14" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M8.19199 6.31434C8.19199 6.31434 10.112 6.1772 10.112 3.91892C10.112 1.66977 8.53941 0.563477 6.54627 0.563477H2.87999H2.77942H0V13.1623H2.77942H2.87999H6.54627C6.54627 13.1623 10.5508 13.2903 10.5508 9.44118C10.5508 9.44118 10.7246 6.31434 8.19199 6.31434ZM15.8811 3.77263C11.0446 3.77263 11.0446 8.60918 11.0446 8.60918C11.0446 8.60918 10.7154 13.4275 15.8811 13.4275C15.8811 13.4275 20.1966 13.6743 20.1966 10.072H17.9748C17.9748 10.072 18.048 11.4343 15.9543 11.4343C15.9543 11.4343 13.7417 11.5806 13.7417 9.24004H20.2697C20.2697 9.24004 20.9828 3.77263 15.8811 3.77263ZM17.856 7.55776H13.7143C13.7143 7.55776 13.9886 5.61948 15.936 5.61948C17.8743 5.61948 17.856 7.55776 17.856 7.55776ZM13.1748 2.85834H18.368V1.3132H13.1748V2.85834ZM2.87999 2.80349H6.07999H6.54627C6.54627 2.80349 7.44228 2.80346 7.44228 4.12003C7.44228 5.42746 6.91199 5.61948 6.3177 5.61948H2.87999V2.80349ZM6.38171 10.9223H2.87999V7.55776H6.54627C6.54627 7.55776 7.88113 7.53949 7.88113 9.28577C7.88113 10.7395 6.90285 10.904 6.38171 10.9223Z"
+                        fill="#0099E9" />
+                    </svg>
+
+                  </a>
+                </li>
+                <li class="social__item social__item-dark">
+                  <a href="#" class="social__link social__link-dark">
+                    <svg class="social__icon" width="20" height="16" viewBox="0 0 20 16" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M0.985352 12.2966L2.51219 14.9298C2.80476 15.5241 3.42648 15.9355 4.13962 15.9355H14.2516L12.1488 12.2966H0.985352ZM10.6585 9.71836L6.5625 2.62349L2.47564 9.71836H10.6585ZM19.0151 12.3149C19.0151 11.9492 18.9053 11.6109 18.7225 11.3275L12.8071 1.02349C12.4962 0.447493 11.8928 0.0634766 11.1888 0.0634766H8.06191L17.2048 15.9172L18.6494 13.4212C18.9419 12.9366 19.0151 12.7355 19.0151 12.3149Z"
+                        fill="#0099E9" />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div href="#" class="button button-dark button-project gradient-right sidebar__project-name">
+            Почтовый
+            мопед
+            <span class="subtext sidebar__project-name-subtext">Курсовой проект</span>
+          </div>
+          <div class="sidebar__project-desc scroll-blue">
+            This my submission on Artstation's Grand Space Opera Challenge. I based my work on Victor
+            Fritsch's
+            awesome submission. His work immediately spoke to my fascination for idyllic landscapes and I
+            wanted
+            to
+            try and give my own interpretation of his beautiful island. Participating in the challenge was a
+            great.
+            His work immediately spoke to my fascination for idyllic landscapes and I wanted to try and give
+            my
+            own
+            interpretation of his
+          </div>
+          <button class="link sidebar__link comments__link" href="#">
+            <svg class="link__icon" width="24" height="25" viewBox="0 0 24 25" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M3 3.55566C2.44772 3.55566 2 4.00338 2 4.55566V18.5557C2 19.1079 2.44772 19.5557 3 19.5557H13.4285V23.5558L18.2673 19.5557H21C21.5523 19.5557 22 19.1079 22 18.5557V4.55566C22 4.00338 21.5523 3.55566 21 3.55566H3Z"
+                fill="white" />
+            </svg>
+
+            Коментарии <span class="comments__counter">33</span>
+          </button>
+
+          <button class="link sidebar__link other__projects" href="#">
+            <span class="link__icon">
+              <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M2.26 2.327A.999.999 0 002 3v18a1 1 0 001 1h18a1 1 0 001-1V3a1 1 0 00-1-1H3a.998.998 0 00-.74.327zM6.5 9a2.5 2.5 0 100-5 2.5 2.5 0 000 5zm10.188 1.293a1.015 1.015 0 00-1.427 0l-4.52 4.48-2.48-2.48a1 1 0 00-1.414 0L4 15.141V19.5a.498.498 0 00.5.5h15a.5.5 0 00.5-.5v-5.925l-3.312-3.282z"
+                  fill="#fff" />
+              </svg>
+            </span>
+            Другие проекты <span class="other__projects-couter">4</span>
+          </button>
+        </div>
+        <div class="sidebar__bottom">
+          <a href="#" class="button button-green button-g-all button-menu-mobile">Записаться на курс</a>
+          <ul class="menu-mobile__list">
+            <li class="menu-mobile__item">
+              <a href="#" class="menu-mobile__link">Сотрудничество</a>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="#" class="menu-mobile__link">Реквизиты</a>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="#" class="menu-mobile__link">Политика конфиденциальности</a>
+            </li>
+          </ul>
+          <div class="social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a href="#" class="social__link"><svg class="social__icon" width="24" height="24"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <path fill="#7D92B0" fill-rule="evenodd"
+                      d="M2.867 0h18.266A2.876 2.876 0 0 1 24 2.869V21.14A2.868 2.868 0 0 1 21.133 24H2.867A2.868 2.868 0 0 1 0 21.141V2.869A2.876 2.876 0 0 1 2.867 0zm16.258 8.424a1.884 1.884 0 0 0-1.309-1.31c-1.166-.316-5.82-.316-5.82-.316s-4.646 0-5.812.306a1.914 1.914 0 0 0-1.31 1.32C4.57 9.59 4.57 12 4.57 12s0 2.429.306 3.576a1.85 1.85 0 0 0 1.309 1.31c1.176.316 5.811.316 5.811.316s4.655 0 5.821-.306a1.85 1.85 0 0 0 1.31-1.31c.305-1.157.305-3.576.305-3.576s.01-2.42-.306-3.586zm-8.611 5.804L14.384 12l-3.87-2.228v4.456z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <svg class="social__icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24">
+                    <path fill="#7D92B0" fill-rule="evenodd"
+                      d="M2.859 0h18.282A2.875 2.875 0 0 1 24 2.869V21.14A2.867 2.867 0 0 1 21.141 24H2.859A2.86 2.86 0 0 1 0 21.141V2.869A2.869 2.869 0 0 1 2.859 0zm12.89 9.122a.87.87 0 0 1-.861-.86c0-.479.392-.861.86-.861.478 0 .86.382.86.86 0 .469-.382.86-.86.86zM12 8.367A3.64 3.64 0 0 1 15.643 12 3.642 3.642 0 0 1 12 15.643 3.642 3.642 0 0 1 8.357 12 3.64 3.64 0 0 1 12 8.367zm0 1.539c1.157 0 2.094.937 2.094 2.094A2.102 2.102 0 0 1 12 14.104 2.11 2.11 0 0 1 9.896 12c0-1.157.947-2.094 2.104-2.094zm7.057 5.594a3.565 3.565 0 0 1-3.567 3.557H8.5A3.563 3.563 0 0 1 4.943 15.5V8.51A3.565 3.565 0 0 1 8.5 4.943h6.99a3.567 3.567 0 0 1 3.567 3.567v6.99zM15.49 6.483H8.5c-1.109 0-2.027.908-2.027 2.027v6.99c0 1.118.918 2.027 2.027 2.027h6.99a2.028 2.028 0 0 0 2.027-2.027V8.51a2.028 2.028 0 0 0-2.027-2.027z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <svg class="social__icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24">
+                    <path fill="#7D92B0" fill-rule="evenodd"
+                      d="M2.867 0h18.266A2.876 2.876 0 0 1 24 2.869V21.14A2.868 2.868 0 0 1 21.133 24H2.867A2.868 2.868 0 0 1 0 21.141V2.869A2.876 2.876 0 0 1 2.867 0zm7.16 14.161l-.316 3.385s-.143 1.052.908 0a31.024 31.024 0 0 1 1.825-1.683c1.186.832 2.466 1.74 3.02 2.218.278.24.507.278.699.268.525-.02.668-.602.668-.602S19.278 7.86 19.364 6.54c0-.134.02-.22.02-.306 0-.124-.01-.248-.03-.306-.056-.162-.123-.2-.229-.248-.22-.077-.602.047-.602.047S5.103 10.575 4.33 11.111c-.163.114-.22.181-.249.258-.124.382.287.555.287.555l3.345 1.09.153.047c.038 0 .105 0 .134-.019.784-.497 7.914-5.02 8.334-5.173.058-.019.106 0 .096.048-.162.583-6.356 6.11-6.356 6.11s-.067.067-.048.124v.01z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <svg class="social__icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24">
+                    <path fill="#7D92B0" fill-rule="evenodd"
+                      d="M2.859 0h18.282A2.875 2.875 0 0 1 24 2.869V21.14A2.867 2.867 0 0 1 21.141 24H2.859A2.86 2.86 0 0 1 0 21.141V2.869A2.869 2.869 0 0 1 2.859 0zm16.045 16.465h-1.636c-.621 0-.812-.497-1.93-1.616-.967-.937-1.397-1.07-1.636-1.07-.325 0-.42.095-.42.554v1.482c0 .402-.135.631-1.177.631-1.73 0-3.652-1.042-5-3.002-2.037-2.85-2.592-5.001-2.592-5.44 0-.24.096-.46.555-.46h1.635c.41 0 .574.191.726.631.813 2.333 2.161 4.38 2.716 4.38.21 0 .306-.096.306-.612v-2.42c-.067-1.109-.65-1.204-.65-1.606 0-.182.162-.373.41-.373h2.573c.354 0 .478.191.478.603v3.25c0 .354.163.479.249.479.21 0 .382-.125.765-.507 1.176-1.32 2.017-3.356 2.017-3.356.115-.24.306-.46.717-.46h1.635c.488 0 .603.259.488.603-.2.956-2.2 3.777-2.2 3.777-.18.287-.238.42 0 .736.173.24.747.727 1.13 1.176.697.794 1.233 1.463 1.376 1.922.163.46-.076.698-.545.698h.01z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <svg class="social__icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 25 24">
+                    <path fill="#7D92B0" fill-rule="evenodd"
+                      d="M3.464 0H21.73a2.876 2.876 0 0 1 2.868 2.869V21.14A2.868 2.868 0 0 1 21.729 24H3.464a2.868 2.868 0 0 1-2.867-2.859V2.869A2.876 2.876 0 0 1 3.464 0zm7.742 18.588h2.437v-5.976h1.998l.325-2.448h-2.323V8.472c0-.478.383-.86.85-.86h1.511v-2.19h-2.103a2.693 2.693 0 0 0-2.695 2.696v2.046H9.189v2.448h2.017v5.976z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar sidebar__left sidebar__left-projects">
+        <div class="sidebar__top-project">
+          <div class="link sidebar__link sidebar__link-back sidebar-back">
+            <span class="link__icon"> <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M2.26 2.327A.999.999 0 002 3v18a1 1 0 001 1h18a1 1 0 001-1V3a1 1 0 00-1-1H3a.998.998 0 00-.74.327zM6.5 9a2.5 2.5 0 100-5 2.5 2.5 0 000 5zm10.188 1.293a1.015 1.015 0 00-1.427 0l-4.52 4.48-2.48-2.48a1 1 0 00-1.414 0L4 15.141V19.5a.498.498 0 00.5.5h15a.5.5 0 00.5-.5v-5.925l-3.312-3.282z"
+                  fill="#fff"></path>
+              </svg> </span> Другие проекты <span class="other__projects-couter">4</span>
+          </div>
+          <button class="button-tr button-tr-blue sidebar-back">Назад</button>
+        </div>
+
+        <div class="sidebar__wrapper sidebar__wrapper-projects scroll-blue">
+          <ul class="projects__list projects__list-sidebar">
+            <li class="project project-sidebar" style="background-image: url('images/projects/reviews.jpg');">
+              <div class="project__top">
+                <div class="project__category">
+                  Курсовой проект
+                </div>
+              </div>
+              <div class="project__bottom">
+                <div class="project__title">
+                  Почтовый мопед
+                </div>
+                <div class="project__info project__info-sidebar">
+                  <div class="project__info-item project__info-item-wiews">
+                    871
+                  </div>
+                  <div class="project__info-item project__info-item-likes">
+                    109
+                  </div>
+                  <div class="project__info-item project__info-item-comments">
+                    225
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="project project-sidebar" style="background-image: url('images/projects/reviews.jpg');">
+              <div class="project__top">
+                <div class="project__category">
+                  Курсовой проект
+                </div>
+              </div>
+              <div class="project__bottom">
+                <div class="project__title">
+                  Почтовый мопед
+                </div>
+                <div class="project__info project__info-sidebar">
+                  <div class="project__info-item project__info-item-date">
+                    21 июня 2021
+                  </div>
+                  <div class="project__info-item project__info-item-wiews">
+                    871
+                  </div>
+                  <div class="project__info-item project__info-item-likes">
+                    109
+                  </div>
+                  <div class="project__info-item project__info-item-comments">
+                    225
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="project project-sidebar" style="background-image: url('images/projects/reviews.jpg');">
+              <div class="project__top">
+                <div class="project__category">
+                  Курсовой проект
+                </div>
+              </div>
+              <div class="project__bottom">
+                <div class="project__title">
+                  Почтовый мопед
+                </div>
+                <div class="project__info project__info-sidebar">
+                  <div class="project__info-item project__info-item-wiews">
+                    871
+                  </div>
+                  <div class="project__info-item project__info-item-likes">
+                    109
+                  </div>
+                  <div class="project__info-item project__info-item-comments">
+                    225
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="project project-sidebar" style="background-image: url('images/projects/reviews.jpg');">
+              <div class="project__top">
+                <div class="project__category">
+                  Курсовой проект
+                </div>
+              </div>
+              <div class="project__bottom">
+                <div class="project__title">
+                  Почтовый мопед
+                </div>
+                <div class="project__info project__info-sidebar">
+                  <div class="project__info-item project__info-item-wiews">
+                    871
+                  </div>
+                  <div class="project__info-item project__info-item-likes">
+                    109
+                  </div>
+                  <div class="project__info-item project__info-item-comments">
+                    225
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="project project-sidebar" style="background-image: url('images/projects/reviews.jpg');">
+              <div class="project__top">
+                <div class="project__category">
+                  Курсовой проект
+                </div>
+              </div>
+              <div class="project__bottom">
+                <div class="project__title">
+                  Почтовый мопед
+                </div>
+                <div class="project__info project__info-sidebar">
+                  <div class="project__info-item project__info-item-wiews">
+                    871
+                  </div>
+                  <div class="project__info-item project__info-item-likes">
+                    109
+                  </div>
+                  <div class="project__info-item project__info-item-comments">
+                    225
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="project project-sidebar" style="background-image: url('images/projects/reviews.jpg');">
+              <div class="project__top">
+                <div class="project__category">
+                  Курсовой проект
+                </div>
+              </div>
+              <div class="project__bottom">
+                <div class="project__title">
+                  Почтовый мопед
+                </div>
+                <div class="project__info project__info-sidebar">
+                  <div class="project__info-item project__info-item-wiews">
+                    871
+                  </div>
+                  <div class="project__info-item project__info-item-likes">
+                    109
+                  </div>
+                  <div class="project__info-item project__info-item-comments">
+                    225
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="sidebar sidebar__left sidebar__left-comments">
+        <div class="sidebar__top">
+          <div class="sidebar__top-project">
+            <div class="link sidebar__link comments__link sidebar__link-back sidebar-back" href="#">
+              <svg class="link__icon" width="24" height="25" viewBox="0 0 24 25" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3 3.55566C2.44772 3.55566 2 4.00338 2 4.55566V18.5557C2 19.1079 2.44772 19.5557 3 19.5557H13.4285V23.5558L18.2673 19.5557H21C21.5523 19.5557 22 19.1079 22 18.5557V4.55566C22 4.00338 21.5523 3.55566 21 3.55566H3Z"
+                  fill="white" />
+              </svg>
+
+              Коментарии <span class="comments__counter">33</span>
+            </div>
+            <button class="button-tr button-tr-blue sidebar-back">Назад</button>
+          </div>
+          <ul class="comments  scroll-blue">
+            <li class="comment">
+              <div class="reviews__user">
+                <div class="reviews__user-left">
+                  <a href="#" class="user user__default user-reviews" style="background-color:#af848e">
+                    <span class="icon icon-initials icon-reviews">АЕ</span>
+                  </a>
+                </div>
+                <div class="reviews__user-right">
+                  <a class="user-name" href="/">
+                    Андрей Ерохин
+                  </a>
+                  <div class="reviews__date">
+                    20 марта 2021 в 13:45
+                  </div>
+                </div>
+              </div>
+              <div class="comment__text">
+                Проблема в том, что на сайте куда больше людей не из геймдева. Большая часть участников
+                используют dtf для развлечения. Выходит, большая часть людей в этом подсайте, по сути,
+                будет
+                лишь в режиме ридонли?
+              </div>
+              <div class="replies">
+                <div class="replies__buttons">
+                  <button class="btn-text text-bold replies__btn">Ответить</button>
+                  <button class="btn-text btn-text-blue replies__btn replies-show">Показать
+                    ответы</button>
+                </div>
+                <ul class="replies__list">
+                  <li class="replies__item">
+                    <div class="reviews__user">
+                      <div class="reviews__user-left">
+                        <a href="#" class="user user__default user-reviews" style="background-color:#bfc900">
+                          <span class="icon icon-initials icon-reviews">MP</span>
+                        </a>
+                      </div>
+                      <div class="reviews__user-right">
+                        <a class="user-name" href="/">
+                          Михаил Резин
+                        </a>
+                        <div class="reviews__date">
+                          20 марта 2021 в 13:45
+                        </div>
+                      </div>
+                    </div>
+                    <div class="replies__text">
+                      <span class="replies__name">Андрей Ерохин, </span> Да
+                    </div>
+                    <button class="btn-text text-bold replies__btn">Ответить</button>
+                  </li>
+                  <li class="replies__item">
+                    <div class="reviews__user">
+                      <div class="reviews__user-left">
+                        <a href="#" class="user user__default user-reviews" style="background-color:#af848e">
+                          <span class="icon icon-initials icon-reviews">АЕ</span>
+                        </a>
+                      </div>
+                      <div class="reviews__user-right">
+                        <a class="user-name" href="/">
+                          Андрей Ерохин
+                        </a>
+                        <div class="reviews__date">
+                          20 марта 2021 в 13:45
+                        </div>
+                      </div>
+                    </div>
+                    <div class="replies__text">
+                      <span class="replies__name">Михаил Резин, </span> Проблема в том, что на
+                      сайте
+                      куда больше людей не из геймдева. Большая часть участников
+                      используют dtf для развлечения. Выходит, большая часть людей в этом
+                      подсайте, по
+                      сути, будет
+                      лишь в режиме ридонли?
+                    </div>
+                    <button class="btn-text text-bold replies__btn">Ответить</button>
+                  </li>
+                  <li class="replies__item">
+                    <div class="reviews__user">
+                      <div class="reviews__user-left">
+                        <a href="#" class="user user__default user-reviews" style="background-color:#bfc900">
+                          <span class="icon icon-initials icon-reviews">MP</span>
+                        </a>
+                      </div>
+                      <div class="reviews__user-right">
+                        <a class="user-name" href="/">
+                          Михаил Резин
+                        </a>
+                        <div class="reviews__date">
+                          20 марта 2021 в 13:45
+                        </div>
+                      </div>
+                    </div>
+                    <div class="replies__text">
+                      <span class="replies__name">Андрей Ерохин, </span> Да
+                    </div>
+                    <button class="btn-text text-bold replies__btn">Ответить</button>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="comment">
+              <div class="reviews__user">
+                <div class="reviews__user-left">
+                  <a href="#" class="user user__default user-reviews" style="background-color:#f25d7f">
+                    <span class="icon icon-initials icon-reviews">МЩ</span>
+                  </a>
+                </div>
+                <div class="reviews__user-right">
+                  <a class="user-name" href="/">
+                    Марина Щербакова
+                  </a>
+                  <div class="reviews__date">
+                    20 марта 2021 в 13:45
+                  </div>
+                </div>
+              </div>
+              <div class="comment__text">
+                Проблема в том, что на сайте куда больше людей не из геймдева. Большая часть участников
+                используют dtf для развлечения. Выходит, большая часть людей в этом подсайте, по сути,
+                будет
+                лишь в режиме ридонли?
+              </div>
+              <div class="replies">
+                <div class="replies__buttons">
+                  <button class="btn-text text-bold replies__btn">Ответить</button>
+                  <button class="btn-text btn-text-blue replies__btn replies-show">Показать
+                    ответы</button>
+                </div>
+                <ul class="replies__list">
+                  <li class="replies__item">
+                    <div class="reviews__user">
+                      <div class="reviews__user-left">
+                        <a href="#" class="user user__default user-reviews" style="background-color:#af848e">
+                          <span class="icon icon-initials icon-reviews">АЕ</span>
+                        </a>
+                      </div>
+                      <div class="reviews__user-right">
+                        <a class="user-name" href="/">
+                          Андрей Ерохин
+                        </a>
+                        <div class="reviews__date">
+                          20 марта 2021 в 13:45
+                        </div>
+                      </div>
+                    </div>
+                    <div class="replies__text">
+                      <span class="replies__name">Андрей Ерохин, </span> Да
+                    </div>
+                    <button class="btn-text text-bold replies__btn">Ответить</button>
+                  </li>
+                  <li class="replies__item">
+                    <div class="reviews__user">
+                      <div class="reviews__user-left">
+                        <a href="#" class="user user__default user-reviews" style="background-color:#af848e">
+                          <span class="icon icon-initials icon-reviews">АЕ</span>
+                        </a>
+                      </div>
+                      <div class="reviews__user-right">
+                        <a class="user-name" href="/">
+                          Андрей Ерохин
+                        </a>
+                        <div class="reviews__date">
+                          20 марта 2021 в 13:45
+                        </div>
+                      </div>
+                    </div>
+                    <div class="replies__text">
+                      <span class="replies__name">Андрей Ерохин, </span> Да
+                    </div>
+                    <button class="btn-text text-bold replies__btn">Ответить</button>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="sidebar__bottom sidebar__bottom-comments">
+          <div class="sidebar__form-box">
+            <div class="sidebar__bottom-text">
+              Укажите ваше имя,
+              комментарий будет оставлен,
+              после прохождения модерации.
+            </div>
+          </div>
+          <div class="sidebar__form-box">
+            <label class="input__box">
+              <span class="input__text input__text-dark">Имя и Фамилия*</span>
+              <input class="input input-dark" type="text">
+            </label>
+            <div class="form__policy form__policy-sidebar">
+              Отправляя сообщение, вы соглашаетесь с условиями обработки
+              <a class="link link-blue" href="/">персональных данных</a>
+            </div>
+          </div>
+          <div class="form__btn-box form__btn-box-sidebar">
+            <button class="button-small button-default button-default-sidebar button-message">Написать</button>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar sidebar__left sidebar__left-message">
+        <div class="sidebar__top sidebar__top-message">
+          <div class="sidebar__top-project">
+            <div class="link sidebar__link comments__link sidebar__link-back sidebar-back" href="#">
+              <svg class="link__icon" width="24" height="25" viewBox="0 0 24 25" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3 3.55566C2.44772 3.55566 2 4.00338 2 4.55566V18.5557C2 19.1079 2.44772 19.5557 3 19.5557H13.4285V23.5558L18.2673 19.5557H21C21.5523 19.5557 22 19.1079 22 18.5557V4.55566C22 4.00338 21.5523 3.55566 21 3.55566H3Z"
+                  fill="white" />
+              </svg>
+
+              Коментарии <span class="comments__counter">33</span>
+            </div>
+            <button class="button-tr button-tr-blue sidebar-back">Назад</button>
+          </div>
+          <textarea class="input input-dark sidebar__textarea scroll-blue"></textarea>
+        </div>
+        <div class="form__btn-box form__btn-box-sidebar">
+          <button class="button-small button-default button-default-sidebar ">Отправить</button>
+        </div>
+      </div>
+    </div>
+    <div class="content__center-col content__center-col-articles">
+      <div class="content-top" style="background-image: url('images/banners/443708_Dmf7aq8b3H_cyberpunk_2077.jpg');">
+        <div class="container container-articles">
+          <div class="content-top__title">
+            Игровая графика
+            <span class="subtext">3д художник с нуля</span>
+          </div>
+          <div class="content-top__text">
+            Наша главная цель – сделать из учеников полноценных специалистов, готовых к работе в геймдеве. Поэтому, мы
+            смело можем сказать, что студенты, прошедшие непростой путь от ученика до специалиста – наша гордость!
+            Примеры работ наших студентов
+          </div>
+        </div>
+      </div>
+      <div class="container container-articles">
+        @@include("chunk/breadcrumbs.html")
+      </div>
+      <div class="articles">
+        <div class="articles__filter">
+          <button class="button-tr button__articles button__articles-marmoset">Marmoset Toolbag</button>
+          <button class="button-tr button__articles button__articles-unreal">Unreal Engine</button>
+          <button class="button-tr button__articles button__articles-zbrush">ZBrush</button>
+          <button class="button-tr button__articles button__articles-unity">Unity</button>
+          <button class="button-tr button__articles button__articles-maya">Maya</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  @@include("chunk/course-modal.html")
+
+  <script src="js/main.js"></script>
+  <!-- <script src="js/app.js"></script> -->
+</body>
+
+</html>
