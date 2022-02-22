@@ -168,37 +168,66 @@
   }
 
   &__articles {
+    margin-right: 16px;
+
     &-marmoset {
-      color: $color-secondary-900;
-      background-color: $color-marmoset;
-      border: 1px solid transparent;
+      color: $color-marmoset;
+      border: 1px solid $color-marmoset;
 
       &:hover,
-      &:focus {
-        color: $color-marmoset;
-        background-color: transparent;
-        border: 1px solid $color-marmoset;
+      &:focus,
+      &.active {
+        color: $color-secondary-900;
+        background-color: $color-marmoset;
       }
     }
 
     &-unreal {
-      color: $color-secondary-900;
-      background-color: $color-unreal;
+      color: $color-unreal;
+      border: 1px solid $color-unreal;
+
+      &:hover,
+      &:focus,
+      &.active {
+        color: $color-secondary-900;
+        background-color: $color-unreal;
+      }
     }
 
     &-zbrush {
-      color: $color-secondary-900;
-      background-color: $color-zbrush;
+      color: $color-zbrush;
+      border: 1px solid $color-zbrush;
+
+      &:hover,
+      &:focus,
+      &.active {
+        color: $color-secondary-900;
+        background-color: $color-zbrush;
+      }
     }
 
     &-unity {
       color: $color-unity;
       border: 1px solid $color-unity;
+
+      &:hover,
+      &:focus,
+      &.active {
+        color: $color-secondary-900;
+        background-color: $color-unity;
+      }
     }
 
     &-maya {
       color: $color-maya;
       border: 1px solid $color-maya;
+
+      &:hover,
+      &:focus,
+      &.active {
+        color: $color-secondary-900;
+        background-color: $color-maya;
+      }
     }
   }
 }
@@ -290,7 +319,7 @@
 
     &-blue {
       background-color: $color-primary-400;
-      border: none;
+      border: 1px solid;
     }
 
     svg {

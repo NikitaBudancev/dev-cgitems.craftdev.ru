@@ -154,7 +154,7 @@ $(function () {
 
   $(".btn-scroll-up").on("click", function () {
     $("html, body").animate({ scrollTop: 0 }, 500);
-    $(".content-scroll").animate({ scrollTop: 0 }, 500);
+    $(".content-scroll, .scroll-up").animate({ scrollTop: 0 }, 500);
   });
 
   $(".copy__url").on("click", function () {

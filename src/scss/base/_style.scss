@@ -46,6 +46,34 @@ body {
       border: none;
     }
   }
+
+  &-violet {
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: $color-secondary-970;
+      border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-secondary-400;
+      border: none;
+    }
+
+    &-articles {
+      &::-webkit-scrollbar-track {
+        margin: 24px 0;
+      }
+    }
+
+    &-banners {
+      &::-webkit-scrollbar-track {
+        margin: 50px 0 24px;
+      }
+    }
+  }
 }
 
 button {
@@ -272,6 +300,11 @@ li {
       margin-bottom: 7px;
       text-transform: uppercase;
       letter-spacing: 2px;
+
+      &-article {
+        font-size: 29px;
+        text-transform: initial;
+      }
     }
 
     &__text {
@@ -279,6 +312,10 @@ li {
 
       max-width: 1068px;
       line-height: 1.2;
+    }
+
+    &-article {
+      padding: 24px 0 16px;
     }
   }
 }

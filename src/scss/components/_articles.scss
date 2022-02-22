@@ -1,0 +1,172 @@
+.articles {
+  display: flex;
+  margin-right: 100px;
+
+  &__center {
+    padding: 0 40px 0 64px;
+  }
+
+  &__right {
+    width: 305px;
+    min-width: 305px;
+    height: calc(100vh - 400px);
+    padding-right: 16px;
+    overflow: auto;
+  }
+
+  &__filter {
+    margin-bottom: 32px;
+  }
+
+  &__list {
+    height: calc(100vh - 460px);
+    padding-right: 16px;
+    overflow: auto;
+
+    &-popular {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.article {
+  position: relative;
+  padding: 16px 62px 16px 32px;
+  margin-bottom: 16px;
+  background-color: $color-secondary-850;
+  border: 1px solid $color-secondary-820;
+  border-radius: 10px;
+
+  &::before {
+    @include pseudo-element;
+
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 100%;
+    border-radius: 0 10px 10px 0;
+  }
+
+  &-marmoset {
+    &::before {
+      background-color: $color-marmoset;
+    }
+  }
+
+  &-unreal {
+    &::before {
+      background-color: $color-unreal;
+    }
+  }
+
+  &-zbrush {
+    &::before {
+      background-color: $color-zbrush;
+    }
+  }
+
+  &-unity {
+    &::before {
+      background-color: $color-unity;
+    }
+  }
+
+  &-maya {
+    &::before {
+      background-color: $color-maya;
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+
+    &-popular {
+      margin-bottom: 2px;
+      line-height: 1;
+    }
+  }
+
+  &__date {
+    font-size: 14px;
+  }
+
+  &__link {
+    @include font(24px, $color-text-light);
+
+    text-decoration: none;
+
+    &-popular {
+      @include font(16px, false, 500);
+    }
+  }
+
+  &__text {
+    font-weight: 300;
+  }
+
+  &__bottom {
+    @include flex;
+  }
+
+  &-popular {
+    position: relative;
+    padding: 16px;
+
+    &::before {
+      top: auto;
+      right: 16px;
+      bottom: 16px;
+      width: 28px;
+      height: 28px;
+      background-image: url("#{$path}icons/three-pixel.svg");
+      border-radius: 0;
+    }
+  }
+
+  &-banner {
+    margin-bottom: 10px;
+
+    &__img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__category {
+    @include font(14px, false, 700);
+
+    margin-bottom: 6px;
+
+    &-marmoset {
+      color: $color-marmoset;
+    }
+
+    &-unreal {
+      color: $color-unreal;
+    }
+
+    &-zbrush {
+      color: $color-zbrush;
+    }
+
+    &-unity {
+      color: $color-unity;
+    }
+
+    &-maya {
+      color: $color-maya;
+    }
+
+    &-content-top {
+      font-size: 20px;
+    }
+  }
+}
+
+.banners {
+  &__title {
+    padding-left: 15px;
+    margin-bottom: 5px;
+    font-size: 17px;
+  }
+}
