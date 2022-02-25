@@ -597,167 +597,226 @@
       </div>
     </div>
     <div class="content__center-col content__center-col-articles">
-      <div class="content-top content-top-article"
-        style="background-image: url('images/banners/443708_Dmf7aq8b3H_cyberpunk_2077.jpg');">
-        <div class="container container-articles">
-          <div class="content-top__title content-top__title-article">
-            Normal Map.
-            <span class="subtext">Практическое руководство</span>
-          </div>
-          <div class="article__category article__category-content-top article__category-unreal">
-            Unreal Engine
-          </div>
-          <div class="article__bottom">
-            <div class="article__bottom-col">
-              <div class="project__info">
-                <div class="project__info-item project__info-item-date"> 21 июня 2021 </div>
-                <div class="project__info-item project__info-item-wiews"> 871 </div>
-                <div class="project__info-item project__info-item-likes"> 109 </div>
-                <div class="project__info-item project__info-item-comments"> 225 </div>
-              </div>
-            </div>
-            <div class="article__bottom-col">
-              <button class="btn-circle"><svg width="16" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M15.024 5.857c.322-1.315-.297-1.357-1.085-1.357l-4.11-.008.44-3.291c.145-1.056-.804-2.002-2.042-.143L5.761 4.366c-.364.41-.372.486-.432.88v6.75c0 .713.534.604 1.373.604h5.644c.864 0 1.034-.117 1.229-.905l1.449-5.838zM3.82 4.5H1.499a.61.61 0 00-.61.603v6.894c0 .335.28.603.61.603H3.82a.611.611 0 00.618-.603V5.103A.611.611 0 003.82 4.5z"
-                    fill="#E0EDFF"></path>
-                </svg></button>
-              <button class="btn-circle"><svg width="24" height="26" viewBox="0 0 24 26" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <g filter="url(#filter0_d_1288_32774)">
-                    <path
-                      d="M6.43011 20.3636L12 16L17.5699 20.3636C18.067 20.7101 18.75 20.3563 18.75 19.7516V6.24698C18.75 5.8341 18.4142 5.5 18 5.5H6C5.58582 5.5 5.25 5.8341 5.25 6.24698V19.7516C5.25 20.3563 5.93298 20.7101 6.43011 20.3636Z"
-                      fill="#E3AE00" />
-                  </g>
-                  <defs>
-                    <filter id="filter0_d_1288_32774" x="0.25" y="0.5" width="23.5" height="25"
-                      filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                        result="hardAlpha" />
-                      <feOffset />
-                      <feGaussianBlur stdDeviation="2.5" />
-                      <feComposite in2="hardAlpha" operator="out" />
-                      <feColorMatrix type="matrix" values="0 0 0 0 0.890196 0 0 0 0 0.682353 0 0 0 0 0 0 0 0 0.8 0" />
-                      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1288_32774" />
-                      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1288_32774" result="shape" />
-                    </filter>
-                  </defs>
-                </svg>
-              </button>
-              <button class="btn-circle btn-circle-blue"> <svg width="19" height="17" viewBox="0 0 19 17" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M9.18138 0.189453L18.6917 8.4766L9.18138 16.5362V11.3781C6.12821 11.3117 2.43977 11.9565 0.77096 14.7631C0.0408562 9.4722 4.32666 5.0916 9.18138 5.00626V0.189453Z"
-                    fill="white"></path>
-                </svg> </button>
-            </div>
-          </div>
-        </div>
+      <div class="container container-articles">
+        @@include("chunk/breadcrumbs.html")
       </div>
-      <div class="articles mt-6">
+      <div class="articles">
         <div class="articles__center">
-
-          <div class="articles__list scroll-violet scroll-violet-articles scroll-up">
-            <p class="text-bold"><i>Введение</i></p>
-
-            <p><i> Данное руководство создано для тех, кто стремится понять тему Normal Mapping. Оно написано как для
-                новых
-                людей в индустрии, так и для более опытных, которые хотят освежить знания по теме. Здесь я постараюсь
-                рассмотреть каждую возможную проблему и предоставить простой и доступный ответ. Надеюсь, что это
-                руководство
-                даст вам все необходимое о Normal Mapping и о том, как его применять. Проблемы с Normal Ma pping должны
-                стоять на пути вашего творчества!
-                Отдельное спасибо EarthQuake с Polycount за вдохновение на создание этого гайда.</i></p>
-
-
-            <p class="text-bold"><i>Примечание</i></p>
-
-            <p><i> Перевод подготовлен специально для школы компьютерной графики XYZ. Некоторые главы, после
-                согласования с
-                автором, были расширены или обновлены для большей актуальности. Следовательно, некоторые части текста
-                могут
-                отсутствовать в оригинальном руководстве. По вопросам перевода пишите на nocstrig@yandex.ru. (Леонид
-                Садеков)</i></p>
-
-            <img class="adaptive-img" src="images/article-img.jpg" alt="">
-            Введение
-
-            <p> Данное руководство создано для тех, кто стремится понять тему Normal Mapping. Оно написано как для новых
-              людей в индустрии, так и для более опытных, которые хотят освежить знания по теме. Здесь я постараюсь
-              рассмотреть каждую возможную проблему и предоставить простой и доступный ответ. Надеюсь, что это
-              руководство
-              даст вам все необходимое о Normal Mapping и о том, как его применять. Проблемы с Normal Ma pping должны
-              стоять на пути вашего творчества!
-              Отдельное спасибо EarthQuake с Polycount за вдохновение на создание этого гайда.</p>
-            <p>
-              Перевод подготовлен специально для школы компьютерной графики XYZ. Некоторые главы, после согласования с
-              автором, были расширены или обновлены для большей актуальности. Следовательно, некоторые части текста
-              могут
-              отсутствовать в оригинальном руководстве. По вопросам перевода пишите на nocstrig@yandex.ru. (Леонид
-              Садеков)</p>
-
-            <img class="adaptive-img" src="images/article-img-1.jpg" alt="">
-
-            <p> Данное руководство создано для тех, кто стремится понять тему Normal Mapping. Оно написано как для новых
-              людей в индустрии, так и для более опытных, которые хотят освежить знания по теме. Здесь я постараюсь
-              рассмотреть каждую возможную проблему и предоставить простой и доступный ответ. Надеюсь, что это
-              руководство
-              даст вам все необходимое о Normal Mapping и о том, как его применять. Проблемы с Normal Ma pping должны
-              стоять на пути вашего творчества!
-              Отдельное спасибо EarthQuake с Polycount за вдохновение на создание этого гайда.</p>
-            <p>
-              Перевод подготовлен специально для школы компьютерной графики XYZ. Некоторые главы, после согласования с
-              автором, были расширены или обновлены для большей актуальности. Следовательно, некоторые части текста
-              могут
-              отсутствовать в оригинальном руководстве. По вопросам перевода пишите на nocstrig@yandex.ru. (Леонид
-              Садеков)</p>
-
-            <div class="article__bottom mt-6">
-              <div class="article__bottom-col">
-                <div class="project__info">
-                  <div class="project__info-item project__info-item-dark-wiews"> 871 </div>
-                  <div class="project__info-item project__info-item-dark-likes"> 109 </div>
-                  <div class="project__info-item project__info-item-dark-comments"> 225 </div>
-                </div>
+          <div class="panel-bar panel-bar-border border-radius-10 shadow-more panel-bar-alphabet">
+            <div class="panel-bar-elements panel-sort">
+              <div class="panel-sort-left">
+                <div>Аа</div>
               </div>
-              <div class="article__bottom-col">
-                <button class="btn-circle"><svg width="16" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M15.024 5.857c.322-1.315-.297-1.357-1.085-1.357l-4.11-.008.44-3.291c.145-1.056-.804-2.002-2.042-.143L5.761 4.366c-.364.41-.372.486-.432.88v6.75c0 .713.534.604 1.373.604h5.644c.864 0 1.034-.117 1.229-.905l1.449-5.838zM3.82 4.5H1.499a.61.61 0 00-.61.603v6.894c0 .335.28.603.61.603H3.82a.611.611 0 00.618-.603V5.103A.611.611 0 003.82 4.5z"
-                      fill="#E0EDFF"></path>
-                  </svg></button>
-                <button class="btn-circle"><svg width="24" height="26" viewBox="0 0 24 26" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <g filter="url(#filter0_d_1288_32774)">
-                      <path
-                        d="M6.43011 20.3636L12 16L17.5699 20.3636C18.067 20.7101 18.75 20.3563 18.75 19.7516V6.24698C18.75 5.8341 18.4142 5.5 18 5.5H6C5.58582 5.5 5.25 5.8341 5.25 6.24698V19.7516C5.25 20.3563 5.93298 20.7101 6.43011 20.3636Z"
-                        fill="#E3AE00" />
-                    </g>
-                    <defs>
-                      <filter id="filter0_d_1288_32774" x="0.25" y="0.5" width="23.5" height="25"
-                        filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                          result="hardAlpha" />
-                        <feOffset />
-                        <feGaussianBlur stdDeviation="2.5" />
-                        <feComposite in2="hardAlpha" operator="out" />
-                        <feColorMatrix type="matrix" values="0 0 0 0 0.890196 0 0 0 0 0.682353 0 0 0 0 0 0 0 0 0.8 0" />
-                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1288_32774" />
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1288_32774" result="shape" />
-                      </filter>
-                    </defs>
-                  </svg>
-                </button>
-                <button class="btn-circle btn-circle-blue"> <svg width="19" height="17" viewBox="0 0 19 17" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M9.18138 0.189453L18.6917 8.4766L9.18138 16.5362V11.3781C6.12821 11.3117 2.43977 11.9565 0.77096 14.7631C0.0408562 9.4722 4.32666 5.0916 9.18138 5.00626V0.189453Z"
-                      fill="white"></path>
-                  </svg> </button>
+              <div class="panel-sort-right">
+                <ul>
+                  <li><a href="#">А</a></li>
+                  <li><a href="#">Б</a></li>
+                  <li><a href="#">В</a></li>
+                  <li><a href="#">Г</a></li>
+                  <li><a href="#">Д</a></li>
+                  <li><a href="#">Е</a></li>
+                  <li><a href="#">Ж</a></li>
+                  <li><a href="#">З</a></li>
+                  <li><a href="#">И</a></li>
+                  <li><a href="#">К</a></li>
+                  <li><a href="#">Л</a></li>
+                  <li><a href="#">М</a></li>
+                  <li><a href="#">Н</a></li>
+                  <li><a href="#">О</a></li>
+                  <li><a href="#">П</a></li>
+                  <li><a href="#">Р</a></li>
+                  <li><a href="#">С</a></li>
+                  <li><a href="#">Т</a></li>
+                  <li><a href="#">У</a></li>
+                  <li><a href="#">Ф</a></li>
+                  <li><a href="#">Х</a></li>
+                  <li><a href="#">Ц</a></li>
+                  <li><a href="#">Ч</a></li>
+                  <li><a href="#">Ш</a></li>
+                  <li><a href="#">Щ</a></li>
+                  <li><a href="#">Э</a></li>
+                  <li><a href="#">Ю</a></li>
+                  <li><a href="#">Я</a></li>
+
+                </ul>
+                <ul>
+                  <li><a href="#">A</a> </li>
+                  <li><a href="#">B</a> </li>
+                  <li><a href="#">C</a> </li>
+                  <li><a href="#">D</a> </li>
+                  <li><a href="#">E</a></li>
+                  <li><a href="#">F</a></li>
+                  <li><a href="#">G</a></li>
+                  <li><a href="#">H</a></li>
+                  <li><a href="#">I</a></li>
+                  <li><a href="#">J</a></li>
+                  <li><a href="#">K</a></li>
+                  <li><a href="#">L</a></li>
+                  <li><a href="#">M</a></li>
+                  <li><a href="#">N</a></li>
+                  <li><a href="#">O</a></li>
+                  <li><a href="#">P</a></li>
+                  <li><a href="#">Q</a></li>
+                  <li><a href="#">R</a></li>
+                  <li><a href="#">S</a></li>
+                  <li><a href="#">T</a></li>
+                  <li><a href="#">U</a></li>
+                  <li><a href="#">V</a></li>
+                  <li><a href="#">W</a></li>
+                  <li><a href="#">X</a></li>
+                  <li><a href="#">Y</a></li>
+                  <li><a href="#">Z</a></li>
+                </ul>
               </div>
             </div>
+          </div>
+          <div class="articles__list scroll-violet scroll-violet-articles scroll-up">
+            <ul class="articles__list articles__list-alphabet">
+              <li class="article article-alphabet">
+                <div class="article__letter">А</div>
+                <div class="article__text">
+                  <p>
+                    <span class="text-bold">Агро</span> –
+                    (сокращение от англ. aggression - враждебность) – характеристика врагов в играх, которая определяет,
+                    кого они будут атаковать. В ММО, например, множество игроков при ударе по монстру увеличивают у
+                    последнего показатель агро. Какой игрок генерирует больше всего агро, того монстр и бьет.
+                  </p>
+                  <p>
+                    <span class="text-bold">Агронуб</span>
+                    – игрок, который жаждет расправы над другими игроками в PvP, но при этом мало что может
+                    предпринять в силу неподковонности механикой проекта. Агронуб рождается тогда, когда обычный нуб
+                    начинает думать, что он ГМ (не путать с ракам и: каждый агронуб – рак, но не каждый рак – агронуб).
+                  </p>
+
+                  <p>
+                    <span class="text-bold">Ад</span>
+                    – 1) англ. add (добавлять) – враг, присоединяющийся к бою. Когда одинокий босс взывает помощников из
+                    ниоткуда, их называют ады; 2) непосредственно ад (hell) – место, где в котлах варятся грешники. В
+                    игровой индустрии часто используется как название уровня сложности.
+                  </p>
+                </div>
+              </li>
+              <li class="article article-alphabet">
+                <div class="article__letter">Б</div>
+                <div class="article__text">
+                  <p>
+                    <span class="text-bold">Агро</span> –
+                    (сокращение от англ. aggression - враждебность) – характеристика врагов в играх, которая определяет,
+                    кого они будут атаковать. В ММО, например, множество игроков при ударе по монстру увеличивают у
+                    последнего показатель агро. Какой игрок генерирует больше всего агро, того монстр и бьет.
+                  </p>
+                  <p>
+                    <span class="text-bold">Агронуб</span>
+                    – игрок, который жаждет расправы над другими игроками в PvP, но при этом мало что может
+                    предпринять в силу неподковонности механикой проекта. Агронуб рождается тогда, когда обычный нуб
+                    начинает думать, что он ГМ (не путать с ракам и: каждый агронуб – рак, но не каждый рак – агронуб).
+                  </p>
+
+                  <p>
+                    <span class="text-bold">Ад</span>
+                    – 1) англ. add (добавлять) – враг, присоединяющийся к бою. Когда одинокий босс взывает помощников из
+                    ниоткуда, их называют ады; 2) непосредственно ад (hell) – место, где в котлах варятся грешники. В
+                    игровой индустрии часто используется как название уровня сложности.
+                  </p>
+                </div>
+              </li>
+              <li class="article article-alphabet">
+                <div class="article__letter">В</div>
+                <div class="article__text">
+                  <p>
+                    <span class="text-bold">Агро</span> –
+                    (сокращение от англ. aggression - враждебность) – характеристика врагов в играх, которая определяет,
+                    кого они будут атаковать. В ММО, например, множество игроков при ударе по монстру увеличивают у
+                    последнего показатель агро. Какой игрок генерирует больше всего агро, того монстр и бьет.
+                  </p>
+                  <p>
+                    <span class="text-bold">Агронуб</span>
+                    – игрок, который жаждет расправы над другими игроками в PvP, но при этом мало что может
+                    предпринять в силу неподковонности механикой проекта. Агронуб рождается тогда, когда обычный нуб
+                    начинает думать, что он ГМ (не путать с ракам и: каждый агронуб – рак, но не каждый рак – агронуб).
+                  </p>
+
+                  <p>
+                    <span class="text-bold">Ад</span>
+                    – 1) англ. add (добавлять) – враг, присоединяющийся к бою. Когда одинокий босс взывает помощников из
+                    ниоткуда, их называют ады; 2) непосредственно ад (hell) – место, где в котлах варятся грешники. В
+                    игровой индустрии часто используется как название уровня сложности.
+                  </p>
+                </div>
+              </li>
+              <li class="article article-alphabet">
+                <div class="article__letter">Z</div>
+                <div class="article__text">
+                  <p>
+                    <span class="text-bold">Агро</span> –
+                    (сокращение от англ. aggression - враждебность) – характеристика врагов в играх, которая определяет,
+                    кого они будут атаковать. В ММО, например, множество игроков при ударе по монстру увеличивают у
+                    последнего показатель агро. Какой игрок генерирует больше всего агро, того монстр и бьет.
+                  </p>
+                  <p>
+                    <span class="text-bold">Агронуб</span>
+                    – игрок, который жаждет расправы над другими игроками в PvP, но при этом мало что может
+                    предпринять в силу неподковонности механикой проекта. Агронуб рождается тогда, когда обычный нуб
+                    начинает думать, что он ГМ (не путать с ракам и: каждый агронуб – рак, но не каждый рак – агронуб).
+                  </p>
+
+                  <p>
+                    <span class="text-bold">Ад</span>
+                    – 1) англ. add (добавлять) – враг, присоединяющийся к бою. Когда одинокий босс взывает помощников из
+                    ниоткуда, их называют ады; 2) непосредственно ад (hell) – место, где в котлах варятся грешники. В
+                    игровой индустрии часто используется как название уровня сложности.
+                  </p>
+                </div>
+              </li>
+              <li class="article article-alphabet">
+                <div class="article__letter">X</div>
+                <div class="article__text">
+                  <p>
+                    <span class="text-bold">Агро</span> –
+                    (сокращение от англ. aggression - враждебность) – характеристика врагов в играх, которая определяет,
+                    кого они будут атаковать. В ММО, например, множество игроков при ударе по монстру увеличивают у
+                    последнего показатель агро. Какой игрок генерирует больше всего агро, того монстр и бьет.
+                  </p>
+                  <p>
+                    <span class="text-bold">Агронуб</span>
+                    – игрок, который жаждет расправы над другими игроками в PvP, но при этом мало что может
+                    предпринять в силу неподковонности механикой проекта. Агронуб рождается тогда, когда обычный нуб
+                    начинает думать, что он ГМ (не путать с ракам и: каждый агронуб – рак, но не каждый рак – агронуб).
+                  </p>
+
+                  <p>
+                    <span class="text-bold">Ад</span>
+                    – 1) англ. add (добавлять) – враг, присоединяющийся к бою. Когда одинокий босс взывает помощников из
+                    ниоткуда, их называют ады; 2) непосредственно ад (hell) – место, где в котлах варятся грешники. В
+                    игровой индустрии часто используется как название уровня сложности.
+                  </p>
+                </div>
+              </li>
+              <li class="article article-alphabet">
+                <div class="article__letter">C</div>
+                <div class="article__text">
+                  <p>
+                    <span class="text-bold">Агро</span> –
+                    (сокращение от англ. aggression - враждебность) – характеристика врагов в играх, которая определяет,
+                    кого они будут атаковать. В ММО, например, множество игроков при ударе по монстру увеличивают у
+                    последнего показатель агро. Какой игрок генерирует больше всего агро, того монстр и бьет.
+                  </p>
+                  <p>
+                    <span class="text-bold">Агронуб</span>
+                    – игрок, который жаждет расправы над другими игроками в PvP, но при этом мало что может
+                    предпринять в силу неподковонности механикой проекта. Агронуб рождается тогда, когда обычный нуб
+                    начинает думать, что он ГМ (не путать с ракам и: каждый агронуб – рак, но не каждый рак – агронуб).
+                  </p>
+
+                  <p>
+                    <span class="text-bold">Ад</span>
+                    – 1) англ. add (добавлять) – враг, присоединяющийся к бою. Когда одинокий босс взывает помощников из
+                    ниоткуда, их называют ады; 2) непосредственно ад (hell) – место, где в котлах варятся грешники. В
+                    игровой индустрии часто используется как название уровня сложности.
+                  </p>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
         <div class="articles__right scroll-violet scroll-violet-banners scroll-up">

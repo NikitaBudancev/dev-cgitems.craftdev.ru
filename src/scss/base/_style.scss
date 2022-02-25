@@ -82,6 +82,10 @@ button {
   outline: none;
 }
 
+p {
+  margin-top: 0;
+}
+
 .text-bold {
   font-weight: 700;
 }
@@ -474,6 +478,18 @@ form {
       max-width: fit-content;
       padding: 10px 16px;
     }
+
+    &-alphabet {
+      margin-bottom: 40px;
+
+      .panel-sort {
+        margin-left: 0;
+
+        a {
+          padding: 0 4px;
+        }
+      }
+    }
   }
 
   &-sort {
@@ -575,4 +591,13 @@ form {
 
 .search__logo {
   margin-bottom: 30px;
+}
+
+.search__list {
+  padding: 64px 0 0 64px;
+  margin-right: 64px;
+}
+
+.mt-6 {
+  margin-top: 60px;
 }

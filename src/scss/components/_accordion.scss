@@ -26,6 +26,10 @@
     text-decoration: none;
     cursor: pointer;
     transition: background-color 0.2s;
+
+    &-profile {
+      @include font(17px, false, 700);
+    }
   }
 }
 
@@ -53,6 +57,10 @@
   background-color: $color-primary-400;
   border-radius: 50%;
   transition: all 0.3s ease-out;
+
+  &-profile {
+    top: 10px;
+  }
 }
 
 .accordion__arrow-item {
@@ -62,11 +70,20 @@
   background-image: url("../images/icons/accordion-arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
+
+  &-profile {
+    background-image: url("../images/icons/plus.svg");
+  }
 }
 
 .accordion__item .accordion__rotate {
   transform: rotate(180deg);
 }
+
+.accordion__item-profile .accordion__rotate {
+  transform: rotate(225deg);
+}
+
 .accordion__item .accordion__content {
   display: none;
   padding: 0 24px 35px;

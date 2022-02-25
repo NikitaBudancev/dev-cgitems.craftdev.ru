@@ -180,4 +180,8 @@ $(function () {
   $(".replies-show").on("click", function () {
     $(this).parent().parent().find(".replies__list").toggleClass("active");
   });
+
+  $(".articles__parent-btn").on("click", function () {
+    $(this).parent().toggleClass("active");
+  });
 });

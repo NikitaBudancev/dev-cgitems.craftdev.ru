@@ -4,6 +4,10 @@
 
   &__center {
     padding: 0 40px 0 64px;
+
+    &-profile {
+      width: 100%;
+    }
   }
 
   &__right {
@@ -25,6 +29,51 @@
 
     &-popular {
       margin-bottom: 40px;
+    }
+  }
+
+  &__nav {
+    height: 400px;
+    padding: 0 16px 0 24px;
+    overflow: auto;
+
+    &-link {
+      @include font(16px, $color-secondary-300, 700);
+
+      text-decoration: none;
+    }
+  }
+
+  &__submenu {
+    display: none;
+    padding-left: 30px;
+
+    &-link {
+      @include font(16px, $color-primary-150);
+
+      text-decoration: none;
+    }
+  }
+
+  &__parent-btn {
+    display: inline-block;
+    padding: 0;
+    vertical-align: middle;
+    background-color: transparent;
+    border-color: $color-secondary-300 transparent transparent;
+    border-style: solid;
+    border-width: 5px 5px 0;
+  }
+
+  &__nav-item.active {
+    .articles__submenu {
+      display: block;
+    }
+
+    .articles__parent-btn {
+      border-color: transparent transparent $color-secondary-300;
+      border-style: solid;
+      border-width: 0 5px 5px;
     }
   }
 }
@@ -160,6 +209,19 @@
     &-content-top {
       font-size: 20px;
     }
+  }
+
+  &-alphabet {
+    @include flex(flex-start, flex-start);
+
+    padding-left: 28px;
+  }
+
+  &__letter {
+    @include font(65px, $color-primary-400, 900);
+
+    margin-right: 28px;
+    line-height: 1;
   }
 }
 
