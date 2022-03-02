@@ -90,6 +90,10 @@ p {
   font-weight: 700;
 }
 
+.text-italic {
+  font-style: italic;
+}
+
 .text-blue {
   color: $color-primary-400;
 }
@@ -571,6 +575,11 @@ form {
   &-projects {
     border: 0;
   }
+}
+
+.adaptive-img {
+  width: 100%;
+  height: auto;
 }
 
 .search__top {

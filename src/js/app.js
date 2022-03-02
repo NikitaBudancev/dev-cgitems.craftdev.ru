@@ -1,6 +1,7 @@
 import $ from "jquery";
 import "slick-carousel";
 import { Fancybox } from "@fancyapps/ui/src/Fancybox/Fancybox.js";
+import "dm-file-uploader";
 
 $(function () {
   $(".accordion__title").on("click", function (e) {
@@ -184,4 +185,15 @@ $(function () {
   $(".articles__parent-btn").on("click", function () {
     $(this).parent().toggleClass("active");
   });
+});
+
+$("#drop-area").dmUploader({
+  // url: "/path/to/backend/upload.asp",
+  //... More settings here...
+
+  onInit: function () {
+    console.log("Callback: Plugin initialized");
+  },
+
+  // ... More callbacks
 });

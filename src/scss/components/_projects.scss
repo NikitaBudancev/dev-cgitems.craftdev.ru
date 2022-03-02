@@ -256,6 +256,46 @@
       }
     }
   }
+
+  &-add {
+    width: 100%;
+    max-width: 378px;
+    height: 234px;
+    padding: 60px 0;
+    margin-right: 16px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #010203;
+    border-radius: 10px;
+
+    &:hover,
+    &:focus {
+      svg {
+        fill: $color-secondary-400;
+      }
+    }
+
+    &__text {
+      color: $color-secondary-400;
+    }
+
+    svg {
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 14px;
+      fill: #384557;
+      transition: all 0.3s;
+    }
+
+    &__box {
+      display: flex;
+    }
+  }
+
+  &-edit {
+    line-height: 26px;
+    background-color: $color-secondary-970;
+  }
 }
 
 .student {

@@ -3,7 +3,7 @@
   margin-right: 100px;
 
   &__center {
-    padding: 0 40px 0 64px;
+    padding: 0 64px;
 
     &-profile {
       width: 100%;
@@ -15,6 +15,7 @@
     min-width: 305px;
     height: calc(100vh - 400px);
     padding-right: 16px;
+    margin-top: -32px;
     overflow: auto;
   }
 
