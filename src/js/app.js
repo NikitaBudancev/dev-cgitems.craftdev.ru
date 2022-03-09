@@ -1,7 +1,9 @@
 import $ from "jquery";
 import "slick-carousel";
 import { Fancybox } from "@fancyapps/ui/src/Fancybox/Fancybox.js";
-import "dm-file-uploader";
+import { DragAndDrop } from "./drag-and-drop.js";
+
+const body = document.querySelector("body");
 
 $(function () {
   $(".accordion__title").on("click", function (e) {
@@ -103,47 +105,63 @@ $(function () {
   $(".fade").on("click", function () {
     $(".form-search-header").fadeOut(300);
     $(".fade").fadeOut(300);
+    $(".panel-sort-right-alphabet").fadeOut(200);
   });
 
-  const p1 = document.querySelector(".page1");
-  let startingX = 0;
+  $(".panel-bar-alphabet").on("click", function () {
+    $(".panel-sort-right-alphabet").fadeToggle(200);
+    $(".fade").fadeToggle(200);
+  });
 
-  function hanleTouchStart(e) {
-    startingX = e.touches[0].clientX;
-  }
+  const dataSidebarBtns = document.querySelectorAll("[data-sidebar-btn]");
 
-  function hanleTouchMove(e) {
-    let touch = e.touches[0];
-    let change = startingX - touch.clientX;
-    if (change < 0) {
-      return;
-    }
+  dataSidebarBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      let dataSidebarBtnValue = btn.getAttribute("data-sidebar-btn");
 
-    p1.style.left = "-" + change + "px";
-    e.preventDefault();
-  }
+      let sidebar = document.querySelector(
+        `[data-sidebar="${dataSidebarBtnValue}"]`
+      );
 
-  function hanleTouchEnd(e) {
-    let change = startingX - e.changedTouches[0].clientX;
-    let treshold = screen.width / 3;
-    if (change < treshold) {
-      p1.style.left = 0;
-      p1.style.opacity = 1;
-      $("body").css({ overflow: "hidden" });
-    } else {
-      p1.style.left = "-95%";
-      p1.style.opacity = 0;
-      $("body").css({ overflow: "initial" });
-    }
-  }
+      sidebar.style.left = 0;
+      sidebar.style.opacity = 1;
+      body.style.overflow = "hidden";
 
-  p1.addEventListener("touchstart", hanleTouchStart, false);
-  p1.addEventListener("touchmove", hanleTouchMove, false);
-  p1.addEventListener("touchend", hanleTouchEnd, false);
+      let startingX = 0;
 
-  $(".menu__btn").on("click", function () {
-    $(".page1").css({ left: 0, opacity: 1 });
-    $("body").css({ overflow: "hidden" });
+      function hanleTouchStart(e) {
+        startingX = e.touches[0].clientX;
+      }
+
+      function hanleTouchMove(e) {
+        let touch = e.touches[0];
+        let change = startingX - touch.clientX;
+        if (change < 80) {
+          return;
+        }
+
+        sidebar.style.left = "-" + change + "px";
+        e.preventDefault();
+      }
+
+      function hanleTouchEnd(e) {
+        let change = startingX - e.changedTouches[0].clientX;
+        let treshold = screen.width / 3;
+        if (change < treshold) {
+          sidebar.style.left = 0;
+          sidebar.style.opacity = 1;
+          $("body").css({ overflow: "hidden" });
+        } else {
+          sidebar.style.left = "-100%";
+          sidebar.style.opacity = 0;
+          $("body").css({ overflow: "initial" });
+        }
+      }
+
+      sidebar.addEventListener("touchstart", hanleTouchStart, false);
+      sidebar.addEventListener("touchmove", hanleTouchMove, false);
+      sidebar.addEventListener("touchend", hanleTouchEnd, false);
+    });
   });
 
   $(".btn-course-mobile,.btn-course").on("click", function () {
@@ -187,13 +205,91 @@ $(function () {
   });
 });
 
-$("#drop-area").dmUploader({
-  // url: "/path/to/backend/upload.asp",
-  //... More settings here...
+const element = document.querySelector(".upload-file__label");
+const dragAndDrop = new DragAndDrop(element);
+dragAndDrop.run();
 
-  onInit: function () {
-    console.log("Callback: Plugin initialized");
-  },
+const inputDragAndDrop = document.querySelector("#fileElem");
+const dataSlide = document.querySelectorAll(".test__item[data-slide]");
+const btnNavSlide = document.querySelectorAll(
+  ".drag-and-drop__item[data-slide-nav]"
+);
 
-  // ... More callbacks
+function addClassActive(element, elementList, className = "active") {
+  elementList.forEach((btn) => {
+    btn.classList.remove(className);
+  });
+  element.classList.add(className);
+}
+
+function removeClazz(selector, value) {
+  selector.classList.remove(value);
+}
+
+btnNavSlide.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    let dataSlideNav = btn.getAttribute("data-slide-nav");
+    let activeSlide = document.querySelector(
+      `.test__item[data-slide="${dataSlideNav}"]`
+    );
+
+    if (document.querySelector("#span-text")) {
+      document.querySelector("#span-text").remove();
+    }
+
+    if (document.querySelector(".drag-and-drop__item.active-edit")) {
+      removeClazz(
+        document.querySelector(".drag-and-drop__item.active-edit"),
+        "active-edit"
+      );
+    }
+
+    addClassActive(btn, btnNavSlide);
+    addClassActive(activeSlide, dataSlide);
+  });
+});
+
+const btnExitSlide = document.querySelectorAll(".test__item-btn-exit");
+
+btnExitSlide.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    let slideActive = btn.closest(".test__item");
+    let btnActive = document.querySelector(
+      `.drag-and-drop__item[data-slide-nav="${slideActive.getAttribute(
+        "data-slide"
+      )}"]`
+    );
+
+    removeClazz(btnActive, "active");
+    removeClazz(slideActive, "active");
+  });
+});
+
+const btnEditSlide = document.querySelectorAll(".test__item-btn-edit");
+const spanText = document.createElement("span");
+spanText.innerHTML = "Выберите файл";
+spanText.className = "drag-and-drop__item-text";
+spanText.id = "span-text";
+
+btnEditSlide.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    let slideActive = btn.closest(".test__item");
+    let btnActive = document.querySelector(
+      `.drag-and-drop__item[data-slide-nav="${slideActive.getAttribute(
+        "data-slide"
+      )}"]`
+    );
+
+    addClassActive(btnActive, btnNavSlide, "active-edit");
+    btnActive.append(spanText);
+    // btnActive.querySelector("img").style.filter = "brightness(50%)";
+    removeClazz(slideActive, "active");
+
+    if (document.querySelector(".drag-and-drop__item.active-edit")) {
+      // console.log(inputDragAndDrop);
+      inputDragAndDrop.addEventListener("change", () => {
+        console.log(inputDragAndDrop);
+      });
+    }
+  });
 });

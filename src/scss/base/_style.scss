@@ -16,6 +16,16 @@ body {
   font-family: Roboto, sans-serif;
 }
 
+::-moz-selection {
+  color: $white;
+  background-color: $color-primary-400;
+}
+
+::selection {
+  color: $white;
+  background-color: $color-primary-400;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -227,7 +237,11 @@ li {
   display: none;
   width: 100%;
   height: 100%;
-  background-color: #1818183f;
+  background-color: #181818f2;
+
+  &.active {
+    display: block;
+  }
 }
 
 .content {
@@ -489,6 +503,10 @@ form {
       .panel-sort {
         margin-left: 0;
 
+        &-text-mobile {
+          display: none;
+        }
+
         a {
           padding: 0 4px;
         }
@@ -609,4 +627,32 @@ form {
 
 .mt-6 {
   margin-top: 60px;
+}
+
+// .scrolling-wrapper {
+//   overflow-x: scroll;
+//   overflow-y: hidden;
+//   white-space: nowrap;
+
+//   .scrolling-item {
+//     display: inline-block;
+//   }
+
+//   &::-webkit-scrollbar {
+//     display: none;
+//   }
+// }
+
+.scrolling-wrapper-flexbox {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+
+  .scrolling-item-flexbox {
+    flex: 0 0 auto;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }

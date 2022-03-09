@@ -47,7 +47,6 @@
     },
     "dependencies": {
         "@fancyapps/ui": "^4.0.25",
-        "dm-file-uploader": "^1.0.2",
         "imagesloaded": "^4.1.4",
         "jquery-bridget": "^3.0.1",
         "masonry-layout": "^4.2.2",

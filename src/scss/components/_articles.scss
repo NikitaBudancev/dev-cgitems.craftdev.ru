@@ -77,6 +77,26 @@
       border-width: 0 5px 5px;
     }
   }
+
+  &__sort {
+    display: none;
+    width: 100%;
+    max-width: 260px;
+    padding-left: 24px;
+    margin-bottom: 30px;
+
+    &-text {
+      @include font(12px, $color-secondary-400);
+
+      margin-right: 20px;
+    }
+
+    .input__sort {
+      @include font(12px, $color-secondary-400);
+
+      border: 1px solid $color-secondary-800;
+    }
+  }
 }
 
 .article {

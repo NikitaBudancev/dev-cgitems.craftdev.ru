@@ -11,8 +11,8 @@
 
   &__left {
     position: absolute;
-    top: 57px;
-    left: -384px;
+    top: 56px;
+    left: -100%;
     justify-content: flex-start;
     padding-top: 0;
     background: #0e1112;
@@ -34,6 +34,10 @@
 
     &-message {
       padding-bottom: 0;
+    }
+
+    &-jc {
+      justify-content: space-between;
     }
   }
 
@@ -193,7 +197,7 @@
   &__textarea {
     width: 100%;
     height: calc(100% - 60px);
-    padding: 5px;
+    padding: 10px;
     resize: none;
     background-color: #0e1112;
     outline: none;

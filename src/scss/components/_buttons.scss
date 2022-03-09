@@ -3,7 +3,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  width: 400px;
+  width: 100%;
   max-width: 100%;
   padding: 14.5px 75px 14.5px 60px;
   font-size: $base_button_size;
@@ -74,6 +74,10 @@
     &:hover {
       background-color: $color-secondary-850;
     }
+  }
+
+  &.button-saved {
+    background-image: url(#{$path}icons/saved.svg);
   }
 
   &-alphabet {
@@ -219,6 +223,7 @@
     }
 
     &-maya {
+      margin-right: 0;
       color: $color-maya;
       border: 1px solid $color-maya;
 
@@ -229,6 +234,18 @@
         background-color: $color-maya;
       }
     }
+  }
+
+  &-mobile {
+    padding-left: 26px;
+    margin-top: 16px;
+    border: none;
+    border-radius: 10px;
+  }
+
+  &__text {
+    margin: 0 5px 0 10px;
+    text-transform: initial;
   }
 }
 
